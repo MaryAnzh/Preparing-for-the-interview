@@ -1,1 +1,30 @@
-<p>main works!</p>
+<section class="main">
+
+  <h2>Themes</h2>
+
+  <section class="main__themes-list">
+
+    <ul class="main__themes-list__themes"
+      *ngFor="let themeList of themeLists">
+      <li class="main__themes-list__themes__item">
+        {{themeList.name}}
+
+        <ul
+          *ngFor="let subTheme of themeList.subTheme"
+          [ngClass]="{'progress': subTheme.progress, 'main__themes-list__themes__item__subTheme': true}">
+          <li class="main__themes-list__themes__item__subTheme__item">
+            {{subTheme.name}}
+
+            <ul class="main__themes-list__themes__item__subTheme__item__description"
+              *ngFor="let description of subTheme.description">
+              <li>
+                {{description}}
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+  </section>
+</section>

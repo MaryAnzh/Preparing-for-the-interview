@@ -1,0 +1,37 @@
+:host {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+
+  .main {
+    max-width: 1200px;
+    width: 100%;
+    line-height: 1.8;
+
+    &__themes-list {
+
+      &__themes {
+        padding-left: 20px;
+        font-size: 20px;
+
+        &__item {
+          &__subTheme {
+            padding-left: 20px;
+            font-size: 16px;
+
+
+            &__item {
+              &__description {
+                padding-left: 20px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+}
