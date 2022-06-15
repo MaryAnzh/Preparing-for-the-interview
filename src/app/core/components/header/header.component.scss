@@ -12,9 +12,13 @@
     background: $mainColor;
 
     &__nav {
+      .main-page {
+        text-decoration: underline;
+      }
       a {
         color:  white;
         text-transform: uppercase;
+        cursor: pointer;
         font-size: 24px;
       }
     }

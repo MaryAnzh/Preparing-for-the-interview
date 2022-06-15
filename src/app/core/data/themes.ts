@@ -303,5 +303,22 @@ export const themeLists: Itheme[] = [
       },
     ]
   },
+  {
+    name: 'Games',
+    isSubThemeShow: false,
+    subTheme: [
+      {
+        name: '',
+        description: [
+          {
+            name: '',
+            progress: false,
+            url: '',
+          }
+        ],
+        progress: false,
+      },
+    ]
+  },
 
 ];

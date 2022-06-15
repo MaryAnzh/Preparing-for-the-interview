@@ -1,7 +1,10 @@
 <header class="header">
   <nav class="header__nav">
     <a
-      routerLink="/">Main</a>
+    [ngClass]="{'main-page': isMain}"
+    (click)="toMain()">
+      {{isMain ? 'Main' : 'To Main'}}
+    </a>
   </nav>
   <section class="header__title">
     <p>Preparing for the interview
