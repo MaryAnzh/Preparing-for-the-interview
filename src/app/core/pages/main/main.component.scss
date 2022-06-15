@@ -1,3 +1,5 @@
+@import '../../../../vareable';
+
 :host {
   width: 100%;
   display: flex;
@@ -13,9 +15,38 @@
 
       &__themes {
         padding-left: 20px;
-        font-size: 20px;
+        font-size: 28px;
 
         &__item {
+
+          &__name {
+            display: flex;
+
+            &__attow {
+              width: 40px;
+              height: 40px;
+
+              .open {
+                width: 20px;
+                height: 10px;
+                fill: $mainColorDark;
+                transform: rotate(-90deg);
+                transition: .5s;
+              }
+
+              .close {
+                width: 20px;
+                height: 10px;
+                fill: $mainColorDark;
+                transform: rotate(0deg);
+                transition: .5s;
+              }
+            }
+          }
+
+
+
+
           &__subTheme {
             padding-left: 20px;
             font-size: 16px;

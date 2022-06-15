@@ -3,6 +3,7 @@ import { Itheme } from "../modal/themes.modal";
 export const themeLists: Itheme[] = [
   {
     name: "JS",
+    isSubThemeShow: false,
     subTheme: [
       {
         name: `Variables, Values, Types. Declaration`,

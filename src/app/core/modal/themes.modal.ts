@@ -1,5 +1,6 @@
 export interface Itheme {
   name: string,
+  isSubThemeShow: boolean,
   subTheme: IsubTheme[],
 }
 

@@ -5,24 +5,42 @@
   <section class="main__themes-list">
 
     <ul class="main__themes-list__themes"
-      *ngFor="let themeList of themeLists">
+      *ngFor="let themeList of themeLists; let i= index;">
+
       <li class="main__themes-list__themes__item">
-        {{themeList.name}}
+        <div class="main__themes-list__themes__item__name">
+          <div class="main__themes-list__themes__item__name__attow">
+            <svg
+              [ngClass]="{'open': !themeList.isSubThemeShow, 'close':
+              themeList.isSubThemeShow}"
+              (click)="themeList.isSubThemeShow= !themeList.isSubThemeShow"
+              viewBox="0 0 20 10">
+              <path
+                d="M20,0c-3.33,3.33-6.67,6.67-10,10C6.67,6.67,3.33,3.33,0,0C6.67,0,13.33,0,20,0z">
+              </path>
+            </svg>
+          </div>
+          {{themeList.name}}
+        </div>
+        <ng-container
+          *ngIf="themeList.isSubThemeShow">
+          <ul
+            *ngFor="let subTheme of themeList.subTheme"
+            [ngClass]="{'progress': subTheme.progress,
+            'main__themes-list__themes__item__subTheme': true}">
+            <li class="main__themes-list__themes__item__subTheme__item">
+              {{subTheme.name}}
 
-        <ul
-          *ngFor="let subTheme of themeList.subTheme"
-          [ngClass]="{'progress': subTheme.progress, 'main__themes-list__themes__item__subTheme': true}">
-          <li class="main__themes-list__themes__item__subTheme__item">
-            {{subTheme.name}}
-
-            <ul class="main__themes-list__themes__item__subTheme__item__description"
-              *ngFor="let description of subTheme.description">
-              <li>
-                {{description}}
-              </li>
-            </ul>
-          </li>
-        </ul>
+              <ul
+                class="main__themes-list__themes__item__subTheme__item__description"
+                *ngFor="let description of subTheme.description">
+                <li>
+                  {{description}}
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </ng-container>
       </li>
     </ul>
 
