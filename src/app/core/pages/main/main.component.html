@@ -22,20 +22,28 @@
           </div>
           {{themeList.name}}
         </div>
+
         <ng-container
           *ngIf="themeList.isSubThemeShow">
           <ul
             *ngFor="let subTheme of themeList.subTheme"
             [ngClass]="{'progress': subTheme.progress,
             'main__themes-list__themes__item__subTheme': true}">
-            <li class="main__themes-list__themes__item__subTheme__item">
-              {{subTheme.name}}
 
+            <li
+            [ngClass]="{'active': subTheme.progress, 'main__themes-list__themes__item__subTheme__item': true}">
+              {{subTheme.name}}
               <ul
                 class="main__themes-list__themes__item__subTheme__item__description"
                 *ngFor="let description of subTheme.description">
-                <li>
-                  {{description}}
+                <li
+                [ngClass]="{'active': description.progress}">
+                  {{description.name}}
+                  <br/>
+                  <a
+                  *ngIf="description.progress"
+                  (click)="linkToList(description.url)">
+                  MORE...</a>
                 </li>
               </ul>
             </li>

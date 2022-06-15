@@ -1,14 +1,8 @@
 @import '../../../../vareable';
 
 :host {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 30px;
 
   .main {
-    max-width: 1200px;
-    width: 100%;
     line-height: 1.8;
 
     &__themes-list {
@@ -25,13 +19,14 @@
             &__attow {
               width: 40px;
               height: 40px;
+              cursor: pointer;
 
               .open {
                 width: 20px;
                 height: 10px;
                 fill: $mainColorDark;
                 transform: rotate(-90deg);
-                transition: .5s;
+                transition: .3s;
               }
 
               .close {
@@ -39,25 +34,44 @@
                 height: 10px;
                 fill: $mainColorDark;
                 transform: rotate(0deg);
-                transition: .5s;
+                transition: .3s;
               }
             }
           }
 
-
-
-
           &__subTheme {
             padding-left: 20px;
+            list-style: disc;
             font-size: 16px;
 
+            .active {
+              color: $additionalDark;
+
+              a {
+                color: $mainColor;
+                text-decoration: underline;
+                cursor: pointer;
+                transition: .3s;
+
+                &:hover {
+                  color: $mainColorDark;
+                }
+              }
+            }
 
             &__item {
+
+
               &__description {
                 padding-left: 20px;
                 font-size: 14px;
+                list-style: circle;
               }
             }
+          }
+
+          &__subTheme .active {
+            list-style: url(../../../../assets/icons/check.svg);
           }
         }
       }

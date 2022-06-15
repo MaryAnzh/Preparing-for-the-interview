@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { MainComponent } from './core/pages/main/main.component';
+import { CssScrollComponent } from './core/pages/css-pages/css-scroll/css-scroll.component';
+import { JsTimersComponent } from './core/pages/js-pages/js-timers/js-timers.component';
 
 const routes: Routes = [
   {
@@ -12,6 +14,14 @@ const routes: Routes = [
   {
     path: 'main',
     component: MainComponent,
+  },
+  {
+    path: 'css-scroll',
+    component: CssScrollComponent,
+  },
+  {
+    path: 'timers',
+    component: JsTimersComponent
   }
 ];
 

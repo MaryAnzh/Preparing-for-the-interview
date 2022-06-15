@@ -1,19 +1,21 @@
 @import url(./reset.scss);
 @import './vareable';
+
 * {
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
 body {
+  width: 100%;
   font-family: 'Roboto';
   font-weight: 300;
   color: $mainColorFont;
-}
-
-main {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  font-size: 16px;
 }
 
 h1,
@@ -44,4 +46,20 @@ button {
   text-transform: uppercase;
   border-radius: 6px;
   cursor: pointer;
+}
+
+
+
+.code {
+  //max-width: 720px;
+  overflow: auto;
+  box-shadow: 5px 5px 15px rgb(180, 180, 180);
+  margin: 10px;
+  border-radius: 10px;
+}
+
+pre {
+  box-sizing: border-box;
+  //max-width: 720px;
+  padding: 15px;
 }

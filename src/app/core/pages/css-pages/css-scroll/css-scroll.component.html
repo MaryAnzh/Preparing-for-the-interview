@@ -1,0 +1,13 @@
+<h3>Проблема</h3>
+<p>При появлении полосы прокрутки сбоку, контент заметно смещается</p>
+<h3>Решение</h3>
+<div class="code">
+ <pre><code>
+  {{'styles.csc
+
+  html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}'}}
+</code></pre>
+</div>

@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainComponent } from './core/pages/main/main.component';
 import { HeaderComponent } from './core/components/header/header.component';
+import { CssScrollComponent } from './core/pages/css-pages/css-scroll/css-scroll.component';
+import { JsTimersComponent } from './core/pages/js-pages/js-timers/js-timers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    HeaderComponent
+    HeaderComponent,
+    CssScrollComponent,
+    JsTimersComponent
   ],
   imports: [
     BrowserModule,

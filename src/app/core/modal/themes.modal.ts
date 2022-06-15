@@ -6,7 +6,12 @@ export interface Itheme {
 
 export interface IsubTheme {
   name: string,
-  description: string[],
+  description: IDescription[],
+  progress: boolean,
+}
+
+export interface IDescription {
+  name: string,
   progress: boolean,
   url: string,
 }
