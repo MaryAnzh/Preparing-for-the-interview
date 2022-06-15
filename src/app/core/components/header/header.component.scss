@@ -14,6 +14,8 @@
     &__nav {
       .main-page {
         text-decoration: underline;
+        cursor: none;
+        pointer-events: none;
       }
       a {
         color:  white;
