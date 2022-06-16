@@ -2,4 +2,4 @@
 Preparing for the interview
 
 **DEPLOY:**
-https://maryanzh.github.io/Preparing-for-the-interview
+https://maryanzh.github.io/Preparing-for-the-interview/main
