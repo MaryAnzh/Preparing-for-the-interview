@@ -2,20 +2,35 @@
   <h3>Pipes</h3>
   <h4>Links</h4>
 
+  <!-- link -->
   <ul>
     <li>
-      <a href="https://angular.io/api/common/AsyncPipe"
-        target="_blank">AsyncPipe</a>
+      <a href="https://angular.io/api/core/Pipe"
+        target="_blank">
+        angular.io/api/core/Pipe
+      </a>
+    </li>
+
+    <li>
+      <a href="https://codecraft.tv/courses/angular/pipes/built-in-pipes/"
+        target="_blank">
+        Built-in-pipes
+      </a>
     </li>
     <li>
       <a href="https://metanit.com/web/angular2/8.1.php"
         target="_blank">Работа с pipes</a>
+    </li>
+    <li>
+      <a href="https://angular.io/api/common/AsyncPipe"
+        target="_blank">AsyncPipe</a>
     </li>
   </ul>
 
   <ul class="pipes__built-In-pipes">
     <p class="pipes__built-In-pipes__title">Built-In Pipes</p>
 
+    <!-- CurrencyPipe -->
     <li class="pipes__built-In-pipes__list">
       CurrencyPipe
       <div class="pipes__built-In-pipes__list__sample">
@@ -29,10 +44,13 @@
       </div>
     </li>
 
+    <!-- DatePipe -->
     <li class="pipes__built-In-pipes__list">
       <p>DatePipe</p>
       <p><a href="https://angular.io/api/common/DatePipe" target="_blank">angular.io/api/common/DatePipe</a></p>
       <p>(description, date format)</p>
+
+      <!-- shortTime -->
       <div class="pipes__built-In-pipes__list__sample">
         <div class="code">
           <pre><code>{{codes[1]}}</code></pre>
@@ -42,34 +60,74 @@
           {{ date | date: 'shortTime' }}
         </div>
       </div>
+
+      <!-- fullDate -->
       <div class="pipes__built-In-pipes__list__sample">
         <div class="code">
           <pre><code>{{codes[2]}}</code></pre>
         </div>
         <div class="pipes__built-In-pipes__list__sample__result">
           <p>Result</p>
-          {{ date | date: 'fullDate' }}
-        </div>
-        <div class="pipes__built-In-pipes__list__sample__result">
-          <p>Result</p>
-          {{ date | date: 'd'}}
+          {{ date | date: 'full' }}
         </div>
       </div>
+
+      <!-- custom formst -->
       <div class="pipes__built-In-pipes__list__sample">
         <div class="code">
           <pre><code>{{codes[3]}}</code></pre>
         </div>
         <div class="pipes__built-In-pipes__list__sample__result">
           <p>Result</p>
-          {{ date | date: 'EEEE, MMMM d, y'}}
-        </div>
-        <div class="pipes__built-In-pipes__list__sample__result">
-          <p>Result</p>
-          {{ date | date: 'd'}}
+          {{ date | date: 'EEE, MMM d, y'}}
         </div>
       </div>
     </li>
 
+    <!-- DecimalPipe -->
+    <li class="pipes__built-In-pipes__list">
+      <p>DecimalPipe</p>
+      <a href="https://angular.io/api/common/DecimalPipe#digitsinfo">angular.io/api/common/DecimalPipe#digitsinfo</a>
+      <p>Форматирование числа</p>
+
+      <ul class="pipes__built-In-pipes__list__params">
+        <p>Параметры</p>
+        <li>
+          <span>minIntegerDigits:</span> The minimum number of integer digits
+          before the decimal point. Default is 1
+        </li>
+        <li>
+          <span>minFractionDigits:</span> The minimum number of digits after the
+          decimal point. Default is 0
+        </li>
+        <li>
+          <span>maxFractionDigits</span>: The maximum number of digits after the
+          decimal point. Default is 3.
+        </li>
+        <li>
+          If the formatted value is truncated it will be rounded using the
+          "to-nearest" method:
+        </li>
+      </ul>
+      <div class="pipes__built-In-pipes__list__sample">
+        <div class="code">
+          <pre><code>{{codes[4]}}</code></pre>
+        </div>
+        <div class="pipes__built-In-pipes__list__sample__result">
+          <p>Result</p>
+          {{3.6 | number: '1.0-0'}}
+        </div>
+      </div>
+      <div class="pipes__built-In-pipes__list__sample">
+        <div class="code">
+          <pre><code>{{codes[4]}}</code></pre>
+        </div>
+        <div class="pipes__built-In-pipes__list__sample__result">
+          <p>Result</p>
+          {{1.6451114 | number: '3.0-3'}}
+        </div>
+      </div>
+    </li>
   </ul>
 
   <ul class="pipes__pipes-creation">

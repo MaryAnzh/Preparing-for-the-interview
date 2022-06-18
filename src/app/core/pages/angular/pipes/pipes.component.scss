@@ -20,6 +20,13 @@
 
       &__list {
         margin-top: 15px;
+        &__params {
+          li {
+            span {
+              font-weight: bold;
+            }
+          }
+        }
 
         &__sample {
           display: flex;
@@ -27,7 +34,7 @@
           align-items: center;
 
           .code {
-            width: 320px;
+            width: 340px;
           }
 
           &__result {

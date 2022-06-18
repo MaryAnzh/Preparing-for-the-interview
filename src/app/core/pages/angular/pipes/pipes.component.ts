@@ -13,19 +13,19 @@ type BuiltInPipes = {
   styleUrls: ['./pipes.component.scss']
 })
 
-export class PipesComponent implements OnInit {
+export class PipesComponent {
   public date = new Date();
 
   public codes: string[] = [
     `{{ 35.05 | currency : 'USD' }}`,
     `{{ date | date: 'shortTime' }}`,
-    `{{ date | date: 'fullDate' }}`,
-    `{{ date | date: 'EEEE, MMMM d, y'}}`,
+    `{{ date | date: 'full' }}`,
+    `{{ date | date: 'EEE, MMM d, y'}}`,
+    `{{3.6 | number: '1.0-0'}}`,
+    `{{1.6451114 | number: '3.0-3'}}`,
   ];
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
 
 }
