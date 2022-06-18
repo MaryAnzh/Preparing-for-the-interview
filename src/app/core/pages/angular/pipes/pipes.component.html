@@ -1,0 +1,85 @@
+<section class="pipes">
+  <h3>Pipes</h3>
+  <h4>Links</h4>
+
+  <ul>
+    <li>
+      <a href="https://angular.io/api/common/AsyncPipe"
+        target="_blank">AsyncPipe</a>
+    </li>
+    <li>
+      <a href="https://metanit.com/web/angular2/8.1.php"
+        target="_blank">Работа с pipes</a>
+    </li>
+  </ul>
+
+  <ul class="pipes__built-In-pipes">
+    <p class="pipes__built-In-pipes__title">Built-In Pipes</p>
+
+    <li class="pipes__built-In-pipes__list">
+      CurrencyPipe
+      <div class="pipes__built-In-pipes__list__sample">
+        <div class="code">
+          <pre><code>{{codes[0]}}</code></pre>
+        </div>
+        <div class="pipes__built-In-pipes__list__sample__result">
+          <p>Result</p>
+          {{ 35.05 | currency : 'USD' }}
+        </div>
+      </div>
+    </li>
+
+    <li class="pipes__built-In-pipes__list">
+      <p>DatePipe</p>
+      <p><a href="https://angular.io/api/common/DatePipe" target="_blank">angular.io/api/common/DatePipe</a></p>
+      <p>(description, date format)</p>
+      <div class="pipes__built-In-pipes__list__sample">
+        <div class="code">
+          <pre><code>{{codes[1]}}</code></pre>
+        </div>
+        <div class="pipes__built-In-pipes__list__sample__result">
+          <p>Result</p>
+          {{ date | date: 'shortTime' }}
+        </div>
+      </div>
+      <div class="pipes__built-In-pipes__list__sample">
+        <div class="code">
+          <pre><code>{{codes[2]}}</code></pre>
+        </div>
+        <div class="pipes__built-In-pipes__list__sample__result">
+          <p>Result</p>
+          {{ date | date: 'fullDate' }}
+        </div>
+        <div class="pipes__built-In-pipes__list__sample__result">
+          <p>Result</p>
+          {{ date | date: 'd'}}
+        </div>
+      </div>
+      <div class="pipes__built-In-pipes__list__sample">
+        <div class="code">
+          <pre><code>{{codes[3]}}</code></pre>
+        </div>
+        <div class="pipes__built-In-pipes__list__sample__result">
+          <p>Result</p>
+          {{ date | date: 'EEEE, MMMM d, y'}}
+        </div>
+        <div class="pipes__built-In-pipes__list__sample__result">
+          <p>Result</p>
+          {{ date | date: 'd'}}
+        </div>
+      </div>
+    </li>
+
+  </ul>
+
+  <ul class="pipes__pipes-creation">
+    <p class="pipes__pipes-creation__title">creation</p>
+    <li>
+      New folder: "Pipes"
+    </li>
+    <li>
+      New file: "nane.pipe.ts"
+    </li>
+
+  </ul>
+</section>

@@ -7,6 +7,7 @@ import { MainComponent } from './core/pages/main/main.component';
 import { HeaderComponent } from './core/components/header/header.component';
 import { CssScrollComponent } from './core/pages/css-pages/css-scroll/css-scroll.component';
 import { JsTimersComponent } from './core/pages/js-pages/js-timers/js-timers.component';
+import { PipesComponent } from './core/pages/angular/pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { JsTimersComponent } from './core/pages/js-pages/js-timers/js-timers.com
     MainComponent,
     HeaderComponent,
     CssScrollComponent,
-    JsTimersComponent
+    JsTimersComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,

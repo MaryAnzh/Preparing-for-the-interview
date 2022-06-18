@@ -3,80 +3,92 @@
 :host {
 
   .main {
+    display: flex;
     line-height: 1.8;
+    margin-top: 30px;
 
-    &__themes-list {
+    &__themes-wrap {
+      width: 70%;
 
-      &__themes {
-        padding-left: 20px;
-        font-size: 28px;
+      &__themes-list {
 
-        &__item {
+        &__themes {
+          padding-left: 20px;
+          font-size: 28px;
 
-          &__name {
-            display: flex;
+          &__item {
 
-            &__attow {
-              width: 40px;
-              height: 40px;
-              cursor: pointer;
+            &__name {
+              display: flex;
 
-              .open {
-                width: 20px;
-                height: 10px;
-                fill: $mainColorDark;
-                transform: rotate(-90deg);
-                transition: .3s;
-              }
-
-              .close {
-                width: 20px;
-                height: 10px;
-                fill: $mainColorDark;
-                transform: rotate(0deg);
-                transition: .3s;
-              }
-            }
-          }
-
-          &__subTheme {
-            padding-left: 20px;
-            list-style: disc;
-            font-size: 16px;
-
-            .active {
-              color: $additionalDark;
-
-              a {
-                color: $mainColor;
-                text-decoration: underline;
+              &__attow {
+                width: 40px;
+                height: 40px;
                 cursor: pointer;
-                transition: .3s;
 
-                &:hover {
-                  color: $mainColorDark;
+                .open {
+                  width: 20px;
+                  height: 10px;
+                  fill: $mainColorDark;
+                  transform: rotate(-90deg);
+                  transition: .3s;
+                }
+
+                .close {
+                  width: 20px;
+                  height: 10px;
+                  fill: $mainColorDark;
+                  transform: rotate(0deg);
+                  transition: .3s;
                 }
               }
             }
 
-            &__item {
+            &__subTheme {
+              padding-left: 20px;
+              list-style: disc;
+              font-size: 16px;
+
+              .active {
+                color: $additionalDark;
+
+                a {
+                  color: $mainColor;
+                  text-decoration: underline;
+                  cursor: pointer;
+                  transition: .3s;
+
+                  &:hover {
+                    color: $mainColorDark;
+                  }
+                }
+              }
+
+              &__item {
 
 
-              &__description {
-                padding-left: 20px;
-                font-size: 14px;
-                list-style: circle;
+                &__description {
+                  padding-left: 20px;
+                  font-size: 14px;
+                  list-style: circle;
+                }
               }
             }
-          }
 
-          &__subTheme .active {
-            list-style: url(../../../../assets/icons/check.svg);
+            &__subTheme .active {
+              list-style: url(../../../../assets/icons/check.svg);
+            }
           }
         }
-      }
 
+      }
     }
+
+    &__recent {
+      width: 30%;
+    }
+
+
 
   }
 }

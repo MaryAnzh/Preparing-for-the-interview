@@ -1,56 +1,62 @@
 <section class="main">
+  <section class="main__themes-wrap">
+    <h2>Themes</h2>
+    <section class="main__themes-wrap__themes-list">
 
-  <h2>Themes</h2>
+      <ul class="main__themes-wrap__themes-list__themes"
+        *ngFor="let themeList of themeLists; let i= index;">
 
-  <section class="main__themes-list">
-
-    <ul class="main__themes-list__themes"
-      *ngFor="let themeList of themeLists; let i= index;">
-
-      <li class="main__themes-list__themes__item">
-        <div class="main__themes-list__themes__item__name">
-          <div class="main__themes-list__themes__item__name__attow">
-            <svg
-              [ngClass]="{'open': !themeList.isSubThemeShow, 'close':
-              themeList.isSubThemeShow}"
-              (click)="themeList.isSubThemeShow= !themeList.isSubThemeShow"
-              viewBox="0 0 20 10">
-              <path
-                d="M20,0c-3.33,3.33-6.67,6.67-10,10C6.67,6.67,3.33,3.33,0,0C6.67,0,13.33,0,20,0z">
-              </path>
-            </svg>
+        <li class="main__themes-wrap__themes-list__themes__item">
+          <div class="main__themes-wrap__themes-list__themes__item__name">
+            <div
+              class="main__themes-wrap__themes-list__themes__item__name__attow">
+              <svg
+                [ngClass]="{'open': !themeList.isSubThemeShow, 'close':
+                themeList.isSubThemeShow}"
+                (click)="themeList.isSubThemeShow= !themeList.isSubThemeShow"
+                viewBox="0 0 20 10">
+                <path
+                  d="M20,0c-3.33,3.33-6.67,6.67-10,10C6.67,6.67,3.33,3.33,0,0C6.67,0,13.33,0,20,0z">
+                </path>
+              </svg>
+            </div>
+            {{themeList.name}}
           </div>
-          {{themeList.name}}
-        </div>
 
-        <ng-container
-          *ngIf="themeList.isSubThemeShow">
-          <ul
-            *ngFor="let subTheme of themeList.subTheme"
-            [ngClass]="{'progress': subTheme.progress,
-            'main__themes-list__themes__item__subTheme': true}">
-
-            <li
-            [ngClass]="{'active': subTheme.progress, 'main__themes-list__themes__item__subTheme__item': true}">
-              {{subTheme.name}}
-              <ul
-                class="main__themes-list__themes__item__subTheme__item__description"
-                *ngFor="let description of subTheme.description">
-                <li
-                [ngClass]="{'active': description.progress}">
-                  {{description.name}}
-                  <br/>
-                  <a
-                  *ngIf="description.progress"
-                  (click)="linkToList(description.url)">
-                  MORE...</a>
+          <ng-container
+            *ngIf="themeList.isSubThemeShow">
+            <ul
+              *ngFor="let subTheme of themeList.subTheme"
+              [ngClass]="{'progress': subTheme.progress,
+              'main__themes-wrap__themes-list__themes__item__subTheme': true}">
+              <li
+                [ngClass]="{'active': subTheme.progress,
+                'main__themes-wrap__themes-list__themes__item__subTheme__item':
+                true}">
+                {{subTheme.name}}
+                <ul
+                  class="main__themes-wrap__themes-list__themes__item__subTheme__item__description"
+                  *ngFor="let description of subTheme.description">
+                  <li
+                    [ngClass]="{'active': description.progress}">
+                    {{description.name}}
+                    <br/>
+                      <a
+                        *ngIf="description.progress"
+                        (click)="linkToList(description.url)">
+                        MORE...</a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
-            </li>
-          </ul>
-        </ng-container>
-      </li>
-    </ul>
+            </ng-container>
+          </li>
+        </ul>
 
+      </section>
+    </section>
+
+    <section class="main__recent">
+      <h3>Recent topics</h3>
+    </section>
   </section>
-</section>

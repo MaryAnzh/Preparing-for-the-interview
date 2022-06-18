@@ -252,6 +252,8 @@ export const themeLists: Itheme[] = [
       },
     ]
   },
+
+  //CSS.SCSS
   {
     name: 'CSS/SCSS',
     isSubThemeShow: false,
@@ -269,23 +271,27 @@ export const themeLists: Itheme[] = [
       },
     ]
   },
+
+  //Angular
   {
     name: 'Angular',
     isSubThemeShow: false,
     subTheme: [
       {
-        name: '',
+        name: 'Pipes',
         description: [
           {
-            name: '',
-            progress: false,
-            url: '',
+            name: 'Pipes',
+            progress: true,
+            url: 'angular-pipes',
           }
         ],
-        progress: false,
+        progress: true,
       },
     ]
   },
+
+  //Animation
   {
     name: 'Animation',
     isSubThemeShow: false,
@@ -303,6 +309,8 @@ export const themeLists: Itheme[] = [
       },
     ]
   },
+
+  //Games
   {
     name: 'Games',
     isSubThemeShow: false,

@@ -25,6 +25,7 @@ h4,
 h5,
 h6 {
   color: $mainColor;
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -48,18 +49,19 @@ button {
   cursor: pointer;
 }
 
-
-
 .code {
-  //max-width: 720px;
+  width: fit-content;
   overflow: auto;
   box-shadow: 5px 5px 15px rgb(180, 180, 180);
   margin: 10px;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 pre {
   box-sizing: border-box;
-  //max-width: 720px;
   padding: 15px;
+}
+
+ul::first-letter {
+  text-transform: uppercase;
 }

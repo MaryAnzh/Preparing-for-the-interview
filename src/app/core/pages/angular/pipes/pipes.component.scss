@@ -1,0 +1,56 @@
+@import '../../../../../vareable';
+
+:host {
+  line-height: 1.8rem;
+
+  .pipes {
+    margin-left: 20px;
+
+    a {
+      cursor: pointer;
+      color: $mainColor;
+    }
+    &__built-In-pipes {
+      margin-top: 10px;
+      list-style: disc;
+
+      &__title {
+        font-weight: bold;
+      }
+
+      &__list {
+        margin-top: 15px;
+
+        &__sample {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+
+          .code {
+            width: 320px;
+          }
+
+          &__result {
+            padding-left: 50px;
+            p {
+              text-transform: uppercase;
+              color: $mainColorDark;
+            }
+          }
+        }
+      }
+
+
+
+    }
+
+    &__pipes-creation {
+      margin-top: 10px;
+      list-style: disc;
+
+      &__title {
+        font-weight: bold;
+      }
+    }
+  }
+}
