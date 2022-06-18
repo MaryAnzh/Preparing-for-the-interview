@@ -12,9 +12,14 @@
     </li>
 
     <li>
-      <a href="https://codecraft.tv/courses/angular/pipes/built-in-pipes/"
+      <a href="https://angular.io/guide/pipes-overview"
         target="_blank">
-        Built-in-pipes
+        Understanding Pipes
+      </a>
+    </li>
+    <li>
+      <a href="https://codecraft.tv/courses/angular/pipes/built-in-pipes/#_decimalpipe">
+        Built-In Pipes
       </a>
     </li>
     <li>
@@ -125,6 +130,22 @@
         <div class="pipes__built-In-pipes__list__sample__result">
           <p>Result</p>
           {{1.6451114 | number: '3.0-3'}}
+        </div>
+      </div>
+    </li>
+
+    <!-- JsonPipe -->
+    <li class="pipes__built-In-pipes__list">
+      <p>JsonPipe</p>
+
+      <div class="pipes__built-In-pipes__list__sample">
+        <div class="code">
+          <pre><code>{{codes[6]}}</code></pre>
+        </div>
+
+        <div class="pipes__built-In-pipes__list__sample__result">
+          <p>Result</p>
+          {{ myJSON | json }}
         </div>
       </div>
     </li>

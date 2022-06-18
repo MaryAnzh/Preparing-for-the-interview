@@ -1,5 +1,5 @@
+import { JsonPipe } from '@angular/common';
 import { Component, OnInit, TemplateRef } from '@angular/core';
-
 
 type BuiltInPipes = {
   name: string,
@@ -23,7 +23,14 @@ export class PipesComponent {
     `{{ date | date: 'EEE, MMM d, y'}}`,
     `{{3.6 | number: '1.0-0'}}`,
     `{{1.6451114 | number: '3.0-3'}}`,
+    `{{ myJSON | json }}`
   ];
+
+  public myJSON = JSON.parse(`{
+  "name": "Fixa",
+  "type": "cat",
+  "color": "grey"
+  }`);
 
   constructor() { }
 
