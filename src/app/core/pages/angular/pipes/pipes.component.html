@@ -92,7 +92,7 @@
 
     <!-- DecimalPipe -->
     <li class="pipes__built-In-pipes__list">
-      <p>DecimalPipe</p>
+      <p id="decimalPipe">DecimalPipe</p>
       <a href="https://angular.io/api/common/DecimalPipe#digitsinfo">angular.io/api/common/DecimalPipe#digitsinfo</a>
       <p>Форматирование числа</p>
 
@@ -180,7 +180,36 @@
       <div class="code">
         <pre><code>{{"text-transform: lowercase;
 text-transform: uppercase;"}}</code></pre>
-      </div>А
+      </div>
+    </li>
+
+    <!-- PercentPipe -->
+    <li class="pipes__built-In-pipes__list">
+      <p>PercentPipe</p>
+      <p>По умолчанию процент от 1</p>
+
+      <div class="pipes__built-In-pipes__list__sample">
+        <div class="code">
+          <pre><code>{{codes[9]}}</code></pre>
+        </div>
+
+        <div class="pipes__built-In-pipes__list__sample__result">
+          <p>Result</p>
+          {{ 0.35 | percent }}
+        </div>
+      </div>
+      <p>Параметры, как у <a (click)="scrollFn('decimalPipe')">DecimalPipe</a></p>
+      <div class="pipes__built-In-pipes__list__sample">
+        <div class="code">
+          <pre><code>{{codes[8]}}</code></pre>
+        </div>
+
+        <div class="pipes__built-In-pipes__list__sample__result">
+          <p>Result</p>
+          {{ 'hello' | uppercase }}
+        </div>
+      </div>
+
     </li>
   </ul>
 

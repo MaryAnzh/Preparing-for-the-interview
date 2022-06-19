@@ -1,0 +1,26 @@
+<h3>Anchor in angular</h3>
+
+<div class="code">
+  <p>Component.ts</p>
+  <pre><code>
+{{"import { ViewportScroller } from '@angular/common';
+...
+  constructor(
+    private _viewportScroller: ViewportScroller) { }
+
+  scrollFn(anchor: string): void {
+    this._viewportScroller.scrollToAnchor(anchor);
+  }"}}
+  </code></pre>
+</div>
+<p>HTML</p>
+<div class="code">
+  <pre><code>{{codes[0]}}</code></pre>
+</div>
+
+<p>CSS</p>
+<div class="code">
+  <pre><code>{{"html {
+  scroll-behavior: smooth;
+}"}}</code></pre>
+</div>

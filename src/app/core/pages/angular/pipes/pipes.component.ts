@@ -1,5 +1,6 @@
-import { JsonPipe } from '@angular/common';
+import { JsonPipe, ViewportScroller } from '@angular/common';
 import { Component, OnInit, TemplateRef } from '@angular/core';
+
 
 type BuiltInPipes = {
   name: string,
@@ -25,7 +26,8 @@ export class PipesComponent {
     `{{1.6451114 | number: '3.0-3'}}`,
     `{{ myJSON | json }}`,
     `{{ 'HELLO' | lowercase }}`,
-    `{{ 'hello' | uppercase }}`
+    `{{ 'hello' | uppercase }}`,
+    `{{ 0.35 | percent }}`,
   ];
 
   public myJSON = JSON.parse(`{
@@ -34,7 +36,11 @@ export class PipesComponent {
   "color": "grey"
   }`);
 
-  constructor() { }
+  constructor(
+    private _viewportScroller: ViewportScroller) { }
 
+  scrollFn(anchor: string): void {
+    this._viewportScroller.scrollToAnchor(anchor);
+  }
 
 }

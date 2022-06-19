@@ -8,6 +8,7 @@ import { HeaderComponent } from './core/components/header/header.component';
 import { CssScrollComponent } from './core/pages/css-pages/css-scroll/css-scroll.component';
 import { JsTimersComponent } from './core/pages/js-pages/js-timers/js-timers.component';
 import { PipesComponent } from './core/pages/angular/pipes/pipes.component';
+import { AngularAnchorComponent } from './core/pages/angular/angular-anchor/angular-anchor.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PipesComponent } from './core/pages/angular/pipes/pipes.component';
     HeaderComponent,
     CssScrollComponent,
     JsTimersComponent,
-    PipesComponent
+    PipesComponent,
+    AngularAnchorComponent
   ],
   imports: [
     BrowserModule,

@@ -277,6 +277,7 @@ export const themeLists: Itheme[] = [
     name: 'Angular',
     isSubThemeShow: false,
     subTheme: [
+      //pipes
       {
         name: 'Pipes',
         description: [
@@ -288,6 +289,18 @@ export const themeLists: Itheme[] = [
         ],
         progress: true,
       },
+      //anchor
+      {
+        name: 'anchor',
+        description: [
+          {
+            name: 'anchor',
+            progress: true,
+            url: 'angular-anchor',
+          }
+        ],
+        progress: true,
+      }
     ]
   },
 
