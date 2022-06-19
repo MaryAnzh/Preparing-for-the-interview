@@ -195,21 +195,47 @@ text-transform: uppercase;"}}</code></pre>
 
         <div class="pipes__built-In-pipes__list__sample__result">
           <p>Result</p>
-          {{ 0.35 | percent }}
+          {{ 0.25 | percent }}
         </div>
       </div>
       <p>Параметры, как у <a (click)="scrollFn('decimalPipe')">DecimalPipe</a></p>
       <div class="pipes__built-In-pipes__list__sample">
         <div class="code">
-          <pre><code>{{codes[8]}}</code></pre>
+          <pre><code>{{codes[10]}}</code></pre>
         </div>
 
         <div class="pipes__built-In-pipes__list__sample__result">
           <p>Result</p>
-          {{ 'hello' | uppercase }}
+          {{ 50.1234 | percent: '4.2-4' }}
         </div>
       </div>
 
+    </li>
+
+    <!-- SlicePipe -->
+    <li class="pipes__built-In-pipes__list">
+      <p>SlicePipe</p>
+
+      <div class="pipes__built-In-pipes__list__sample">
+        <div class="code">
+          <pre><code>{{codes[11]}}</code></pre>
+        </div>
+
+        <div class="pipes__built-In-pipes__list__sample__result">
+          <p>Result</p>
+          {{ 'Long fish text' | slice:5:9 }}...
+        </div>
+      </div>
+      <div class="pipes__built-In-pipes__list__sample">
+        <div class="code">
+          <pre><code>{{codes[12]}}</code></pre>
+        </div>
+
+        <div class="pipes__built-In-pipes__list__sample__result">
+          <p>Result</p>
+          {{ [1, 2, 3, 4, 5, 6] | slice:0:-2 }}
+        </div>
+      </div>
     </li>
   </ul>
 

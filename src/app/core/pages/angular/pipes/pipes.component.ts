@@ -1,4 +1,4 @@
-import { JsonPipe, ViewportScroller } from '@angular/common';
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit, TemplateRef } from '@angular/core';
 
 
@@ -27,7 +27,10 @@ export class PipesComponent {
     `{{ myJSON | json }}`,
     `{{ 'HELLO' | lowercase }}`,
     `{{ 'hello' | uppercase }}`,
-    `{{ 0.35 | percent }}`,
+    `{{ 0.25 | percent }}`,
+    `{{ 50.1234 | percent: '4.4-2' }}`,
+    `{{ 'Long fish text' | slice:5:9 }}...`,
+    `{{ [1, 2, 3, 4, 5, 6] | slice:0:-2 }}`,
   ];
 
   public myJSON = JSON.parse(`{
