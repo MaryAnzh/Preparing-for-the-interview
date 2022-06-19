@@ -18,7 +18,8 @@
       </a>
     </li>
     <li>
-      <a href="https://codecraft.tv/courses/angular/pipes/built-in-pipes/#_decimalpipe">
+      <a
+        href="https://codecraft.tv/courses/angular/pipes/built-in-pipes/#_decimalpipe">
         Built-In Pipes
       </a>
     </li>
@@ -125,7 +126,7 @@
       </div>
       <div class="pipes__built-In-pipes__list__sample">
         <div class="code">
-          <pre><code>{{codes[4]}}</code></pre>
+          <pre><code>{{codes[5]}}</code></pre>
         </div>
         <div class="pipes__built-In-pipes__list__sample__result">
           <p>Result</p>
@@ -148,6 +149,38 @@
           {{ myJSON | json }}
         </div>
       </div>
+    </li>
+
+    <!-- LowerCasePipe/UpperCasePipe -->
+    <li class="pipes__built-In-pipes__list">
+      <p>LowerCasePipe/UpperCasePipe</p>
+
+      <div class="pipes__built-In-pipes__list__sample">
+        <div class="code">
+          <pre><code>{{codes[7]}}</code></pre>
+        </div>
+
+        <div class="pipes__built-In-pipes__list__sample__result">
+          <p>Result</p>
+          {{ 'HELLO' | lowercase }}
+        </div>
+      </div>
+      <div class="pipes__built-In-pipes__list__sample">
+        <div class="code">
+          <pre><code>{{codes[8]}}</code></pre>
+        </div>
+
+        <div class="pipes__built-In-pipes__list__sample__result">
+          <p>Result</p>
+          {{ 'hello' | uppercase }}
+        </div>
+      </div>
+
+      <p style="font-weight: bold; margin-top: 15px;">CSS аналог</p>
+      <div class="code">
+        <pre><code>{{"text-transform: lowercase;
+text-transform: uppercase;"}}</code></pre>
+      </div>А
     </li>
   </ul>
 

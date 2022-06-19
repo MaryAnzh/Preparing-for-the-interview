@@ -23,7 +23,9 @@ export class PipesComponent {
     `{{ date | date: 'EEE, MMM d, y'}}`,
     `{{3.6 | number: '1.0-0'}}`,
     `{{1.6451114 | number: '3.0-3'}}`,
-    `{{ myJSON | json }}`
+    `{{ myJSON | json }}`,
+    `{{ 'HELLO' | lowercase }}`,
+    `{{ 'hello' | uppercase }}`
   ];
 
   public myJSON = JSON.parse(`{
