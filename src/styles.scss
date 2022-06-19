@@ -44,6 +44,16 @@ h3 {
   font-weight: 200;
 }
 
+a {
+  cursor: pointer;
+  color: $mainColor;
+
+  &:hover {
+    text-decoration: underline;
+    color: $mainColorDark;
+  }
+}
+
 button {
   text-transform: uppercase;
   border-radius: 6px;

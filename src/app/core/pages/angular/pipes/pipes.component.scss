@@ -7,15 +7,6 @@
     margin-left: 20px;
     transition: .3s;
 
-    a {
-      cursor: pointer;
-      color: $mainColor;
-
-      &:hover {
-        text-decoration: underline;
-        color: $mainColorDark;
-      }
-    }
     &__built-In-pipes {
       margin-top: 10px;
       list-style: disc;
