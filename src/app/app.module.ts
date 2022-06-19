@@ -9,6 +9,7 @@ import { CssScrollComponent } from './core/pages/css-pages/css-scroll/css-scroll
 import { JsTimersComponent } from './core/pages/js-pages/js-timers/js-timers.component';
 import { PipesComponent } from './core/pages/angular/pipes/pipes.component';
 import { AngularAnchorComponent } from './core/pages/angular/angular-anchor/angular-anchor.component';
+import { FooterComponent } from './core/components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AngularAnchorComponent } from './core/pages/angular/angular-anchor/angu
     CssScrollComponent,
     JsTimersComponent,
     PipesComponent,
-    AngularAnchorComponent
+    AngularAnchorComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

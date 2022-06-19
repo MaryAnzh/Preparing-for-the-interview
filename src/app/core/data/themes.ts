@@ -282,10 +282,20 @@ export const themeLists: Itheme[] = [
         name: 'Pipes',
         description: [
           {
-            name: 'Pipes',
+            name: 'Built-In Pipes',
             progress: true,
             url: 'angular-pipes',
-          }
+          },
+          {
+            name: 'Custom Pipes',
+            progress: false,
+            url: '',
+          },
+          {
+            name: 'Async Pipes',
+            progress: false,
+            url: '',
+          },
         ],
         progress: true,
       },

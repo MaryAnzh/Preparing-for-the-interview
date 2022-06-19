@@ -1,0 +1,14 @@
+@import '../../../../vareable';
+
+:host {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+
+  .footer {
+    max-width: 1200px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+}
