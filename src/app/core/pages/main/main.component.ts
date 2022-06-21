@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { themeLists } from '../../data/themes';
 import { Itheme } from '../../modal/themes.modal';
 import { Router } from '@angular/router';
@@ -11,7 +11,7 @@ import { CoreService } from '../../service/core-service/core.service';
 })
 
 export class MainComponent {
-  public themeLists: Itheme[] = themeLists;
+  @Input() public themeLists: Itheme[] = themeLists;
 
   constructor(
     private router: Router,

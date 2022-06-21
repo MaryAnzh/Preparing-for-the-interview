@@ -1,0 +1,8 @@
+<section class="recent-topics"
+  *ngIf="themeLists">
+  <ul class="recent-topics__list"
+    *ngFor="let recent of (themeLists | recentTopics)">
+    <li>{{recent.name}}</li>
+  </ul>
+
+</section>

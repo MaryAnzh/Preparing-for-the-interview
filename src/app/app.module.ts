@@ -12,6 +12,7 @@ import { AngularAnchorComponent } from './core/pages/angular/angular-anchor/angu
 import { FooterComponent } from './core/components/footer/footer.component';
 import { CustomPipeComponent } from './core/pages/angular/custom-pipe/custom-pipe.component';
 import { RecentTopicsPipe } from './core/pipes/recent-topics/recent-topics.pipe';
+import { RecentTopicsComponent } from './core/components/recent-topics/recent-topics.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RecentTopicsPipe } from './core/pipes/recent-topics/recent-topics.pipe'
     AngularAnchorComponent,
     FooterComponent,
     CustomPipeComponent,
-    RecentTopicsPipe
+    RecentTopicsPipe,
+    RecentTopicsComponent
   ],
   imports: [
     BrowserModule,
