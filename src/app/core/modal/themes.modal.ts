@@ -13,5 +13,6 @@ export interface IsubTheme {
 export interface IDescription {
   name: string,
   progress: boolean,
+  date: Date | null,
   url: string,
 }

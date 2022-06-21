@@ -4,7 +4,6 @@ import { Itheme } from '../../modal/themes.modal';
 import { Router } from '@angular/router';
 import { CoreService } from '../../service/core-service/core.service';
 
-
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',

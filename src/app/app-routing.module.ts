@@ -6,6 +6,8 @@ import { CssScrollComponent } from './core/pages/css-pages/css-scroll/css-scroll
 import { JsTimersComponent } from './core/pages/js-pages/js-timers/js-timers.component';
 import { PipesComponent } from './core/pages/angular/pipes/pipes.component';
 import { AngularAnchorComponent } from './core/pages/angular/angular-anchor/angular-anchor.component';
+import { CustomPipeComponent } from './core/pages/angular/custom-pipe/custom-pipe.component';
+
 
 const routes: Routes = [
   {
@@ -32,6 +34,10 @@ const routes: Routes = [
   {
     path: 'angular-anchor',
     component: AngularAnchorComponent
+  },
+  {
+    path: 'custom-pipe',
+    component: CustomPipeComponent
   }
 ];
 

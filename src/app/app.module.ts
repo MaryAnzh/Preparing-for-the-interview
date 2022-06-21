@@ -10,6 +10,8 @@ import { JsTimersComponent } from './core/pages/js-pages/js-timers/js-timers.com
 import { PipesComponent } from './core/pages/angular/pipes/pipes.component';
 import { AngularAnchorComponent } from './core/pages/angular/angular-anchor/angular-anchor.component';
 import { FooterComponent } from './core/components/footer/footer.component';
+import { CustomPipeComponent } from './core/pages/angular/custom-pipe/custom-pipe.component';
+import { RecentTopicsPipe } from './core/pipes/recent-topics/recent-topics.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FooterComponent } from './core/components/footer/footer.component';
     JsTimersComponent,
     PipesComponent,
     AngularAnchorComponent,
-    FooterComponent
+    FooterComponent,
+    CustomPipeComponent,
+    RecentTopicsPipe
   ],
   imports: [
     BrowserModule,
