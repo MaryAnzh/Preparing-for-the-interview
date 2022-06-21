@@ -10,6 +10,8 @@ import { Itheme } from '../../modal/themes.modal';
 export class RecentTopicsComponent implements OnInit {
   @Input() public themeLists: Itheme[] | null = null;
 
+  @Input() public linkToList: Function | null = null;
+
   constructor() { }
 
   ngOnInit(): void {

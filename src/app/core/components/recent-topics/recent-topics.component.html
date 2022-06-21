@@ -1,8 +1,17 @@
 <section class="recent-topics"
-  *ngIf="themeLists">
+  *ngIf="themeLists && linkToList">
   <ul class="recent-topics__list"
     *ngFor="let recent of (themeLists | recentTopics)">
-    <li>{{recent.name}}</li>
+    <li>
+      <p class="recent-topics__list__title">{{recent.name}}</p>
+      <p class="recent-topics__list__theme">
+        {{recent.theme}}, {{recent.subTheme}}
+      </p>
+      <p class="recent-topics__list__date">{{recent.date | date: 'EEEE, MMMM d, y'}}</p>
+      <p>
+        <a (click)="linkToList(recent.url)">MORE...</a>
+      </p>
+    </li>
   </ul>
 
 </section>

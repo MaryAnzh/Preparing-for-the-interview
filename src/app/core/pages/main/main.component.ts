@@ -18,7 +18,7 @@ export class MainComponent {
     private coreService: CoreService,
   ) { }
 
-  linkToList(url: string): void {
+  @Input() linkToList(url: string): void {
     if (url !== '') {
       this.router.navigateByUrl(url);
       this.coreService.updateIsMain(false);

@@ -314,10 +314,10 @@ export const themeLists: Itheme[] = [
     subTheme: [
     //03-00
       {
-        name: 'Прыгающий контент от скролл',
+        name: 'problems',
         description: [
           {
-            name: 'При появлении полосы прокрутки сбоку, контент заметно смещается',
+            name: 'Прыгающий контент от скролл-бар',
             progress: true,
             date: new Date('06/15/2022 14:00'),
             url: 'css-scroll',
