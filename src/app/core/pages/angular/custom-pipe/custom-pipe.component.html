@@ -87,8 +87,8 @@ export const themeLists: Itheme[] = [
     </div>
 
     <h4 class="sample__title-result">Result</h4>
-    <!-- <app-browser-frame></app-browser-frame> -->
-    <ul class="sample__result"
+    <app-browser-frame>
+          <ul class="sample__result"
     *ngFor="let recent of sampleThemeLists | recentTopics">
     <li>
       <p class="sample__result__title">{{recent.name}}</p>
@@ -98,4 +98,6 @@ export const themeLists: Itheme[] = [
       <p class="sample__result__date">{{recent.date | date: 'EEEE, MMMM d, y'}}</p>
     </li>
     </ul>
+    </app-browser-frame>
+
   </section>
