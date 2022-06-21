@@ -1,7 +1,7 @@
 <section class="recent-topics"
   *ngIf="themeLists && linkToList">
   <ul class="recent-topics__list"
-    *ngFor="let recent of (themeLists | recentTopics)">
+    *ngFor="let recent of themeLists | recentTopics">
     <li>
       <p class="recent-topics__list__title">{{recent.name}}</p>
       <p class="recent-topics__list__theme">

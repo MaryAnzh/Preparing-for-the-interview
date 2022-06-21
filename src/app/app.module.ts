@@ -13,6 +13,7 @@ import { FooterComponent } from './core/components/footer/footer.component';
 import { CustomPipeComponent } from './core/pages/angular/custom-pipe/custom-pipe.component';
 import { RecentTopicsPipe } from './core/pipes/recent-topics/recent-topics.pipe';
 import { RecentTopicsComponent } from './core/components/recent-topics/recent-topics.component';
+import { BrowserFrameComponent } from './core/components/browser-frame/browser-frame.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RecentTopicsComponent } from './core/components/recent-topics/recent-to
     FooterComponent,
     CustomPipeComponent,
     RecentTopicsPipe,
-    RecentTopicsComponent
+    RecentTopicsComponent,
+    BrowserFrameComponent
   ],
   imports: [
     BrowserModule,
