@@ -20,16 +20,201 @@
       &__site-name {
         width: 300px;
         height: 25px;
+        padding-left: 10px;
         border-radius: 8px 8px 0 0;
         background: #ffffff;
+        display: flex;
+        align-items: center;
+
+        &__fav {
+          width: 16px;
+          height: 16px;
+          background: $additionalDark;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #ffffff;
+          font-size: 12px;
+        }
+
+        &__name {
+          width: 250px;
+          padding-left: 10px;
+        }
+
+        &__cross {
+          font-size: 22px;
+          color: $mainColorDark;
+          padding-right: 10px;
+          transform: rotate(0.125turn);
+        }
+      }
+
+      &__cross {
+        width: 100px;
+        padding-left: 10px;
+        font-size: 26px;
+        color: $mainColorDark;
+      }
+
+      &__icons {
+        width: 72px;
+        height: 30px;
+        margin-right: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        &__icon {
+          width: 20px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &__line {
+            width: 70%;
+            height: 1px;
+            background: $mainColorDark;
+          }
+
+          &__open {
+            width: 10px;
+            height: 10px;
+            position: relative;
+            transform: translate(0px, -2px);
+            border: 1px solid $mainColorDark;
+
+            &::after {
+              content: "";
+              position: absolute;
+              width: 8px;
+              height: 8px;
+              transform: translate(-4px, 2px);
+              border: 1px solid $mainColorDark;
+              background: $mainColorLight;
+            }
+          }
+        }
+
+        .cross {
+          background: $contrastColor;
+          color: #ffffff;
+
+          p {
+            font-size: 20px;
+            transform: rotate(0.125turn);
+          }
+        }
       }
     }
 
     &__url {
       width: 100%;
-      height: 30px;
+      height: 38px;
       background: $mainColorLight2;
       margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+
+      &__icon {
+        height: 30px;
+        display: flex;
+        align-items: center;
+
+        &__arrow {
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $mainColorFont;
+        }
+
+        &__arrow:nth-child(2) {
+          opacity: 0.3;
+        }
+
+        &__arrow-round {
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $mainColorFont;
+          transform: rotate(0.25turn);
+          font-size: 20px;
+        }
+      }
+
+      &__field {
+        width: 100%;
+        height: 30px;
+        background: #ffffff;
+        border: 1px solid $mainColorDark;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+
+        &__icon {
+          width: 15px;
+          height: 15px;
+          margin: 0 10px;
+          border: 1px solid $mainColor;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: $mainColor;
+          font-size: 12px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+
+      }
+
+      &__icon2 {
+        width: 80px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        &__user-icon {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background: $mainColorDark;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          p {
+            color: #ffffff;
+            font-size: 16px;
+          }
+        }
+
+        &__setting {
+          width: 10px;
+          height: 16px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+
+          &__point {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: $mainColorDark;
+          }
+        }
+      }
     }
   }
 }

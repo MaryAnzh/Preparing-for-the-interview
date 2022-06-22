@@ -1,9 +1,56 @@
 <section class="frame">
   <div class="frame__header">
-    <div class="frame__header__site-name"></div>
+    <div class="frame__header__site-name">
+      <div class="frame__header__site-name__fav">
+        A
+      </div>
+      <div class="frame__header__site-name__name">
+        {{siteName}}
+      </div>
+      <div class="frame__header__site-name__cross">
+        +
+      </div>
+    </div>
+    <div class="frame__header__cross">
+      +
+    </div>
+    <div class="frame__header__icons">
+      <div class="frame__header__icons__icon line">
+        <div class="frame__header__icons__icon__line"></div>
+      </div>
+      <div class="frame__header__icons__icon">
+        <div class="frame__header__icons__icon__open"></div>
+      </div>
+      <div class="frame__header__icons__icon cross">
+        <p>+</p>
+      </div>
+    </div>
   </div>
+
   <div class="frame__url">
 
+    <div class="frame__url__icon">
+      <div class="frame__url__icon__arrow">🡠</div>
+      <div class="frame__url__icon__arrow">🡪</div>
+      <div class="frame__url__icon__arrow-round">↻</div>
+    </div>
+
+    <div class="frame__url__field">
+      <div class="frame__url__field__icon">i</div>
+      <p>http://localhost:4200/</p>
+    </div>
+
+    <div class="frame__url__icon2">
+      <div class="frame__url__icon2__user-icon">
+        <p>M</p>
+      </div>
+      <div class="frame__url__icon2__setting">
+        <div class="frame__url__icon2__setting__point"></div>
+        <div class="frame__url__icon2__setting__point"></div>
+        <div class="frame__url__icon2__setting__point"></div>
+      </div>
+    </div>
   </div>
-<ng-content></ng-content>
+
+  <ng-content></ng-content>
 </section>

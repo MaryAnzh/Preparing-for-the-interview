@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { showPipeFile, showPipeFileHTML } from 'src/app/core/data/showPipeFile';
 import { Itheme } from 'src/app/core/modal/themes.modal';
 
@@ -51,6 +51,7 @@ export class CustomPipeComponent implements OnInit {
 
   public showPipeFileHTML: string = showPipeFileHTML;
 
+  @Input() public siteName = 'Custom pipe';
   constructor() { }
 
   ngOnInit(): void {

@@ -87,7 +87,8 @@ export const themeLists: Itheme[] = [
     </div>
 
     <h4 class="sample__title-result">Result</h4>
-    <app-browser-frame>
+    <app-browser-frame
+    [siteName]="siteName">
           <ul class="sample__result"
     *ngFor="let recent of sampleThemeLists | recentTopics">
     <li>
