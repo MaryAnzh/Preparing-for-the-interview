@@ -2,12 +2,46 @@ import { NEVER } from "rxjs";
 import { Itheme } from "../modal/themes.modal";
 
 export const themeLists: Itheme[] = [
-// JS
+  // JS
   {
     name: "JS",
     isSubThemeShow: false,
     subTheme: [
-    //00-00 Variables
+      //use strict
+      {
+        name: 'use strict',
+        description: [
+          {
+            name: 'use strict',
+            date: null,
+            progress: false,
+            url: '',
+          },
+        ],
+        progress: false,
+      },
+
+      //Advanced Expressions
+      {
+        name: 'Advanced Expressions',
+        description: [
+          {
+            name: 'Hoisting',
+            date: null,
+            progress: false,
+            url: '',
+          },
+          {
+            name: 'Temporal dead zone',
+            date: null,
+            progress: false,
+            url: '',
+          }
+        ],
+        progress: false,
+      },
+
+      //Variables
       {
         name: 'Variables',
         description: [
@@ -20,7 +54,8 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-      //00-01 Types
+
+      //Types
       {
         name: 'Types',
         description: [
@@ -33,7 +68,8 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-      //00-02 Set. Map
+
+      //Set. Map
       {
         name: 'Set. Map',
         description: [
@@ -46,30 +82,70 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-      //00-03 Objects
+
+      //Objects
       {
         name: 'Objects',
         description: [
+          //create, modify
           {
-            name: 'create, modify, built-in methods',
+            name: 'create, modify',
             progress: false,
             date: null,
             url: '',
           },
+          //built-in methods
           {
-            name: 'Object static methods',
+            name: 'built-in methods',
             progress: false,
             date: null,
             url: '',
           },
+          //Object public, private, static members
+          {
+            name: 'Object public, private, static members',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //Object keys/values
+          {
+            name: 'Object keys/values',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //calculated props
           {
             name: 'calculated props',
             progress: false,
             date: null,
             url: '',
           },
+          //Property flags & descriptors
+          {
+            name: 'Property flags & descriptors',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //getter & setter
           {
             name: 'getter & setter',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //iterable objects
+          {
+            name: 'iterable objects',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //Object as Hash
+          {
+            name: 'Object as Hash (to loop through Object keys)',
             progress: false,
             date: null,
             url: '',
@@ -77,40 +153,54 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-      //00-04 Array
+
+      // Array
       {
         name: 'Array',
         description: [
+          //create, modify, indexes, length
           {
-            name: 'create, modify, indexes, length, built-in methods',
+            name: 'create, modify, indexes, length',
             progress: false,
             date: null,
             url: '',
           },
+          //built-in methods
           {
             name: 'built-in methods',
             progress: false,
             date: null,
             url: '',
           },
+          //copy array part
+          {
+            name: 'copy array, array part',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //Sorting
           {
             name: 'Sorting',
             progress: false,
             date: null,
             url: '',
           },
+          //filtering
           {
             name: 'filtering',
             progress: false,
             date: null,
             url: '',
           },
+          //search
           {
             name: 'search',
             progress: false,
             date: null,
             url: '',
           },
+          //iterating
           {
             name: 'iterating',
             progress: false,
@@ -120,42 +210,42 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-      //00-05 Functions
+
+      //Functions
       {
         name: 'Functions',
         description: [
+          //create
           {
             name: 'create',
             progress: false,
             date: null,
             url: '',
           },
+          //invoke
           {
             name: 'invoke',
             progress: false,
             date: null,
             url: '',
           },
+          //arrow functions
           {
             name: 'arrow functions',
             progress: false,
             date: null,
             url: '',
           },
+          //rest & spread operator
           {
             name: 'rest & spread operator',
             progress: false,
             date: null,
             url: '',
           },
+          //default parameters
           {
             name: 'default parameters',
-            progress: false,
-            date: null,
-            url: '',
-          },
-          {
-            name: 'scope, closure, recursion',
             progress: false,
             date: null,
             url: '',
@@ -163,30 +253,156 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-      //00-06 This, Prototype
+
+      //Functional Scope
+      {
+        name: 'Functional Scope',
+        description: [
+          //global scope and functional scope
+          {
+            name: 'global scope and functional scope',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //variables visibility areas
+          {
+            name: 'variables visibility areas',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //closure, recursion
+          {
+            name: 'closure, recursion',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //nested scopes
+          {
+            name: 'nested scopes',
+            progress: false,
+            date: null,
+            url: '',
+          },
+        ],
+        progress: false,
+      },
+
+      //This, Prototype
       {
         name: 'This, Prototype',
         description: [
+          //execution context
           {
             name: 'execution context',
             progress: false,
             date: null,
             url: '',
           },
+          //call/apply/bind methods
           {
             name: 'call/apply/bind methods',
             progress: false,
             date: null,
             url: '',
           },
+          //constructor functions
           {
             name: 'constructor functions',
             progress: false,
             date: null,
             url: '',
           },
+          //understanding of prototypes
           {
             name: 'understanding of prototypes',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //__proto__ property
+          {
+            name: '__proto__ property',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //[Object.create] and define __proto__ explicitly
+          {
+            name: `[Object.create] and define __proto__ explicitly`,
+            progress: false,
+            date: null,
+            url: '',
+          },
+          // set / get object prototype
+          {
+            name: `set / get object prototype`,
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //prototype property
+          {
+            name: `prototype property`,
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //dependency between function constructor prototype and instance __proto__
+          {
+            name: `dependency between function constructor prototype and instance __proto__`,
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //create 'class' methods using function prototype property
+          {
+            name: `create 'class' methods using function prototype property`,
+            progress: false,
+            date: null,
+            url: '',
+          },
+        ],
+        progress: false,
+      },
+
+      //Classes
+      {
+        name: 'Classes',
+        description: [
+          //constructors
+          {
+            name: 'constructors',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //difference between class and constructor function
+          {
+            name: 'difference between class and constructor function',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //Getter/setter
+          {
+            name: 'Getter/setter',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //super(), where we have to use it
+          {
+            name: 'super(), where we have to use it',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //static members
+          {
+            name: 'static members',
             progress: false,
             date: null,
             url: '',
@@ -195,41 +411,75 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-      //00-07 Classes
-      {
-        name: 'Classes',
-        description: [
-          {
-            name: 'constructors',
-            progress: false,
-            date: null,
-            url: '',
-          },
-          {
-            name: 'static members',
-            progress: false,
-            date: null,
-            url: '',
-          },
-        ],
-        progress: false,
-      },
-      //00-08 Async JavaScript
+
+      //Async JavaScript
       {
         name: 'Async JavaScript',
         description: [
+          //Timers
           {
             name: 'Timers',
             progress: true,
             date: null,
             url: 'timers',
           },
+          //Promise
           {
             name: 'Promise',
             progress: false,
             date: null,
             url: '',
           },
+          //Promise states
+          {
+            name: '\Promise states',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //Promise Chaining
+          {
+            name: 'Promise Chaining',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //built-in methods
+          {
+            name: 'built-in methods',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //Promise static methods
+          {
+            name: 'Promise static methods',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //compare promise and callback patterns
+          {
+            name: 'compare promise and callback patterns',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //handle errors in promises
+          {
+            name: 'handle errors in promises',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //event loop
+          {
+            name: 'event loop',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //sync/await
           {
             name: 'async/await',
             progress: false,
@@ -267,7 +517,216 @@ export const themeLists: Itheme[] = [
     ]
   },
 
-  //TypeScript 01
+  //JavaScript in Browser
+  {
+    name: 'JavaScript in Browser',
+    isSubThemeShow: false,
+    subTheme: [
+      //Global object window
+      {
+        name: 'Global object window',
+        description: [
+          //Location
+          {
+            name: 'Location',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //History API (Global object window)
+          {
+            name: 'History API (Global object window)',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //history state
+          {
+            name: 'history state',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //navigator
+          {
+            name: 'navigator',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //screen
+          {
+            name: 'screen',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //document
+          {
+            name: 'document',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //cookies
+          {
+            name: 'cookies',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //Difference between localStorage, sessionStorage, session and cookies
+          {
+            name: '\Difference between localStorage, sessionStorage, session and cookies',
+            progress: false,
+            date: null,
+            url: '',
+          },
+        ],
+        progress: false,
+      },
+      //DOM Manipulation
+      {
+        name: 'DOM Manipulation',
+        description: [
+          {
+            name: 'selection, traversing, modification, live collections',
+            progress: false,
+            date: null,
+            url: '',
+          }
+        ],
+        progress: false,
+      },
+      //Nodes Modification
+      {
+        name: 'Nodes Modification',
+        description: [
+          {
+            name: 'node properties, attributes, data attributes, styling',
+            progress: false,
+            date: null,
+            url: '',
+          }
+        ],
+        progress: false,
+      },
+      //Events Basics
+      {
+        name: 'Events Basics',
+        description: [
+        //difference between capturing and bubbling
+          {
+            name: 'difference between capturing and bubbling',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //Event concept
+          {
+            name: 'Event concept',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //Custom events
+          {
+            name: 'Custom events',
+            progress: false,
+            date: null,
+            url: '',
+          },
+        ],
+        progress: false,
+      },
+      //Events Propagation / Preventing
+      {
+        name: 'Events Propagation / Preventing',
+        description: [
+        //Event propagation cycle
+          {
+            name: 'Event propagation cycle',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //stop Event propagation
+          {
+            name: 'stop Event propagation',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //Event delegating concept
+          {
+            name: 'Event delegating concept',
+            progress: false,
+            date: null,
+            url: '',
+          },
+
+        ],
+        progress: false,
+      },
+      //Event Handling
+      {
+        name: 'Event Handling',
+        description: [
+          {
+            name: 'node properties, attributes, data attributes, styling',
+            progress: false,
+            date: null,
+            url: '',
+          },
+        ],
+        progress: false,
+      },
+      //Browser API
+      {
+        name: 'Browser API',
+        description: [
+          //Fetch
+          {
+            name: 'Fetch',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //Console
+          {
+            name: 'Console',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //Storage
+          {
+            name: 'Storage',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //History
+          {
+            name: 'History',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //Web Animations API
+          {
+            name: 'Web Animations API',
+            progress: false,
+            date: null,
+            url: '',
+          }
+        ],
+        progress: false,
+      },
+    ]
+  },
+
+  //TypeScript
   {
     name: 'TypeScript',
     isSubThemeShow: false,
@@ -287,7 +746,7 @@ export const themeLists: Itheme[] = [
     ]
   },
 
-  //HTML 02
+  //HTML
   {
     name: 'HTML',
     isSubThemeShow: false,
@@ -307,12 +766,12 @@ export const themeLists: Itheme[] = [
     ]
   },
 
-  //CSS.SCSS 03
+  //CSS.SCSS
   {
     name: 'CSS/SCSS',
     isSubThemeShow: false,
     subTheme: [
-    //03-00
+      //03-00
       {
         name: 'problems',
         description: [
@@ -368,16 +827,25 @@ export const themeLists: Itheme[] = [
     ]
   },
 
-  //Animation 05
+  //Animation
   {
     name: 'Animation',
     isSubThemeShow: false,
     subTheme: [
+    //Browser Animation
       {
-        name: '',
+        name: 'Browser Animation',
         description: [
+        //requestAnimationFrame
           {
-            name: '',
+            name: 'requestAnimationFrame',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //Web Animations API
+          {
+            name: 'Web Animations API',
             progress: false,
             date: null,
             url: '',

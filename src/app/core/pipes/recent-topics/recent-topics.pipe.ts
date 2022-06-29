@@ -29,14 +29,11 @@ export class RecentTopicsPipe implements PipeTransform {
               date: elem.date,
               url: elem.url,
             }
-
             recentTopics.push(recentTopic);
           }
         });
       })
     });
-
     return recentTopics.sort((a, b) => +b.date - +a.date );
   }
-
 }
