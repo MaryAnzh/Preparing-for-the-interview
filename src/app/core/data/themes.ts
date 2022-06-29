@@ -615,7 +615,7 @@ export const themeLists: Itheme[] = [
       {
         name: 'Events Basics',
         description: [
-        //difference between capturing and bubbling
+          //difference between capturing and bubbling
           {
             name: 'difference between capturing and bubbling',
             progress: false,
@@ -643,7 +643,7 @@ export const themeLists: Itheme[] = [
       {
         name: 'Events Propagation / Preventing',
         description: [
-        //Event propagation cycle
+          //Event propagation cycle
           {
             name: 'Event propagation cycle',
             progress: false,
@@ -731,15 +731,39 @@ export const themeLists: Itheme[] = [
     name: 'TypeScript',
     isSubThemeShow: false,
     subTheme: [
+      //TypeScript
       {
-        name: '',
+        name: 'TypeScript',
         description: [
+          //TS(ES6) module system
           {
-            name: '',
+            name: 'TS(ES6) module system',
             progress: false,
             date: null,
             url: '',
-          }
+          },
+          //interfaces, custom types, types/interface differences
+          {
+            name: 'interfaces, custom types, types/interface differences',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //function types.
+          {
+            name: 'function type',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //utitily types, typeguards, generic types
+          {
+            name: 'futitily types, typeguards, generic types',
+            progress: false,
+            date: null,
+            url: '',
+          },
+
         ],
         progress: false,
       },
@@ -771,7 +795,35 @@ export const themeLists: Itheme[] = [
     name: 'CSS/SCSS',
     isSubThemeShow: false,
     subTheme: [
-      //03-00
+      //CSS Methodologies
+      {
+        name: 'CSS Methodologies',
+        description: [
+        //BEM, OOCSS, SMACSS, ITCSS, Atomic CSS
+          {
+            name: 'BEM, OOCSS, SMACSS, ITCSS, Atomic CSS',
+            progress: false,
+            date: null,
+            url: '',
+          }
+        ],
+        progress: false,
+      },
+      //CSS Preprocessors
+      {
+        name: 'CSS Preprocessors',
+        description: [
+          //LESS, SASS/SCSS, Stylus
+          {
+            name: 'LESS, SASS/SCSS, Stylus',
+            progress: false,
+            date: null,
+            url: '',
+          }
+        ],
+        progress: false,
+      },
+      //problems
       {
         name: 'problems',
         description: [
@@ -787,7 +839,43 @@ export const themeLists: Itheme[] = [
     ]
   },
 
-  //Angular 04
+  //Design patterns
+  {
+    name: 'Design patterns',
+    isSubThemeShow: false,
+    subTheme: [
+    //design patterns
+      {
+        name: 'design patterns',
+        description: [
+        //design patterns
+          {
+            name: 'design patterns',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //KISS, DRY, YAGNI
+          {
+            name: 'KISS, DRY, YAGNI',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //behind SOLID principles
+          {
+            name: 'behind SOLID principles',
+            progress: false,
+            date: null,
+            url: '',
+          },
+        ],
+        progress: false,
+      },
+    ]
+  },
+
+  //Angular
   {
     name: 'Angular',
     isSubThemeShow: false,
@@ -832,11 +920,11 @@ export const themeLists: Itheme[] = [
     name: 'Animation',
     isSubThemeShow: false,
     subTheme: [
-    //Browser Animation
+      //Browser Animation
       {
         name: 'Browser Animation',
         description: [
-        //requestAnimationFrame
+          //requestAnimationFrame
           {
             name: 'requestAnimationFrame',
             progress: false,
