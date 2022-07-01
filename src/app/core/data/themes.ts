@@ -475,9 +475,9 @@ export const themeLists: Itheme[] = [
           //event loop
           {
             name: 'event loop',
-            progress: false,
-            date: null,
-            url: '',
+            progress: true,
+            date: new Date('06/30/2022'),
+            url: 'event-loop',
           },
           //sync/await
           {

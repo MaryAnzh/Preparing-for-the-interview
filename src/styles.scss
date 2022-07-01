@@ -26,7 +26,7 @@ h4,
 h5,
 h6 {
   color: $mainColor;
-  margin-bottom: 20px;
+  margin-bottom: 10px 0;
 }
 
 h1 {
@@ -58,6 +58,16 @@ button {
   text-transform: uppercase;
   border-radius: 6px;
   cursor: pointer;
+  background: $mainColor;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: none;
+  transition: .3s;
+
+  &:hover {
+    background: $mainColorFont;
+
+  }
 }
 
 .code {
@@ -74,11 +84,27 @@ pre {
   color: $mainColorFont;
 }
 
-ul::first-letter {
-  text-transform: uppercase;
-}
-
 .links-list {
   list-style: disc;
   padding-bottom: 20px;
+  margin-left: 20px;
+
+  li {
+    padding-left: 10px;
+  }
+}
+
+.links-list-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.links-list-title::first-letter {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: bold;
+  font-size: 18px;
+  color: $mainColorDark;
 }

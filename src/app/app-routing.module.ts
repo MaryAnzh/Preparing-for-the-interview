@@ -7,7 +7,7 @@ import { JsTimersComponent } from './core/pages/js-pages/js-timers/js-timers.com
 import { PipesComponent } from './core/pages/angular/pipes/pipes.component';
 import { AngularAnchorComponent } from './core/pages/angular/angular-anchor/angular-anchor.component';
 import { CustomPipeComponent } from './core/pages/angular/custom-pipe/custom-pipe.component';
-
+import { EventLoopComponent } from './core/pages/js-pages/event-loop/event-loop.component';
 
 const routes: Routes = [
   {
@@ -38,6 +38,10 @@ const routes: Routes = [
   {
     path: 'custom-pipe',
     component: CustomPipeComponent
+  },
+  {
+    path: 'event-loop',
+    component: EventLoopComponent
   }
 ];
 

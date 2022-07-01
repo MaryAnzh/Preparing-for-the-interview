@@ -14,6 +14,7 @@ import { CustomPipeComponent } from './core/pages/angular/custom-pipe/custom-pip
 import { RecentTopicsPipe } from './core/pipes/recent-topics/recent-topics.pipe';
 import { RecentTopicsComponent } from './core/components/recent-topics/recent-topics.component';
 import { BrowserFrameComponent } from './core/components/browser-frame/browser-frame.component';
+import { EventLoopComponent } from './core/pages/js-pages/event-loop/event-loop.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { BrowserFrameComponent } from './core/components/browser-frame/browser-f
     CustomPipeComponent,
     RecentTopicsPipe,
     RecentTopicsComponent,
-    BrowserFrameComponent
+    BrowserFrameComponent,
+    EventLoopComponent
   ],
   imports: [
     BrowserModule,
