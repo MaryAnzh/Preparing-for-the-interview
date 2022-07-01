@@ -23,8 +23,10 @@
 
     &__example {
       display: flex;
+      justify-content: space-between;
 
       &__code {
+        width: 45%;
         &__pre {
 
           .select {
@@ -35,13 +37,29 @@
       }
 
       &__arroy {
+        margin-top: 20px;
         button {
           width: 34px;
           height: 34px;
           padding: 0;
           border-radius: 50%;
           border: none;
-          background: $mainColorDark;
+          cursor: pointer;
+          box-shadow: 0px 0px 5px rgb(180, 180, 180);
+          background: $mainColor;
+
+          &:hover {
+            background: $mainColorDark;
+            box-shadow: none;
+          }
+
+          &:active {
+            background: $mainColor;
+          }
+
+          &:active svg {
+            fill: $mainColorLight;
+          }
 
           svg {
             width: 28px;
@@ -50,6 +68,12 @@
             fill: #ffffff;
           }
         }
+      }
+
+      &__text {
+        width: 45%;
+        height: 400px;
+        background: $mainColorLight;
       }
     }
   }
