@@ -51,10 +51,14 @@
     <div class="event-loop__example">
       <div class="event-loop__example__code code">
         <pre class="event-loop__example__code__pre">
-        <code>{{codes[0]}}</code>
-        <code [ngClass]="{'select': stringSelectIterationArr[0]}">{{codes[1]}}</code>
-        <code>{{codes[02]}}</code>
-        <code [ngClass]="{'select': stringSelectIterationArr[1]}">{{codes[3]}}</code>
+          <code>{{"//Создвем макро-задачу-1, нажимая на кнопку 'Show'"}}</code>
+          <code [ngClass]="{'select': stringSelectIterationArr[0]}">{{codes[0]}}</code>
+
+          <code>{{"//Вызываем функцию, ассоциирующуюся с этой  макро задачей"}}</code>
+          <code [ngClass]="{'select': stringSelectIterationArr[1]}">{{"task01(): void {"}}</code>
+          <code [ngClass]="{'select': stringSelectIterationArr[2]}">{{"  setTimeout(() => console.log('01. setTimeout 1'), 0);"}}</code>
+          <code [ngClass]="{'select': stringSelectIterationArr[3]}">{{"  setTimeout(() => console.log('02. setTimeout 2'), 0);"}}</code>
+          <code [ngClass]="{'select': stringSelectIterationArr[4]}">{{"  setTimeout(() => console.log('03. setTimeout 3'), 0);"}}</code>
       </pre>
       </div>
       <div class="event-loop__example__arroy">

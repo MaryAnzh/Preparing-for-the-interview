@@ -8,57 +8,10 @@ import { Component, OnInit } from '@angular/core';
 
 export class EventLoopComponent implements OnInit {
   public codes: string[] = [
-    //0
-    `//Создвем макро-задачу-1, нажимая на кнопку 'Show'`,
-    //1
-    `<button (click)="task01()">Show</button>`,
-    `//Вызываем функцию, ассоциирующуюся с этой  макро задачей`,
-    `task01(): void {`,
-    `//Создвем макро-задачу-2, отправляется в конец очереди
-      //lop выполняется в контексте Макро-задачи 2
-      setTimeout(() => console.log('setTimeout 1.'), 0);
-      //Создвем макро-задачу-3, отправляется в конец очереди
-      //lop выполняется в контексте Макро-задачи 3
-      setTimeout(() => console.log('setTimeout 2.'), 0);
-      //Создвем макро-задачу-4, отправляется в конец очереди
-      //lop выполняется в контексте Макро-задачи 4
-      setTimeout(() => console.log('setTimeout 3.'), 0);
-
-      //log выполняется в контексте Макро-задачи 1
-      console.log('1. log task01 (01) (контекст 01)');
-
-      //Promise, выполняется в контексте макро-задачи-1
-      //setTimeout создает маеро-задачу-5
-      const a = new Promise((resolve, reject) =>
-
-      setTimeout(() => {
-          console.log('2. Promise task01 (02) (контекст 01)');
-          resolve('3. resolve task01 (03) (контекст 01)');
-        }, 0));
-      console.log('4. log task01 (04) (контекст 01)');
-      a.then((resolve) => console.log(resolve));
-
-      setTimeout(() => console.log('setTimeout 4.'), 0);
-
-
-      function task02() {
-        console.log('5. log task02 (01)(вторая задача) (контекст 02)');
-        a.finally(() => console.log('6. finally task02 выполнен (вторая задача) (контекст 01)'));
-        function task03() {
-          setTimeout(() => console.log('(setTimeout контекст 03)'), 0);
-          console.log('6. log task03 (01)((контекст 03))');
-          a.finally(() => console.log('6. finally task03 выполнен ((контекст 03))'));
-        }
-        task03();
-      }
-      task02();
-      a.finally(() => console.log('7. finally выполнен'));
-      console.log('8. log -- самый нижний');
-
-    }`,
+  `<button (click)="task01()">Show</button>`,
   ]
 
-  public allStringCount: number = 2;
+  public allStringCount: number = 5;
 
   public stringSelectIterationArr: boolean[] = new Array(2).fill(false);
 
@@ -115,7 +68,6 @@ export class EventLoopComponent implements OnInit {
 
   selectedCodeStrinOnClick() {
     this.selectStringNumber++;
-    console.log(this.selectStringNumber);
     if (this.selectStringNumber === 0) {
       this.stringSelectIterationArr[this.selectStringNumber] = true;
     } else if (this.selectStringNumber !== 0 && this.selectStringNumber < this.allStringCount) {
