@@ -57,29 +57,29 @@
     <code [ngClass]="{'select': stringSelectIterationArr[3]}">{{"  console.log('02');"}}</code>
     <code [ngClass]="{'select': stringSelectIterationArr[4]}">{{"  const a = new Promise((resolve, reject) => {"}}</code>
     <code [ngClass]="{'select': stringSelectIterationArr[5]}">{{"    setTimeout(() => {"}}</code>
-    <code [ngClass]="{'select': stringSelectIterationArr[6]}">{{"      console.log('03');"}}</code>
+    <code [ngClass]="{'select': false}">{{"      console.log('03');"}}</code>
     <code>{{"      resolve('resolve a');  })"}}</code>
     <code>{{"  });"}}</code>
-    <code [ngClass]="{'select': stringSelectIterationArr[7]}">{{"  console.log('04');"}}</code>
-    <code [ngClass]="{'select': stringSelectIterationArr[8]}">{{"  a.then((resolve) => console.log('05'));"}}</code>
-    <code [ngClass]="{'select': stringSelectIterationArr[9]}">{{"  setTimeout(() => console.log('06'), 0);"}}</code>
-    <code [ngClass]="{'select': stringSelectIterationArr[11]}">{{"  function fun01() {"}}</code>
-    <code [ngClass]="{'select': stringSelectIterationArr[12]}">{{"    console.log('07');"}}</code>
-    <code [ngClass]="{'select': stringSelectIterationArr[14]}">{{"    function fun02() {"}}</code>
-    <code [ngClass]="{'select': stringSelectIterationArr[15]}">{{"      setTimeout(() => console.log('08'), 0);"}}</code>
-    <code [ngClass]="{'select': stringSelectIterationArr[16]}">{{"      console.log('09')"}}</code>
-    <code [ngClass]="{'select': stringSelectIterationArr[17]}">{{"      a.then((resolve) => console.log(`10`));"}}</code>
+    <code [ngClass]="{'select': stringSelectIterationArr[6]}">{{"  console.log('04');"}}</code>
+    <code [ngClass]="{'select': stringSelectIterationArr[7]}">{{"  a.then((resolve) => console.log('05'));"}}</code>
+    <code [ngClass]="{'select': stringSelectIterationArr[8]}">{{"  setTimeout(() => console.log('06'), 0);"}}</code>
+    <code [ngClass]="{'select': stringSelectIterationArr[10]}">{{"  function fun01() {"}}</code>
+    <code [ngClass]="{'select': stringSelectIterationArr[11]}">{{"    console.log('07');"}}</code>
+    <code [ngClass]="{'select': stringSelectIterationArr[13]}">{{"    function fun02() {"}}</code>
+    <code [ngClass]="{'select': stringSelectIterationArr[14]}">{{"      setTimeout(() => console.log('08'), 0);"}}</code>
+    <code [ngClass]="{'select': stringSelectIterationArr[15]}">{{"      console.log('09')"}}</code>
+    <code [ngClass]="{'select': stringSelectIterationArr[16]}">{{"      a.then((resolve) => console.log(`10`));"}}</code>
     <code>{{"    }"}}</code>
-    <code [ngClass]="{'select': stringSelectIterationArr[13]}">{{"    fun02();"}}</code>
+    <code [ngClass]="{'select': stringSelectIterationArr[12]}">{{"    fun02();"}}</code>
     <code>{{"  }"}}</code>
-    <code [ngClass]="{'select': stringSelectIterationArr[10]}">{{"  fun01();"}}</code>
-    <code [ngClass]="{'select': stringSelectIterationArr[18]}">{{"  const b = new Promise((resolve, reject) => {"}}</code>
-    <code [ngClass]="{'select': stringSelectIterationArr[19]}">{{"    console.log('11');"}}</code>
+    <code [ngClass]="{'select': stringSelectIterationArr[9]}">{{"  fun01();"}}</code>
+    <code [ngClass]="{'select': stringSelectIterationArr[17]}">{{"  const b = new Promise((resolve, reject) => {"}}</code>
+    <code [ngClass]="{'select': stringSelectIterationArr[18]}">{{"    console.log('11');"}}</code>
     <code>{{"    resolve('resolve b');"}}</code>
     <code>{{"  });"}}</code>
-    <code [ngClass]="{'select': stringSelectIterationArr[20]}">{{"  b.then((resolve) => console.log(`12`));"}}</code>
-    <code [ngClass]="{'select': stringSelectIterationArr[21]}">{{"  console.log('13. log -- самый последний');"}}</code>
-    <code>{{"}"}}</code>
+    <code [ngClass]="{'select': stringSelectIterationArr[19]}">{{"  b.then((resolve) => console.log(`12`));"}}</code>
+    <code [ngClass]="{'select': stringSelectIterationArr[20]}">{{"  console.log('13. log -- самый последний');"}}</code>
+    <code [ngClass]="{'select': stringSelectIterationArr[21]}">{{"}"}}</code>
       </pre>
       </div>
       <div class="event-loop__example__arroy">
@@ -91,7 +91,11 @@
           </svg>
         </button>
       </div>
-      <div class="event-loop__example__text"></div>
+      <div class="event-loop__example__text">
+        <ng-container *ngFor="let task of codeDescription; let i = index">
+          <p *ngIf="stringSelectIterationArr[i]">{{task}}</p>
+        </ng-container>
+      </div>
     </div>
     <button (click)="task01()">Show in Console</button>
   </section>

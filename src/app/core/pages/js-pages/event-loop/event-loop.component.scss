@@ -71,9 +71,13 @@
       }
 
       &__text {
+
         width: 45%;
         height: 400px;
-        background: $mainColorLight;
+        padding-top: 20px;
+        padding-left: 10px;
+        background: $mainColorLight2;
+        color: black;
       }
     }
   }
