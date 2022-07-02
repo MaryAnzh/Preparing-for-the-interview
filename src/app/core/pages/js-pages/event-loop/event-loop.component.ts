@@ -45,11 +45,11 @@ export class EventLoopComponent implements OnInit {
     `09. Макро-задача-1, log, вложенная функция fun02`,
     `11, Макро-задача-1, Promise`,
     `13. Макро-задача-1, последний log`,
-    `12. Микро-задача-3 b.then, результат выполнения промиса уже есть в Макро-задаче-1`,
+    `12. Микро-задача-03 b.then, результат выполнения промиса уже есть в Макро-задаче-1`,
     `01. Макро-задача-2, setTimeout-1`,
     `03. Макро-задача-3, setTimeout-2 in Promise, log`,
-    `05. Микро-задача-01, then resolve a, ждет выполнения  Макро-задачи-3`,
-    `10. Макро-задача-3, resolve a, ждет выполнения Макро-задачи-3`,
+    `05. Микро-задача-01, оработала, после выполнения Макро-задачи-3, setTimeout-2`,
+    `10. Микро-задача-02, оработала, после выполнения Макро-задачи-3, setTimeout-2`,
     `06.  Макро-задача-4, setTimeout-3`,
     `08.  Макро-задача-5, setTimeout-4, вложенная функция fun02`
   ];
@@ -83,7 +83,7 @@ export class EventLoopComponent implements OnInit {
       }, 0);
     });
     console.log('04. Макро-задача-1, log');
-    a.then((resolve) => console.log(`05. Микро-задача-01, then ${resolve}, ждет выполнения  Макро-задачи-3`));
+    a.then((resolve) => console.log(`05. Микро-задача-01, оработала, после выполнения Макро-задачи-3, setTimeout-2`));
 
     setTimeout(() => console.log('06.  Макро-задача-4, setTimeout-3'), 0);
 
@@ -93,14 +93,14 @@ export class EventLoopComponent implements OnInit {
       function fun02() {
         setTimeout(() => console.log('08.  Макро-задача-5, setTimeout-4, вложенная функция fun02'), 0);
         console.log('09. Макро-задача-1, log, вложенная функция fun02');
-        a.then((resolve) => console.log(`10. Макро-задача-3, ${resolve}, ждет выполнения Макро-задачи-3`));
+        a.then((resolve) => console.log(`10. Микро-задача-02, оработала, после выполнения Макро-задачи-3, setTimeout-2`));
       }
       fun02();
     }
     fun01();
 
     const b = new Promise((resolve, reject) => {
-      console.log('11, Макро-задача-1, Promise');
+      console.log('11. Макро-задача-1, Promise');
       resolve('resolve b');
     });
 
