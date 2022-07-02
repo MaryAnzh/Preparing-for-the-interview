@@ -38,11 +38,32 @@ export class EventLoopComponent implements OnInit {
 
   ]
 
-  public allStringCount: number = 22;
+  public consoleData: string[] = [
+    `02. Макро-задача-1, log`,
+    `04. Макро-задача-1, log`,
+    `07. Макро-задача-1, log вложенная фукция fun01`,
+    `09. Макро-задача-1, log, вложенная функция fun02`,
+    `11, Макро-задача-1, Promise`,
+    `13. Макро-задача-1, последний log`,
+    `12. Микро-задача-3 b.then, результат выполнения промиса уже есть в Макро-задаче-1`,
+    `01. Макро-задача-2, setTimeout-1`,
+    `03. Макро-задача-3, setTimeout-2 in Promise, log`,
+    `05. Микро-задача-01, then resolve a, ждет выполнения  Макро-задачи-3`,
+    `10. Макро-задача-3, resolve a, ждет выполнения Макро-задачи-3`,
+    `06.  Макро-задача-4, setTimeout-3`,
+    `08.  Макро-задача-5, setTimeout-4, вложенная функция fun02`
+  ];
 
-  public stringSelectIterationArr: boolean[] = new Array(2).fill(false);
+  public allStringCount: number = 20;
+
+  public allTasksCount: number = 26;
+
+  public stringSelectIterationArr: boolean[] = [];
 
   public selectStringNumber: number = -1;
+
+  public showFirstMacroTask: boolean = true;
+  public showMacroTasksQueue: boolean = false;
 
   constructor(
     private _viewportScroller: ViewportScroller) { }
@@ -85,19 +106,35 @@ export class EventLoopComponent implements OnInit {
 
     b.then((resolve) => console.log(`12. Микро-задача-3 b.then, результат выполнения промиса уже есть в Макро-задаче-1`));
     console.log('13. Макро-задача-1, последний log');
+    // setTimeout(() => {
+    //   const b = Promise.resolve([1, 2, 3]);
+    //   b.then((resolve) => {
+    //     for (let i = 0; i < resolve.length; i++) {
+    //       console.log(resolve[i]);
+    //     }
+    //   });
+
+    // }, 0);
+
+    // const d = Promise.reject('Ошибка');
+    // d.catch((reject) => console.log(reject));
   }
 
   selectedCodeStrinOnClick() {
     this.selectStringNumber++;
+
     if (this.selectStringNumber === 0) {
       this.scrollFn('eventLoopPre');
       this.stringSelectIterationArr[this.selectStringNumber] = true;
-    } else if (this.selectStringNumber !== 0 && this.selectStringNumber < this.allStringCount) {
+    } else if (this.selectStringNumber !== 0 && this.selectStringNumber < this.allStringCount + 1) {
       this.stringSelectIterationArr[this.selectStringNumber - 1] = false;
       this.stringSelectIterationArr[this.selectStringNumber] = true;
-    } else if (this.selectStringNumber === this.allStringCount) {
+    } else if (this.selectStringNumber === this.allStringCount + 1) {
+      this.showFirstMacroTask = false;
+      this.showMacroTasksQueue = true;
+      this.stringSelectIterationArr[this.selectStringNumber] = true;
       this.stringSelectIterationArr[this.selectStringNumber - 1] = false;
-      this.selectStringNumber = -1;
+      console.log(this.stringSelectIterationArr[this.selectStringNumber], this.selectStringNumber);
     }
   }
 

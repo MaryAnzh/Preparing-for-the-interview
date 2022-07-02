@@ -50,7 +50,8 @@
     <h3>Пример</h3>
     <div class="event-loop__example">
       <div class="event-loop__example__code code">
-        <pre id="eventLoopPre" class="event-loop__example__code__pre">
+        <ng-container *ngIf="showFirstMacroTask">
+          <pre id="eventLoopPre" class="event-loop__example__code__pre">
     <code [ngClass]="{'select': stringSelectIterationArr[0]}">{{codes[0]}}</code>
     <code [ngClass]="{'select': stringSelectIterationArr[1]}">{{"task01(): void {"}}</code>
     <code [ngClass]="{'select': stringSelectIterationArr[2]}">{{"  setTimeout(() => console.log('01'), 0);"}}</code>
@@ -79,8 +80,23 @@
     <code>{{"  });"}}</code>
     <code [ngClass]="{'select': stringSelectIterationArr[19]}">{{"  b.then((resolve) => console.log(`12`));"}}</code>
     <code [ngClass]="{'select': stringSelectIterationArr[20]}">{{"  console.log('13. log -- самый последний');"}}</code>
-    <code [ngClass]="{'select': stringSelectIterationArr[21]}">{{"}"}}</code>
+    <code >{{"}"}}</code></pre>
+        </ng-container>
+        <ng-container *ngIf="showMacroTasksQueue">
+          <pre>
+        <code>{{"Очередь макро-задач"}}</code>
+        <code [ngClass]="{'select': stringSelectIterationArr[21]}">{{"Макро-задача-1"}}</code>
+        <code [ngClass]="{'select': stringSelectIterationArr[23]}">{{"Макро-задача-2"}}</code>
+        <code [ngClass]="{'select': stringSelectIterationArr[24]}">{{"Макро-задача-3"}}</code>
+        <code [ngClass]="{'select': stringSelectIterationArr[27]}">{{"Макро-задача-4"}}</code>
+        <code [ngClass]="{'select': stringSelectIterationArr[28]}">{{"Макро-задача-6"}}</code>
+
+        <code>{{"Очередь микро-задач"}}</code>
+        <code [ngClass]="{'select': stringSelectIterationArr[25]}">{{"Микро-задача-01"}}</code>
+        <code [ngClass]="{'select': stringSelectIterationArr[26]}">{{"Микро-задача-02"}}</code>
+        <code [ngClass]="{'select': stringSelectIterationArr[22]}">{{"Микро-задача-02"}}</code>
       </pre>
+        </ng-container>
       </div>
       <div class="event-loop__example__arroy">
         <button (click)="selectedCodeStrinOnClick()">
@@ -92,9 +108,41 @@
         </button>
       </div>
       <div class="event-loop__example__text">
-        <ng-container *ngFor="let task of codeDescription; let i = index">
-          <p *ngIf="stringSelectIterationArr[i]">{{task}}</p>
-        </ng-container>
+        <div class="event-loop__example__text__code-comment">
+          <div
+            *ngFor="let text of codeDescription; let i= index">
+            <p
+              *ngIf="stringSelectIterationArr[i]">{{text}}
+            </p>
+          </div>
+        </div>
+        <div class="event-loop__example__text__console">
+          <h4>Console</h4>
+          <ul style="font-family: monospace; line-height: 1.2;"
+          *ngFor="let task of consoleData">
+            <li>
+              {{task}}
+            </li>
+          </ul>
+
+        </div>
+        <div class="event-loop__example__text__queue">
+          <h4>Очередь Макро-задач</h4>
+          <div class="event-loop__example__text__queue__macro">
+            <div class="cards">Макро-задача-1</div>
+            <div class="cards">Макро-задача-2</div>
+            <div class="cards">Макро-задача-3</div>
+            <div class="cards">Макро-задача-4</div>
+            <div class="cards">Макро-задача-5</div>
+            <div class="cards">Макро-задача-5</div>
+        </div>
+        <h4>Очередь Микро-задач</h4>
+        <div class="event-loop__example__text__queue__micro">
+          <div class="cards">Ммкро-задача-01</div>
+          <div class="cards">Ммкро-задача-02</div>
+          <div class="cards">Ммкро-задача-03</div>
+        </div>
+      </div>
       </div>
     </div>
     <button (click)="task01()">Show in Console</button>
