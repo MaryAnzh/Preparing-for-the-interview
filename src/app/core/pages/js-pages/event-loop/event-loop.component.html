@@ -48,6 +48,9 @@
       выполнение .then/catch/finally становятся миеро задачами. Также
       миерозадачи порождает await</p>
     <h3>Пример</h3>
+    <p class="bolde">Создавая интерактивный пример, прописывая алгоритмы, --
+      очень хорошо начинаешь понимать, что за чем идет. И уже автоматом
+      пытаешься разобрать код на микро и макро задачи :)</p>
     <div class="event-loop__example">
       <div class="event-loop__example__code code">
         <ng-container *ngIf="showFirstMacroTask">
@@ -119,9 +122,11 @@
         <div class="event-loop__example__text__console">
           <h4>Console</h4>
           <ul style="font-family: monospace; line-height: 1.2;"
-          *ngFor="let task of consoleData">
-            <li>
-              {{task}}
+            *ngFor="let task of consoleData">
+            <li
+              *ngIf="task.visible"
+              [ngClass]="{'bold': task.isTitle}">
+              {{task.text}}
             </li>
           </ul>
 
@@ -129,20 +134,33 @@
         <div class="event-loop__example__text__queue">
           <h4>Очередь Макро-задач</h4>
           <div class="event-loop__example__text__queue__macro">
-            <div class="cards">Макро-задача-1</div>
-            <div class="cards">Макро-задача-2</div>
-            <div class="cards">Макро-задача-3</div>
-            <div class="cards">Макро-задача-4</div>
-            <div class="cards">Макро-задача-5</div>
-            <div class="cards">Макро-задача-5</div>
+            <ul>
+              <li
+                *ngFor="let macroTask of macrotaskDate"
+                [ngClass]="{
+                'cards': true,
+                'select-card': macroTask.select,
+                'visible': macroTask.visible,
+                'hidden': !macroTask.visible}">
+                {{macroTask.title}}
+              </li>
+            </ul>
+          </div>
+          <h4>Очередь Микро-задач</h4>
+          <div class="event-loop__example__text__queue__micro">
+            <ul>
+              <li
+                *ngFor="let microTask of microtaskDate"
+                [ngClass]="{
+                'cards': true,
+                'select-card': microTask.select,
+                'visible': microTask.visible,
+                'hidden': !microTask.visible}">
+                {{microTask.title}}
+              </li>
+            </ul>
+          </div>
         </div>
-        <h4>Очередь Микро-задач</h4>
-        <div class="event-loop__example__text__queue__micro">
-          <div class="cards">Ммкро-задача-01</div>
-          <div class="cards">Ммкро-задача-02</div>
-          <div class="cards">Ммкро-задача-03</div>
-        </div>
-      </div>
       </div>
     </div>
     <button (click)="task01()">Show in Console</button>

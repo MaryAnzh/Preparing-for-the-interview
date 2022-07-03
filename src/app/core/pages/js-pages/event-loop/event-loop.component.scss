@@ -29,8 +29,7 @@
         width: 45%;
         height: 875px;
 
-        &__pre {
-        }
+        &__pre {}
       }
 
       &__arroy {
@@ -87,15 +86,21 @@
           margin: 5px;
           padding: 8px;
           background: white;
+
         }
 
         &__queue {
           margin-top: 50px;
+
           &__macro {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
             padding-bottom: 40px;
+
+            ul {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 5px;
+            }
+
           }
 
           &__micro {
@@ -103,10 +108,9 @@
             flex-wrap: wrap;
             gap: 5px;
 
-            div {
+            li {
               background: $mainColorLight3;
               border: 1px dotted $mainColorDark;
-
             }
           }
         }
@@ -126,4 +130,17 @@
   background: white;
   border: 1px solid $mainColorFont;
   border-radius: 4px;
+}
+
+.select-card {
+  background: $mainColor;
+  color: #ffffff;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
 }

@@ -1,5 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
+import { ITaskDate, IConsoleData } from './event-loop.model';
+import {
+  consoleData,
+  macrotaskDate,
+  codeDescription,
+  microtaskDate
+} from './event-loop-date';
+
 
 @Component({
   selector: 'app-event-loop',
@@ -12,49 +20,15 @@ export class EventLoopComponent implements OnInit {
     `<button (click)="task01()">Show</button>`,
   ]
 
-  public codeDescription: string[] = [
-    'Создание Макро-задачи-1, при клике на кнопку "Show in Console"',
-    'Вызов функции task01(), ассоциированной Макро-задаче-1, помещение контекста ее выполнения на верх стека вызова',
-    'Создание Макро-задачи-2, отправка ее в очередь макро-задач',
-    'Выполнение функции',
-    'Создание Promise',
-    'Создание Макро-задачи-3, отправка ее в очередь макро-задач',
-    'Выполнение функции',
-    'Создание Микро-задачи-01, отправка ее в очередь микро-задач. Ожидание выполнения Макро-задачи-3',
-    'Создание Макро-задачи-4, отправка ее в очередь макро-задач',
-    'Вызов fun01()',
-    'Выполнение fun01()',
-    'Выполнение функции',
-    'Вызов fun02()',
-    'Выполнение fun02()',
-    'Создание Макро-задачи-5, отправка ее в очередь макро-задач',
-    'Выполнение функции',
-    'Создание Микро-задачи-02, отправка ее в очередь микро-задач. Ожидание выполнения Макро-задачи-3',
-    'Создание Promise',
-    'Выполнение функции',
-    'Создание Микро-задачи-03, отправка ее в очередь микро-задач. Ожидание выполнения Макро-задачи-1',
-    'Выполнение функции',
-    'Завершение выполнения Макро-задачи-1',
+  public codeDescription: string[] = codeDescription;
 
-  ]
+  public consoleData: IConsoleData[] = consoleData;
 
-  public consoleData: string[] = [
-    `02. Макро-задача-1, log`,
-    `04. Макро-задача-1, log`,
-    `07. Макро-задача-1, log вложенная фукция fun01`,
-    `09. Макро-задача-1, log, вложенная функция fun02`,
-    `11, Макро-задача-1, Promise`,
-    `13. Макро-задача-1, последний log`,
-    `12. Микро-задача-03 b.then, результат выполнения промиса уже есть в Макро-задаче-1`,
-    `01. Макро-задача-2, setTimeout-1`,
-    `03. Макро-задача-3, setTimeout-2 in Promise, log`,
-    `05. Микро-задача-01, оработала, после выполнения Макро-задачи-3, setTimeout-2`,
-    `10. Микро-задача-02, оработала, после выполнения Макро-задачи-3, setTimeout-2`,
-    `06.  Макро-задача-4, setTimeout-3`,
-    `08.  Макро-задача-5, setTimeout-4, вложенная функция fun02`
-  ];
+  public macrotaskDate: ITaskDate[] = macrotaskDate;
 
-  public allStringCount: number = 20;
+  public microtaskDate: ITaskDate[] = microtaskDate;
+
+  public allCommentsStringCount: number = 20;
 
   public allTasksCount: number = 26;
 
@@ -122,19 +96,38 @@ export class EventLoopComponent implements OnInit {
 
   selectedCodeStrinOnClick() {
     this.selectStringNumber++;
+    this.showConsoleDataString(this.selectStringNumber);
 
     if (this.selectStringNumber === 0) {
       this.scrollFn('eventLoopPre');
       this.stringSelectIterationArr[this.selectStringNumber] = true;
-    } else if (this.selectStringNumber !== 0 && this.selectStringNumber < this.allStringCount + 1) {
+    } else if (this.selectStringNumber !== 0 && this.selectStringNumber < this.allCommentsStringCount + 1) {
       this.stringSelectIterationArr[this.selectStringNumber - 1] = false;
       this.stringSelectIterationArr[this.selectStringNumber] = true;
-    } else if (this.selectStringNumber === this.allStringCount + 1) {
+    } else if (this.selectStringNumber === this.allCommentsStringCount + 1) {
       this.showFirstMacroTask = false;
       this.showMacroTasksQueue = true;
       this.stringSelectIterationArr[this.selectStringNumber] = true;
       this.stringSelectIterationArr[this.selectStringNumber - 1] = false;
       console.log(this.stringSelectIterationArr[this.selectStringNumber], this.selectStringNumber);
+    }
+  }
+
+  showConsoleDataString(codeStringNumber: number) {
+
+    switch (codeStringNumber) {
+      case 0:
+        this.consoleData[0].visible = true;
+        break;
+      case 3:
+        this.consoleData[1].visible = true;
+        break;
+      case 5:
+        this.consoleData[2].visible = true;
+        break;
+
+      default:
+        break;
     }
   }
 
