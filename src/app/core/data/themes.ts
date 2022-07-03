@@ -474,7 +474,7 @@ export const themeLists: Itheme[] = [
           },
           //event loop
           {
-            name: 'event loop',
+            name: 'event loop, + interactive example',
             progress: true,
             date: new Date('06/30/2022'),
             url: 'event-loop',
