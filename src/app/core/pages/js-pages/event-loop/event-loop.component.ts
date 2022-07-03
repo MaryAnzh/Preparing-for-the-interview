@@ -30,7 +30,7 @@ export class EventLoopComponent implements OnInit {
 
   public allCommentsStringCount: number = 20;
 
-  public allTasksCount: number = 26;
+  public allTasksCount: number = 29;
 
   public stringSelectIterationArr: boolean[] = [];
 
@@ -104,12 +104,20 @@ export class EventLoopComponent implements OnInit {
     } else if (this.selectStringNumber !== 0 && this.selectStringNumber < this.allCommentsStringCount + 1) {
       this.stringSelectIterationArr[this.selectStringNumber - 1] = false;
       this.stringSelectIterationArr[this.selectStringNumber] = true;
-    } else if (this.selectStringNumber === this.allCommentsStringCount + 1) {
+    } else if (this.selectStringNumber > this.allCommentsStringCount && this.selectStringNumber < this.allTasksCount) {
       this.showFirstMacroTask = false;
       this.showMacroTasksQueue = true;
       this.stringSelectIterationArr[this.selectStringNumber] = true;
       this.stringSelectIterationArr[this.selectStringNumber - 1] = false;
-      console.log(this.stringSelectIterationArr[this.selectStringNumber], this.selectStringNumber);
+    } else {
+      this.showFirstMacroTask = true;
+      this.showMacroTasksQueue = false;
+      this.resetTask(this.macrotaskDate);
+      this.resetTask(this.microtaskDate);
+      for (let i = 0; i < this.consoleData.length; i++) {
+        this.consoleData[i].visible = false;
+      }
+      this.selectStringNumber = -1;
     }
   }
 
@@ -160,12 +168,20 @@ export class EventLoopComponent implements OnInit {
       case 20:
         this.consoleData[6].visible = true;
         break;
-        case 21:
-          this.macrotaskDate[0].select = false;
-          break;
+      case 21:
+        this.macrotaskDate[0].select = false;
+        break;
 
       default:
         break;
+    }
+  }
+
+  resetTask(array: ITaskDate[]) {
+    for (let i = 0; i < array.length; i++) {
+      array[i].select = false;
+      array[i].visible = false;
+
     }
   }
 

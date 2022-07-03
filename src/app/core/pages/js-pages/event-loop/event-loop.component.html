@@ -52,7 +52,10 @@
       очень хорошо начинаешь понимать, что за чем идет. И уже автоматом
       пытаешься разобрать код на микро и макро задачи :)</p>
     <div class="event-loop__example">
+      <!--code window -->
       <div class="event-loop__example__code code">
+
+        <!-- functipn task01 -->
         <ng-container *ngIf="showFirstMacroTask">
           <pre id="eventLoopPre" class="event-loop__example__code__pre">
     <code [ngClass]="{'select': stringSelectIterationArr[0]}">{{codes[0]}}</code>
@@ -85,6 +88,8 @@
     <code [ngClass]="{'select': stringSelectIterationArr[20]}">{{"  console.log('13. log -- самый последний');"}}</code>
     <code >{{"}"}}</code></pre>
         </ng-container>
+
+        <!-- tasks queue -->
         <ng-container *ngIf="showMacroTasksQueue">
           <pre>
         <code>{{"Очередь макро-задач"}}</code>
@@ -101,6 +106,8 @@
       </pre>
         </ng-container>
       </div>
+
+      <!-- arroy button -->
       <div class="event-loop__example__arroy">
         <button (click)="selectedCodeStrinOnClick()">
           <svg viewBox="0 0 27.52 14.41">
@@ -110,6 +117,7 @@
           </svg>
         </button>
       </div>
+
       <div class="event-loop__example__text">
         <div class="event-loop__example__text__code-comment">
           <div
@@ -163,6 +171,7 @@
         </div>
       </div>
     </div>
+
     <button (click)="task01()">Show in Console</button>
   </section>
 </section>
