@@ -74,7 +74,7 @@ export class EventLoopComponent implements OnInit {
     fun01();
 
     const b = new Promise((resolve, reject) => {
-      console.log('11. Макро-задача-1, Promise');
+      console.log('11. Макро-задача-1, log из Promise');
       resolve('resolve b');
     });
 
@@ -96,7 +96,7 @@ export class EventLoopComponent implements OnInit {
 
   selectedCodeStrinOnClick() {
     this.selectStringNumber++;
-    this.showConsoleDataString(this.selectStringNumber);
+    this.ShowInteractive(this.selectStringNumber);
 
     if (this.selectStringNumber === 0) {
       this.scrollFn('eventLoopPre');
@@ -113,18 +113,56 @@ export class EventLoopComponent implements OnInit {
     }
   }
 
-  showConsoleDataString(codeStringNumber: number) {
+  ShowInteractive(codeStringNumber: number) {
 
     switch (codeStringNumber) {
       case 0:
         this.consoleData[0].visible = true;
+        this.macrotaskDate[0].visible = true;
+        this.macrotaskDate[0].select = true;
+        break;
+      case 2:
+        this.macrotaskDate[1].visible = true;
         break;
       case 3:
         this.consoleData[1].visible = true;
         break;
       case 5:
+        this.macrotaskDate[2].visible = true;
+        break;
+      case 6:
         this.consoleData[2].visible = true;
         break;
+      case 7:
+        this.microtaskDate[0].visible = true;
+        break;
+      case 8:
+        this.macrotaskDate[3].visible = true;
+        break;
+      case 11:
+        this.consoleData[3].visible = true;
+        break;
+      case 14:
+        this.macrotaskDate[4].visible = true;
+        break;
+      case 15:
+        this.consoleData[4].visible = true;
+        break;
+      case 16:
+        this.microtaskDate[1].visible = true;
+        break;
+      case 18:
+        this.consoleData[5].visible = true;
+        break;
+      case 19:
+        this.microtaskDate[2].visible = true;
+        break;
+      case 20:
+        this.consoleData[6].visible = true;
+        break;
+        case 21:
+          this.macrotaskDate[0].select = false;
+          break;
 
       default:
         break;

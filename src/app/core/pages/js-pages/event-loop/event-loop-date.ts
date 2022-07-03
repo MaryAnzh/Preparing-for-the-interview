@@ -75,7 +75,7 @@ export const consoleData: IConsoleData[] = [
     isTitle: false,
   },
   {
-    text: '11, Promise',
+    text: '11. log из Promise',
     visible: false,
     isTitle: false,
   },
