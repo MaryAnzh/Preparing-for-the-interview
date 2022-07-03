@@ -29,7 +29,6 @@
         width: 45%;
         height: 875px;
 
-        &__pre {}
       }
 
       &__arroy {
@@ -52,6 +51,7 @@
 
           &:active {
             background: $mainColor;
+            transform: scale(0.8, 0.8);
           }
 
           &:active svg {
@@ -93,7 +93,7 @@
           margin-top: 50px;
 
           &__macro {
-            padding-bottom: 40px;
+            height: 100px;
 
             ul {
               display: flex;
@@ -104,13 +104,22 @@
           }
 
           &__micro {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
+            height: 50px;
+            ul {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 5px;
+            }
+
 
             li {
               background: $mainColorLight3;
               border: 1px dotted $mainColorDark;
+            }
+          }
+          &__micro-await {
+            li {
+              margin-bottom: 5px;
             }
           }
         }

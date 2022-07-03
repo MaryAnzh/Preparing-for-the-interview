@@ -92,17 +92,17 @@
         <!-- tasks queue -->
         <ng-container *ngIf="showMacroTasksQueue">
           <pre>
-        <code>{{"Очередь макро-задач"}}</code>
+        <code class="bold">{{"Очередь макро-задач"}}</code>
         <code [ngClass]="{'select': stringSelectIterationArr[21]}">{{"Макро-задача-1"}}</code>
         <code [ngClass]="{'select': stringSelectIterationArr[23]}">{{"Макро-задача-2"}}</code>
         <code [ngClass]="{'select': stringSelectIterationArr[24]}">{{"Макро-задача-3"}}</code>
         <code [ngClass]="{'select': stringSelectIterationArr[27]}">{{"Макро-задача-4"}}</code>
         <code [ngClass]="{'select': stringSelectIterationArr[28]}">{{"Макро-задача-5"}}</code>
 
-        <code>{{"Очередь микро-задач"}}</code>
+        <code class="bold">{{"Микро-задачи"}}</code>
         <code [ngClass]="{'select': stringSelectIterationArr[25]}">{{"Микро-задача-01"}}</code>
         <code [ngClass]="{'select': stringSelectIterationArr[26]}">{{"Микро-задача-02"}}</code>
-        <code [ngClass]="{'select': stringSelectIterationArr[22]}">{{"Микро-задача-02"}}</code>
+        <code [ngClass]="{'select': stringSelectIterationArr[22]}">{{"Микро-задача-03"}}</code>
       </pre>
         </ng-container>
       </div>
@@ -154,17 +154,34 @@
               </li>
             </ul>
           </div>
+
           <h4>Очередь Микро-задач</h4>
           <div class="event-loop__example__text__queue__micro">
             <ul>
+              <ng-container
+                *ngFor="let item of microtaskDate">
+                <li
+                  *ngIf="item.visible"
+                  [ngClass]="{'cards': true, 'select-card': item.select}">
+                  {{item.title}}
+                </li>
+              </ng-container>
+
+            </ul>
+          </div>
+
+          <h4>Ожидают выполнения</h4>
+          <div class="event-loop__example__text__queue__micro-await">
+
+            <ul>
               <li
-                *ngFor="let microTask of microtaskDate"
+                *ngFor="let await of microtaskinAwait"
                 [ngClass]="{
                 'cards': true,
-                'select-card': microTask.select,
-                'visible': microTask.visible,
-                'hidden': !microTask.visible}">
-                {{microTask.title}}
+                'select-card': await.select,
+                'visible': await.visible,
+                'hidden': !await.visible}">
+                {{await.title}}
               </li>
             </ul>
           </div>

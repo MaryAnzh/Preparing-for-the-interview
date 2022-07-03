@@ -5,7 +5,8 @@ import {
   consoleData,
   macrotaskDate,
   codeDescription,
-  microtaskDate
+  microtaskDate,
+  microtaskinAwait
 } from './event-loop-date';
 
 
@@ -27,6 +28,8 @@ export class EventLoopComponent implements OnInit {
   public macrotaskDate: ITaskDate[] = macrotaskDate;
 
   public microtaskDate: ITaskDate[] = microtaskDate;
+
+  public microtaskinAwait: ITaskDate[] = microtaskinAwait;
 
   public allCommentsStringCount: number = 20;
 
@@ -110,10 +113,12 @@ export class EventLoopComponent implements OnInit {
       this.stringSelectIterationArr[this.selectStringNumber] = true;
       this.stringSelectIterationArr[this.selectStringNumber - 1] = false;
     } else {
+      this.stringSelectIterationArr[this.selectStringNumber - 1] = false;
       this.showFirstMacroTask = true;
       this.showMacroTasksQueue = false;
       this.resetTask(this.macrotaskDate);
       this.resetTask(this.microtaskDate);
+      this.resetTask(this.microtaskinAwait);
       for (let i = 0; i < this.consoleData.length; i++) {
         this.consoleData[i].visible = false;
       }
@@ -142,7 +147,7 @@ export class EventLoopComponent implements OnInit {
         this.consoleData[2].visible = true;
         break;
       case 7:
-        this.microtaskDate[0].visible = true;
+        this.microtaskinAwait[0].visible = true;
         break;
       case 8:
         this.macrotaskDate[3].visible = true;
@@ -157,7 +162,7 @@ export class EventLoopComponent implements OnInit {
         this.consoleData[4].visible = true;
         break;
       case 16:
-        this.microtaskDate[1].visible = true;
+        this.microtaskinAwait[1].visible = true;
         break;
       case 18:
         this.consoleData[5].visible = true;
