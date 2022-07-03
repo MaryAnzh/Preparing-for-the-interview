@@ -182,11 +182,6 @@ export const macrotaskDate: ITaskDate[] = [
     visible: false,
     select: false,
   },
-  {
-    title: 'Макро-задача-06',
-    visible: false,
-    select: false,
-  },
 ]
 
 export const microtaskDate: ITaskDate[] = [
