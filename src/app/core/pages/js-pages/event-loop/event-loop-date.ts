@@ -50,7 +50,7 @@ export const codeDescription: string[] = [
   //23
   'Выполнение Макро-задачи-02',
   //24
-  'Выполнение Макро-задачи-03',
+  'Выполнение Макро-задачи-03. Добавление в очередь Миеро-задач Миеро-задачи-01 и Миеро-задачи-02',
   //25
   'Выполнение Микро-задачи-01',
   //26
@@ -62,11 +62,6 @@ export const codeDescription: string[] = [
 ]
 
 export const consoleData: IConsoleData[] = [
-  {
-    text: 'Макро-задача-1',
-    visible: false,
-    isTitle: true,
-  },
   {
     text: '02. log',
     visible: false,
@@ -98,19 +93,9 @@ export const consoleData: IConsoleData[] = [
     isTitle: false,
   },
   {
-    text: 'Микро-задача-03',
-    visible: false,
-    isTitle: true,
-  },
-  {
     text: '12. b.then, результат выполнения промиса уже есть в Макро-задаче-1',
     visible: false,
     isTitle: false,
-  },
-  {
-    text: 'Макро-задача-2, setTimeout-1',
-    visible: false,
-    isTitle: true,
   },
   {
     text: '01. log',
@@ -118,19 +103,9 @@ export const consoleData: IConsoleData[] = [
     isTitle: false,
   },
   {
-    text: 'Макро-задача-3, setTimeout-2 in Promise',
-    visible: false,
-    isTitle: true,
-  },
-  {
     text: '03. log',
     visible: false,
     isTitle: false,
-  },
-  {
-    text: 'Микро-задача-01, оработала, после выполнения Макро-задачи-3',
-    visible: false,
-    isTitle: true,
   },
   {
     text: '05. a.then',
@@ -138,29 +113,14 @@ export const consoleData: IConsoleData[] = [
     isTitle: false,
   },
   {
-    text: 'Микро-задача-02, оработала, после выполнения Макро-задачи-3',
-    visible: false,
-    isTitle: true,
-  },
-  {
     text: '10. a.then',
     visible: false,
     isTitle: false,
   },
   {
-    text: 'Макро-задача-4, setTimeout-3',
-    visible: false,
-    isTitle: true,
-  },
-  {
     text: '06. log',
     visible: false,
     isTitle: false,
-  },
-  {
-    text: 'Макро-задача-5, setTimeout-4, вложенная функция fun02',
-    visible: false,
-    isTitle: true,
   },
   {
     text: '08. log',

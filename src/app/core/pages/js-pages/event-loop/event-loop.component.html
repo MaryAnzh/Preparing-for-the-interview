@@ -143,15 +143,17 @@
           <h4>Очередь Макро-задач</h4>
           <div class="event-loop__example__text__queue__macro">
             <ul>
-              <li
-                *ngFor="let macroTask of macrotaskDate"
+              <ng-container
+              *ngFor="let macroTask of macrotaskDate">
+                 <li
+                 *ngIf="macroTask.visible"
                 [ngClass]="{
                 'cards': true,
-                'select-card': macroTask.select,
-                'visible': macroTask.visible,
-                'hidden': !macroTask.visible}">
+                'select-card': macroTask.select}">
                 {{macroTask.title}}
               </li>
+              </ng-container>
+
             </ul>
           </div>
 
@@ -162,7 +164,7 @@
                 *ngFor="let item of microtaskDate">
                 <li
                   *ngIf="item.visible"
-                  [ngClass]="{'cards': true, 'select-card': item.select}">
+                  [ngClass]="{'cards-micro': true, 'select-card': item.select}">
                   {{item.title}}
                 </li>
               </ng-container>

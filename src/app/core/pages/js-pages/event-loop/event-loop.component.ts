@@ -102,6 +102,9 @@ export class EventLoopComponent implements OnInit {
     this.ShowInteractive(this.selectStringNumber);
 
     if (this.selectStringNumber === 0) {
+      for (let i = 0; i < this.consoleData.length; i++) {
+        this.consoleData[i].visible = false;
+      }
       this.scrollFn('eventLoopPre');
       this.stringSelectIterationArr[this.selectStringNumber] = true;
     } else if (this.selectStringNumber !== 0 && this.selectStringNumber < this.allCommentsStringCount + 1) {
@@ -117,11 +120,6 @@ export class EventLoopComponent implements OnInit {
       this.showFirstMacroTask = true;
       this.showMacroTasksQueue = false;
       this.resetTask(this.macrotaskDate);
-      this.resetTask(this.microtaskDate);
-      this.resetTask(this.microtaskinAwait);
-      for (let i = 0; i < this.consoleData.length; i++) {
-        this.consoleData[i].visible = false;
-      }
       this.selectStringNumber = -1;
     }
   }
@@ -170,13 +168,58 @@ export class EventLoopComponent implements OnInit {
       case 19:
         this.microtaskDate[2].visible = true;
         break;
-      case 20:
-        this.consoleData[6].visible = true;
-        break;
       case 21:
         this.macrotaskDate[0].select = false;
+        this.macrotaskDate[0].visible = false;
         break;
-
+      case 22:
+        this.microtaskDate[2].select = true;
+        this.consoleData[6].visible = true;
+        break;
+      case 23:
+        this.microtaskDate[2].select = false;
+        this.microtaskDate[2].visible = false;
+        this.macrotaskDate[1].select = true;
+        this.consoleData[7].visible = true;
+        break;
+      case 24:
+        this.macrotaskDate[1].select = false;
+        this.macrotaskDate[1].visible = false;
+        this.macrotaskDate[2].select = true;
+        this.macrotaskDate[2].visible = true;
+        this.consoleData[8].visible = true;
+        this.resetTask(this.microtaskinAwait);
+        this.microtaskDate[0].visible = true;
+        this.microtaskDate[1].visible = true;
+        break;
+      case 25:
+        this.macrotaskDate[2].select = false;
+        this.macrotaskDate[2].visible = false;
+        this.microtaskDate[0].select = true;
+        this.consoleData[9].visible = true;
+        break;
+      case 26:
+        this.microtaskDate[0].select = false;
+        this.microtaskDate[0].visible = false;
+        this.microtaskDate[1].select = true;
+        this.consoleData[10].visible = true;
+        break;
+      case 27:
+        this.microtaskDate[1].select = false;
+        this.microtaskDate[1].visible = false;
+        this.macrotaskDate[3].select = true;
+        this.consoleData[11].visible = true;
+        break;
+      case 28:
+        this.macrotaskDate[3].select = false;
+        this.macrotaskDate[3].visible = false;
+        this.macrotaskDate[4].select = true;
+        this.consoleData[12].visible = true;
+        break;
+      case 29:
+        this.macrotaskDate[4].select = false;
+        this.macrotaskDate[4].visible = false;
+        break;
       default:
         break;
     }

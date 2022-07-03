@@ -105,18 +105,15 @@
 
           &__micro {
             height: 50px;
+
             ul {
               display: flex;
               flex-wrap: wrap;
               gap: 5px;
-            }
 
-
-            li {
-              background: $mainColorLight3;
-              border: 1px dotted $mainColorDark;
             }
           }
+
           &__micro-await {
             li {
               margin-bottom: 5px;
@@ -133,12 +130,18 @@
   color: #ffffff;
 }
 
-.cards {
+.cards,
+.cards-micro {
   width: fit-content;
   padding: 0 5px;
   background: white;
   border: 1px solid $mainColorFont;
   border-radius: 4px;
+}
+
+.cards-micro {
+  background: $mainColorLight3;
+  border: 1px dotted $mainColorDark;
 }
 
 .select-card {
