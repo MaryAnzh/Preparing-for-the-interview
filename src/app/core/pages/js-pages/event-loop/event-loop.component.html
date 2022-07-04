@@ -144,14 +144,15 @@
           <div class="event-loop__example__text__queue__macro">
             <ul>
               <ng-container
-              *ngFor="let macroTask of macrotaskDate">
-                 <li
-                 *ngIf="macroTask.visible"
-                [ngClass]="{
-                'cards': true,
-                'select-card': macroTask.select}">
-                {{macroTask.title}}
-              </li>
+                *ngFor="let macroTask of macrotaskDate">
+                <li
+                  @showTask
+                  *ngIf="macroTask.visible"
+                  [ngClass]="{
+                  'cards': true,
+                  'select-card': macroTask.select}">
+                  {{macroTask.title}}
+                </li>
               </ng-container>
 
             </ul>
@@ -163,12 +164,12 @@
               <ng-container
                 *ngFor="let item of microtaskDate">
                 <li
+                  @showTask
                   *ngIf="item.visible"
                   [ngClass]="{'cards-micro': true, 'select-card': item.select}">
                   {{item.title}}
                 </li>
               </ng-container>
-
             </ul>
           </div>
 
@@ -176,15 +177,17 @@
           <div class="event-loop__example__text__queue__micro-await">
 
             <ul>
-              <li
-                *ngFor="let await of microtaskinAwait"
-                [ngClass]="{
-                'cards': true,
-                'select-card': await.select,
-                'visible': await.visible,
-                'hidden': !await.visible}">
-                {{await.title}}
-              </li>
+              <ng-container
+              *ngFor="let await of microtaskinAwait">              ">
+                <li
+                  @showTask
+                  *ngIf="await.visible"
+                  [ngClass]="{
+                  'cards': true,
+                  'select-card': await.select}">
+                  {{await.title}}
+                </li>
+              </ng-container>
             </ul>
           </div>
         </div>

@@ -8,12 +8,34 @@ import {
   microtaskDate,
   microtaskinAwait
 } from './event-loop-date';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
 
 
 @Component({
   selector: 'app-event-loop',
   templateUrl: './event-loop.component.html',
-  styleUrls: ['./event-loop.component.scss']
+  styleUrls: ['./event-loop.component.scss'],
+  animations: [
+    trigger('showTask', [
+      state('in', style({ marginLeft: '0' })),
+      transition('void => *', [
+        style({ marginLeft: '200px' }),
+        animate(300),
+      ]),
+      transition('* => void', [
+        animate(300, style({
+          marginLeft: '-100px',
+          background: 'white',
+        })),
+      ])
+    ]),
+  ],
 })
 
 export class EventLoopComponent implements OnInit {

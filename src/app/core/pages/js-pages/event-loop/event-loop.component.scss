@@ -74,10 +74,12 @@
         padding-left: 10px;
         background: $mainColorLight2;
         color: black;
+        overflow: hidden;
 
         &__code-comment {
           width: 100%;
           height: 50px;
+
         }
 
         &__console {
