@@ -47,17 +47,20 @@
     <p>Микрозадачи приходят только из кода. Обычно они создаются промисами,
       выполнение .then/catch/finally становятся миеро задачами. Также
       миерозадачи порождает await</p>
+
     <h3>Пример</h3>
     <p class="bolde">Создавая интерактивный пример, прописывая алгоритмы, --
-      очень хорошо начинаешь понимать, что за чем идет. И уже автоматом
-      пытаешься разобрать код на микро и макро задачи :)</p>
-    <div class="event-loop__example">
-      <!--code window -->
-      <div class="event-loop__example__code code">
+      очень хорошо начинаешь понимать, что за чем идет. И уже автоматом.
+      пытаешься разобрать код на микро и макро задачи :)
+      <br/>
+        Для анимации исполдьзоаван Angular модуль BrowserAnimationsModule</p>
+      <div class="event-loop__example">
+        <!--code window -->
+        <div class="event-loop__example__code code">
 
-        <!-- functipn task01 -->
-        <ng-container *ngIf="showFirstMacroTask">
-          <pre id="eventLoopPre" class="event-loop__example__code__pre">
+          <!-- functipn task01 -->
+          <ng-container *ngIf="showFirstMacroTask">
+            <pre id="eventLoopPre" class="event-loop__example__code__pre">
     <code [ngClass]="{'select': stringSelectIterationArr[0]}">{{codes[0]}}</code>
     <code [ngClass]="{'select': stringSelectIterationArr[1]}">{{"task01(): void {"}}</code>
     <code [ngClass]="{'select': stringSelectIterationArr[2]}">{{"  setTimeout(() => console.log('01'), 0);"}}</code>
@@ -87,11 +90,11 @@
     <code [ngClass]="{'select': stringSelectIterationArr[19]}">{{"  b.then((resolve) => console.log(`12`));"}}</code>
     <code [ngClass]="{'select': stringSelectIterationArr[20]}">{{"  console.log('13. log -- самый последний');"}}</code>
     <code >{{"}"}}</code></pre>
-        </ng-container>
+          </ng-container>
 
-        <!-- tasks queue -->
-        <ng-container *ngIf="showMacroTasksQueue">
-          <pre>
+          <!-- tasks queue -->
+          <ng-container *ngIf="showMacroTasksQueue">
+            <pre>
         <code class="bold">{{"Очередь макро-задач"}}</code>
         <code [ngClass]="{'select': stringSelectIterationArr[21]}">{{"Макро-задача-1"}}</code>
         <code [ngClass]="{'select': stringSelectIterationArr[23]}">{{"Макро-задача-2"}}</code>
@@ -104,96 +107,97 @@
         <code [ngClass]="{'select': stringSelectIterationArr[26]}">{{"Микро-задача-02"}}</code>
         <code [ngClass]="{'select': stringSelectIterationArr[22]}">{{"Микро-задача-03"}}</code>
       </pre>
-        </ng-container>
-      </div>
+          </ng-container>
+        </div>
 
-      <!-- arroy button -->
-      <div class="event-loop__example__arroy">
-        <button (click)="selectedCodeStrinOnClick()">
-          <svg viewBox="0 0 27.52 14.41">
-            <path
-              d="M27.25,1.31L14.41,14.14c-0.36,0.36-0.95,0.36-1.31,0L0.27,1.31c-0.36-0.36-0.36-0.95,0-1.31h26.97
-              C27.61,0.36,27.61,0.95,27.25,1.31z"></path>
-          </svg>
-        </button>
-      </div>
+        <!-- arroy button -->
+        <div class="event-loop__example__arroy">
+          <button (click)="selectedCodeStrinOnClick()">
+            <svg viewBox="0 0 27.52 14.41">
+              <path
+                d="M27.25,1.31L14.41,14.14c-0.36,0.36-0.95,0.36-1.31,0L0.27,1.31c-0.36-0.36-0.36-0.95,0-1.31h26.97
+                C27.61,0.36,27.61,0.95,27.25,1.31z"></path>
+            </svg>
+          </button>
+        </div>
 
-      <div class="event-loop__example__text">
-        <div class="event-loop__example__text__code-comment">
-          <div
-            *ngFor="let text of codeDescription; let i= index">
-            <p
-              *ngIf="stringSelectIterationArr[i]">{{text}}
-            </p>
+        <div class="event-loop__example__text">
+          <div class="event-loop__example__text__code-comment">
+            <div
+              *ngFor="let text of codeDescription; let i= index">
+              <p
+                *ngIf="stringSelectIterationArr[i]">{{text}}
+              </p>
+            </div>
+          </div>
+          <div class="event-loop__example__text__console">
+            <h4>Console</h4>
+            <ul style="font-family: monospace; line-height: 1.2;"
+              *ngFor="let task of consoleData">
+              <li
+                *ngIf="task.visible"
+                [ngClass]="{'bold': task.isTitle}">
+                {{task.text}}
+              </li>
+            </ul>
+
+          </div>
+          <div class="event-loop__example__text__queue">
+            <h4>Очередь Макро-задач</h4>
+            <div class="event-loop__example__text__queue__macro">
+              <ul>
+                <ng-container
+                  *ngFor="let macroTask of macrotaskDate">
+                  <li
+                    @showTask
+                    *ngIf="macroTask.visible"
+                    [ngClass]="{
+                    'cards': true,
+                    'select-card': macroTask.select}">
+                    {{macroTask.title}}
+                  </li>
+                </ng-container>
+
+              </ul>
+            </div>
+
+            <h4>Очередь Микро-задач</h4>
+            <div class="event-loop__example__text__queue__micro">
+              <ul>
+                <ng-container
+                  *ngFor="let item of microtaskDate">
+                  <li
+                    @showTask
+                    *ngIf="item.visible"
+                    [ngClass]="{'cards-micro': true, 'select-card':
+                    item.select}">
+                    {{item.title}}
+                  </li>
+                </ng-container>
+              </ul>
+            </div>
+
+            <h4>Ожидают выполнения</h4>
+            <div class="event-loop__example__text__queue__micro-await">
+
+              <ul>
+                <ng-container
+                  *ngFor="let await of microtaskinAwait"> ">
+                  <li
+                    @showTask
+                    *ngIf="await.visible"
+                    [ngClass]="{
+                    'cards': true,
+                    'select-card': await.select}">
+                    {{await.title}}
+                  </li>
+                </ng-container>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="event-loop__example__text__console">
-          <h4>Console</h4>
-          <ul style="font-family: monospace; line-height: 1.2;"
-            *ngFor="let task of consoleData">
-            <li
-              *ngIf="task.visible"
-              [ngClass]="{'bold': task.isTitle}">
-              {{task.text}}
-            </li>
-          </ul>
-
-        </div>
-        <div class="event-loop__example__text__queue">
-          <h4>Очередь Макро-задач</h4>
-          <div class="event-loop__example__text__queue__macro">
-            <ul>
-              <ng-container
-                *ngFor="let macroTask of macrotaskDate">
-                <li
-                  @showTask
-                  *ngIf="macroTask.visible"
-                  [ngClass]="{
-                  'cards': true,
-                  'select-card': macroTask.select}">
-                  {{macroTask.title}}
-                </li>
-              </ng-container>
-
-            </ul>
-          </div>
-
-          <h4>Очередь Микро-задач</h4>
-          <div class="event-loop__example__text__queue__micro">
-            <ul>
-              <ng-container
-                *ngFor="let item of microtaskDate">
-                <li
-                  @showTask
-                  *ngIf="item.visible"
-                  [ngClass]="{'cards-micro': true, 'select-card': item.select}">
-                  {{item.title}}
-                </li>
-              </ng-container>
-            </ul>
-          </div>
-
-          <h4>Ожидают выполнения</h4>
-          <div class="event-loop__example__text__queue__micro-await">
-
-            <ul>
-              <ng-container
-              *ngFor="let await of microtaskinAwait">              ">
-                <li
-                  @showTask
-                  *ngIf="await.visible"
-                  [ngClass]="{
-                  'cards': true,
-                  'select-card': await.select}">
-                  {{await.title}}
-                </li>
-              </ng-container>
-            </ul>
-          </div>
-        </div>
       </div>
-    </div>
 
-    <button (click)="task01()">Show in Console</button>
+      <button (click)="task01()">Show in Console</button>
+    </section>
   </section>
-</section>
