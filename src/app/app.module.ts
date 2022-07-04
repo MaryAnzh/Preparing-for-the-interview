@@ -16,6 +16,7 @@ import { RecentTopicsPipe } from './core/pipes/recent-topics/recent-topics.pipe'
 import { RecentTopicsComponent } from './core/components/recent-topics/recent-topics.component';
 import { BrowserFrameComponent } from './core/components/browser-frame/browser-frame.component';
 import { EventLoopComponent } from './core/pages/js-pages/event-loop/event-loop.component';
+import { NotFoundPageComponent } from './core/pages/not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { EventLoopComponent } from './core/pages/js-pages/event-loop/event-loop.
     RecentTopicsPipe,
     RecentTopicsComponent,
     BrowserFrameComponent,
-    EventLoopComponent
+    EventLoopComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,
