@@ -888,7 +888,7 @@ export const themeLists: Itheme[] = [
             name: 'Built-In Pipes',
             progress: true,
             date: new Date('Jun 18 2022 19:52:00'),
-            url: 'angular-pipes',
+            url: 'angular/pipes',
           },
           {
             name: 'Custom pipe',

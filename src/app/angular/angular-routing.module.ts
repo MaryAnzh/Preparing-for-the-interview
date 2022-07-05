@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AngularComponent } from './angular.component';
 import { AnchorComponent } from './pages/anchor/anchor.component';
 import { CustomPipeComponent } from './pages/custom-pipe/custom-pipe.component';
+import { PipesComponent } from './pages/pipes/pipes.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'custom-pipe',
     component: CustomPipeComponent
+  },
+  {
+    path: 'pipes',
+    component: PipesComponent
   }
 
 ];

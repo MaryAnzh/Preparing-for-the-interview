@@ -2,11 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { MainComponent } from './core/pages/main/main.component';
-import { CssScrollComponent } from './core/pages/css-pages/css-scroll/css-scroll.component';
-import { JsTimersComponent } from './core/pages/js-pages/js-timers/js-timers.component';
-import { PipesComponent } from './core/pages/angular/pipes/pipes.component';
-import { CustomPipeComponent } from './core/pages/angular/custom-pipe/custom-pipe.component';
-import { EventLoopComponent } from './core/pages/js-pages/event-loop/event-loop.component';
 import { NotFoundPageComponent } from './core/pages/not-found-page/not-found-page.component';
 
 const routes: Routes = [
@@ -19,7 +14,9 @@ const routes: Routes = [
     path: 'main',
     component: MainComponent,
   },
-  { path: 'angular', loadChildren: () => import('./angular/angular.module').then(m => m.AngularModule) },
+  { path: 'angular',
+  loadChildren: () => import('./angular/angular.module').then(m => m.AngularModule)
+},
   {
     path: '**',
     component: NotFoundPageComponent,
@@ -35,10 +32,6 @@ const routes: Routes = [
   // {
   //   path: 'angular-pipes',
   //   component: PipesComponent,
-  // },
-  // {
-  //   path: 'custom-pipe',
-  //   component: CustomPipeComponent
   // },
   // {
   //   path: 'event-loop',
