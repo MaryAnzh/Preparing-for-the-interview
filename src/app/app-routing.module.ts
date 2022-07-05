@@ -14,29 +14,18 @@ const routes: Routes = [
     path: 'main',
     component: MainComponent,
   },
-  { path: 'angular',
-  loadChildren: () => import('./angular/angular.module').then(m => m.AngularModule)
-},
+  {
+    path: 'angular',
+    loadChildren: () => import('./angular/angular.module').then(m => m.AngularModule)
+  },
+  {
+    path: 'css',
+    loadChildren: () => import('./css-themes//css-themes.module').then(m => m.CssThemesModule)
+  },
   {
     path: '**',
     component: NotFoundPageComponent,
   }
-  // {
-  //   path: 'css-scroll',
-  //   component: CssScrollComponent,
-  // },
-  // {
-  //   path: 'timers',
-  //   component: JsTimersComponent
-  // },
-  // {
-  //   path: 'angular-pipes',
-  //   component: PipesComponent,
-  // },
-  // {
-  //   path: 'event-loop',
-  //   component: EventLoopComponent
-  // }
 ];
 
 @NgModule({

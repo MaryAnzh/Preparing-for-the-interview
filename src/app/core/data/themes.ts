@@ -831,7 +831,7 @@ export const themeLists: Itheme[] = [
             name: 'Прыгающий контент от скролл-бар',
             progress: true,
             date: new Date('06/15/2022 14:00'),
-            url: 'css-scroll',
+            url: 'css/scroll',
           }
         ],
         progress: true,
