@@ -5,7 +5,6 @@ import { MainComponent } from './core/pages/main/main.component';
 import { CssScrollComponent } from './core/pages/css-pages/css-scroll/css-scroll.component';
 import { JsTimersComponent } from './core/pages/js-pages/js-timers/js-timers.component';
 import { PipesComponent } from './core/pages/angular/pipes/pipes.component';
-import { AngularAnchorComponent } from './core/pages/angular/angular-anchor/angular-anchor.component';
 import { CustomPipeComponent } from './core/pages/angular/custom-pipe/custom-pipe.component';
 import { EventLoopComponent } from './core/pages/js-pages/event-loop/event-loop.component';
 import { NotFoundPageComponent } from './core/pages/not-found-page/not-found-page.component';
@@ -20,6 +19,7 @@ const routes: Routes = [
     path: 'main',
     component: MainComponent,
   },
+  { path: 'angular', loadChildren: () => import('./angular/angular.module').then(m => m.AngularModule) },
   {
     path: '**',
     component: NotFoundPageComponent,
@@ -35,10 +35,6 @@ const routes: Routes = [
   // {
   //   path: 'angular-pipes',
   //   component: PipesComponent,
-  // },
-  // {
-  //   path: 'angular-anchor',
-  //   component: AngularAnchorComponent
   // },
   // {
   //   path: 'custom-pipe',

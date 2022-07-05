@@ -894,7 +894,7 @@ export const themeLists: Itheme[] = [
             name: 'Custom pipe',
             progress: true,
             date: new Date('06/21/2022 14:54'),
-            url: 'custom-pipe',
+            url: 'angular/custom-pipe',
           }
         ],
         progress: true,
@@ -907,7 +907,7 @@ export const themeLists: Itheme[] = [
             name: 'anchor',
             progress: true,
             date: new Date('Jun 19 2022 15:15:00'),
-            url: 'angular-anchor',
+            url: 'angular/anchor',
           }
         ],
         progress: true,
