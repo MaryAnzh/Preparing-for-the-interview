@@ -23,6 +23,10 @@ const routes: Routes = [
     loadChildren: () => import('./css-themes//css-themes.module').then(m => m.CssThemesModule)
   },
   {
+    path: 'js',
+    loadChildren: () => import('./core/js-themes/js-themes.module').then(m => m.JsThemesModule)
+  },
+  {
     path: '**',
     component: NotFoundPageComponent,
   }

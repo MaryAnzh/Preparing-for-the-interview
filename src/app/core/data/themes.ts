@@ -421,7 +421,7 @@ export const themeLists: Itheme[] = [
             name: 'Timers',
             progress: true,
             date: null,
-            url: 'timers',
+            url: 'js/timers',
           },
           //Promise
           {
@@ -477,7 +477,7 @@ export const themeLists: Itheme[] = [
             name: 'event loop, + interactive example',
             progress: true,
             date: new Date('06/30/2022'),
-            url: 'event-loop',
+            url: 'js/event-loop',
           },
           //sync/await
           {
