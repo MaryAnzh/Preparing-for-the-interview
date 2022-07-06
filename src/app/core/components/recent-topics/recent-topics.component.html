@@ -8,7 +8,12 @@
         {{recent.theme}}, {{recent.subTheme}}
       </p>
       <p class="recent-topics__list__date">{{recent.date | date: 'EEEE, MMMM d, y'}}</p>
-      <p>
+      <p
+      *ngIf="recent.sourse !== ''">
+      <a href="{{recent.sourse}}" target="_blank">link to article --></a>
+      </p>
+      <p
+      *ngIf="recent.url !== ''">
         <a (click)="linkToList(recent.url)">MORE...</a>
       </p>
     </li>

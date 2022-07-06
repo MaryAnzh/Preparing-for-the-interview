@@ -24,7 +24,7 @@ const routes: Routes = [
   },
   {
     path: 'js',
-    loadChildren: () => import('./core/js-themes/js-themes.module').then(m => m.JsThemesModule)
+    loadChildren: () => import('./js-themes/js-themes.module').then(m => m.JsThemesModule)
   },
   {
     path: '**',

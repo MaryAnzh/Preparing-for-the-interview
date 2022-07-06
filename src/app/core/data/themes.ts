@@ -799,7 +799,7 @@ export const themeLists: Itheme[] = [
       {
         name: 'CSS Methodologies',
         description: [
-        //BEM, OOCSS, SMACSS, ITCSS, Atomic CSS
+          //BEM, OOCSS, SMACSS, ITCSS, Atomic CSS
           {
             name: 'BEM, OOCSS, SMACSS, ITCSS, Atomic CSS',
             progress: false,
@@ -844,11 +844,11 @@ export const themeLists: Itheme[] = [
     name: 'Design patterns',
     isSubThemeShow: false,
     subTheme: [
-    //design patterns
+      //design patterns
       {
         name: 'design patterns',
         description: [
-        //design patterns
+          //design patterns
           {
             name: 'design patterns',
             progress: false,
@@ -880,6 +880,20 @@ export const themeLists: Itheme[] = [
     name: 'Angular',
     isSubThemeShow: false,
     subTheme: [
+      //module
+      {
+        name: 'Module',
+        description: [
+          {
+            name: 'Share Module',
+            progress: true,
+            date: new Date('07/05/2022'),
+            url: '',
+            sourse: 'https://betterprogramming.pub/angular-4-shared-modules-18ac50f24852',
+          },
+        ],
+        progress: false,
+      },
       //pipes
       {
         name: 'Pipes',

@@ -15,4 +15,5 @@ export interface IDescription {
   progress: boolean,
   date: Date | null,
   url: string,
+  sourse?: string
 }

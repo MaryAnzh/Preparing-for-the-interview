@@ -7,6 +7,7 @@ type RecentTopics = {
   theme: string,
   url: string,
   date: Date,
+  sourse: string,
 }
 
 @Pipe({
@@ -22,14 +23,17 @@ export class RecentTopicsPipe implements PipeTransform {
       theme.subTheme.forEach((subTheme) => {
         subTheme.description.forEach((elem) => {
           if (elem.date !== null) {
+            const sourse = elem.sourse ?? '';
             const recentTopic: RecentTopics = {
               name: elem.name,
               theme: theme.name,
               subTheme: subTheme.name,
               date: elem.date,
               url: elem.url,
+              sourse: sourse,
             }
             recentTopics.push(recentTopic);
+            console.log(elem);
           }
         });
       })
