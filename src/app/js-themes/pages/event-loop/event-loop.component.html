@@ -1,29 +1,22 @@
 <section class="event-loop">
   <h2>Event loop</h2>
-  <ul class="links-list">
+  <app-links-list
+  [linksData]="linksData">
+  </app-links-list>
+  <!-- <ul class="links-list">
     <p class="links-list-title">
       Links
     </p>
-    <li>
-      <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/EventLoop"
-        target="_blank">
-        JavaScript EventLoop MDN
-      </a>
-    </li>
-    <li>
-      <a href="https://learn.javascript.ru/event-loop"
-        target="_blank">
-        Событийный цикл: микрозадачи и макрозадачи . Современный учебник JS
-      </a>
-    </li>
+
+
     <li>
       <a
         href="https://highload.today/kak-ustroen-event-loop-v-javascript-parallelnaya-model-i-tsikl-sobytij/#:~:text=Event%20Loop%20выполняет%20одну%20простую,стек%20вызовов%2C%20который%20его%20запустит."
         target="_blank">
-        Как устроен Event Loop в JavaScript: параллельная модель и цикл событий
+
       </a>
     </li>
-  </ul>
+  </ul> -->
   <section class="event-loop__discription">
     <h3>Basic concepts</h3>
 
@@ -182,7 +175,7 @@
 
               <ul>
                 <ng-container
-                  *ngFor="let await of microtaskinAwait"> ">
+                  *ngFor="let await of microtaskinAwait">
                   <li
                     @showTask
                     *ngIf="await.visible"

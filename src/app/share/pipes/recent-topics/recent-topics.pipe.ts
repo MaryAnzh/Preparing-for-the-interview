@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Itheme } from '../../core/modal/themes.modal';
+import { Itheme } from '../../../core/modal/themes.modal';
 
 type RecentTopics = {
   name: string,

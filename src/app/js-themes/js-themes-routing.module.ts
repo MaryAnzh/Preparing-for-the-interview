@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { JsThemesComponent } from './js-themes.component';
 import { EventLoopComponent } from './pages/event-loop/event-loop.component';
 import { JsTimersComponent } from './pages/js-timers/js-timers.component';
-
+import { PromiseComponent } from './pages/promise/promise.component';
 
 const routes: Routes = [
   {
@@ -17,7 +17,11 @@ const routes: Routes = [
   {
     path: 'timers',
     component: JsTimersComponent
-  }
+  },
+  {
+    path: 'promise',
+    component: PromiseComponent
+  },
 ];
 
 @NgModule({

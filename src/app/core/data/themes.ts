@@ -20,7 +20,6 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-
       //Advanced Expressions
       {
         name: 'Advanced Expressions',
@@ -40,7 +39,6 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-
       //Variables
       {
         name: 'Variables',
@@ -54,7 +52,6 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-
       //Types
       {
         name: 'Types',
@@ -68,7 +65,6 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-
       //Set. Map
       {
         name: 'Set. Map',
@@ -82,7 +78,6 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-
       //Objects
       {
         name: 'Objects',
@@ -153,7 +148,6 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-
       // Array
       {
         name: 'Array',
@@ -210,7 +204,6 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-
       //Functions
       {
         name: 'Functions',
@@ -253,7 +246,6 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-
       //Functional Scope
       {
         name: 'Functional Scope',
@@ -289,7 +281,6 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-
       //This, Prototype
       {
         name: 'This, Prototype',
@@ -367,7 +358,6 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-
       //Classes
       {
         name: 'Classes',
@@ -411,7 +401,6 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-
       //Async JavaScript
       {
         name: 'Async JavaScript',
@@ -426,9 +415,9 @@ export const themeLists: Itheme[] = [
           //Promise
           {
             name: 'Promise',
-            progress: false,
-            date: null,
-            url: '',
+            progress: true,
+            date: new Date('07/07/2022'),
+            url: 'js/promise',
           },
           //Promise states
           {

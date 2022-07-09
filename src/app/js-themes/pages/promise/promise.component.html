@@ -1,0 +1,28 @@
+<section class="promise">
+  <h2>Promise</h2>
+  <p>Мои любимые Promise. Спрашивали на всех собесах</p>
+  <app-links-list
+    [linksData]="linksData"></app-links-list>
+  <section class="promise__description description">
+    <p>Promise -- объект, который используется для отложенных и асинхронных
+      вычислений.
+    </p>
+    <h4>Promise может находиться в одном из трех состояний</h4>
+    <ul style="list-style: circle;">
+      <li>ожидание (pending): начальное состояние, не исполнен и не отклонён</li>
+      <li>исполнено (fulfilled): операция завершена успешно</li>
+      <li>отклонено (rejected): операция завершена с ошибкой</li>
+    </ul>
+    <h4>Способы создания Promise</h4>
+    <ul class="promise__description__create">
+      <li>
+        При помощи ключевого слова new
+        <div class="code">
+          <pre><code>{{"const promise = new Promise((resolve, reject) => {
+  // функция-исполнитель (executor)
+});"}}</code></pre>
+        </div>
+      </li>
+    </ul>
+  </section>
+</section>

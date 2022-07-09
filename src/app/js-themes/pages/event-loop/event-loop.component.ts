@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 import { ITaskDate, IConsoleData } from './event-loop.model';
 import {
@@ -15,6 +15,7 @@ import {
   animate,
   transition,
 } from '@angular/animations';
+import { ILinksData } from 'src/app/share/madel/links-list.modet';
 
 
 @Component({
@@ -39,6 +40,21 @@ import {
 })
 
 export class EventLoopComponent implements OnInit {
+  @Input() public linksData: ILinksData[] = [
+    {
+      title: 'JavaScript EventLoop MDN',
+      url: 'https://developer.mozilla.org/ru/docs/Web/JavaScript/EventLoop',
+    },
+    {
+      title: 'Событийный цикл: микрозадачи и макрозадачи . Современный учебник JS',
+      url: 'https://learn.javascript.ru/event-loop',
+    },
+    {
+      title: 'Как устроен Event Loop в JavaScript: параллельная модель и цикл событий',
+      url: 'https://highload.today/kak-ustroen-event-loop-v-javascript-parallelnaya-model-i-tsikl-sobytij/#:~:text=Event%20Loop%20выполняет%20одну%20простую,стек%20вызовов%2C%20который%20его%20запустит.'
+    },
+  ]
+
   public codes: string[] = [
     `<button (click)="task01()">Show</button>`,
   ]

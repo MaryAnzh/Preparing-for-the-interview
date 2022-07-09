@@ -17,6 +17,7 @@ body {
   font-weight: 300;
   color: $mainColorFont;
   font-size: 16px;
+  line-height: 1.8;
 }
 
 h1,
@@ -35,13 +36,17 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 32px;
   font-weight: 200;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 24px;
   font-weight: 200;
+}
+
+h4 {
+  font-size: 20px;
 }
 
 a {
@@ -70,6 +75,12 @@ button {
   }
 }
 
+.description {
+  p {
+    padding: 10px 0;
+  }
+}
+
 .code {
   width: fit-content;
   overflow: auto;
@@ -82,25 +93,6 @@ pre {
   box-sizing: border-box;
   padding: 15px;
   color: $mainColorFont;
-}
-
-.links-list {
-  list-style: disc;
-  padding-bottom: 20px;
-  margin-left: 20px;
-
-  li {
-    padding-left: 10px;
-  }
-}
-
-.links-list-title {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.links-list-title::first-letter {
-  text-transform: uppercase;
 }
 
 .bold {
