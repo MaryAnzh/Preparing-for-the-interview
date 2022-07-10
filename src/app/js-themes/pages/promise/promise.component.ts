@@ -13,8 +13,33 @@ export class PromiseComponent {
     {
       title: 'Promise MDN',
       url: 'https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise'
-    }
+    },
+    {
+      title: 'Promise. Современный учебник js',
+      url: 'https://learn.javascript.ru/promise-basics',
+    },
   ];
+
+  public codes: string[] = [
+    `const promiseResolve = Promise.resolve('secsess');
+    promiseResolve.then(
+        (secsess) => console.log(secsess),
+        (error) => console.log(error)
+    );
+    //secsess`,
+    `const promiseError = Promise.reject(new Error('OPS!'));
+    promiseError.then(
+        (secsess) => console.log(secsess),
+        (error) => console.log(error)
+    );
+    //OPS!`,
+    `const promiseError = Promise.reject(new Error('OPS!'));
+    promiseError.catch(
+        (error) => console.log(error)
+    );
+    //OPS!`
+
+    ];
 
   constructor() { }
 

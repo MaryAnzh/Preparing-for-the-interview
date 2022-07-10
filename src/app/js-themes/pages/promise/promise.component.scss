@@ -3,6 +3,10 @@
   &__description {
     &__create {
       list-style: decimal;
+
+      li {
+        padding-top: 20px;
+      }
     }
   }
 }
