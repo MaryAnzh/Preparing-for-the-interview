@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { BrowserFrameComponent } from './components/browser-frame/browser-frame.component';
 import { RecentTopicsPipe } from './pipes/recent-topics/recent-topics.pipe';
 import { LinksListComponent } from './components/links-list/links-list.component';
+import { PopUpDescriptionComponent } from './components/pop-up-description/pop-up-description.component';
 
 @NgModule({
   declarations: [
     BrowserFrameComponent,
     RecentTopicsPipe,
-    LinksListComponent
+    LinksListComponent,
+    PopUpDescriptionComponent
   ],
   imports: [
     CommonModule
@@ -16,7 +18,9 @@ import { LinksListComponent } from './components/links-list/links-list.component
   exports: [
     BrowserFrameComponent,
     RecentTopicsPipe,
-    LinksListComponent
+    LinksListComponent,
+    PopUpDescriptionComponent
   ]
 })
+
 export class ShareModule { }

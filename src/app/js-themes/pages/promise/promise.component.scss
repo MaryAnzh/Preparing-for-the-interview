@@ -1,12 +1,18 @@
 .promise {
 
   &__description {
-    &__create {
-      list-style: decimal;
+    &__part {
+      margin: 20px 0;
 
-      li {
-        padding-top: 20px;
+      &__create {
+        list-style: decimal;
+
+        li {
+          padding-top: 50px;
+        }
       }
     }
+
+
   }
 }

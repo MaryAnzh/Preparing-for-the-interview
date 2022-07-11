@@ -1,0 +1,40 @@
+:host {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba($color: #000000, $alpha: 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+
+  .description {
+    max-width: 1200px;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+    background: white;
+    border-radius: 10px;
+
+    &__wrap {
+      height: calc(90vh - 40px - 80px);
+      overflow: auto;
+    }
+
+    h3 {
+      font-size: 32px;
+    }
+
+    button {
+      margin-top: 20px;
+      font-size: 24px;
+      align-self: center;
+
+    }
+  }
+}

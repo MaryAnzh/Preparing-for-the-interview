@@ -1,3 +1,8 @@
+<app-pop-up-description
+[description]="currentMethod"
+[close]="closeMethodInfoOnClick.bind(this)"
+*ngIf="currentMethod"
+></app-pop-up-description>
 <section class="promise">
   <h2>Promise</h2>
   <p>Мои любимые Promise. Спрашивали на всех собесах</p>
@@ -7,48 +12,73 @@
     <p>Promise -- объект, который используется для отложенных и асинхронных
       вычислений.
     </p>
-    <h4>Promise может находиться в одном из трех состояний</h4>
-    <ul style="list-style: circle;">
-      <li>ожидание (pending): начальное состояние, не исполнен и не отклонён</li>
-      <li>исполнено (fulfilled): операция завершена успешно</li>
-      <li>отклонено (rejected): операция завершена с ошибкой</li>
-    </ul>
-    <h4>Свойства Promise</h4>
-    <ul style="list-style: circle;">
-      <li>
-        Promise.length. Всегда равно 1
-      </li>
-      <li>
-        Promise.prototype. Прототип для конмтруктора Promise
-      </li>
-    </ul>
-    <h4>Способы создания Promise</h4>
-    <ul class="promise__description__create">
-      <li>
-        При помощи ключевого слова new  и конструктора Promise
-        <div class="code">
-          <pre><code>{{"const promise = new Promise((resolve, reject) => {
+
+    <section class="promise__description__part">
+      <h4>Promise может находиться в одном из трех состояний</h4>
+      <ul style="list-style: circle;">
+        <li>ожидание (pending): начальное состояние, не исполнен и не отклонён</li>
+        <li>исполнено (fulfilled): операция завершена успешно</li>
+        <li>отклонено (rejected): операция завершена с ошибкой</li>
+      </ul>
+    </section>
+
+    <section class="promise__description__part">
+      <h4>Свойства Promise</h4>
+      <ul style="list-style: circle;">
+        <li>
+          Promise.length. Всегда равно 1
+        </li>
+        <li>
+          Promise.prototype. Прототип для конмтруктора Promise
+        </li>
+      </ul>
+    </section>
+
+    <section class="promise__description__part">
+      <h4>Способы создания Promise</h4>
+      <ul class="promise__description__part__create">
+        <li>
+          При помощи ключевого слова new и конструктора Promise
+          <div class="code">
+            <pre><code>{{"const promise = new Promise((resolve, reject) => {
   // функция-исполнитель (executor)
 });"}}</code></pre>
-        </div>
-      </li>
-      <li>
-        При помощи метода Promise.resolve(value), который возвращает Promise выполненный с переданным значением.
-        <div class="code">
-          <pre><code>{{codes[0]}}</code></pre>
-        </div>
-      </li>
-      <li>
-        При помощи метода Promise.reject(reason), который возвращает объект Promise, который был отклонён по указанной причине
-        <br/>
-        Promise.reject возвращает Promise который был отклонён. В целях отладки и выборочного отлова ошибок, удобно использовать в качестве причины объекты Error.
-        <div class="code">
-          <pre><code>{{codes[1]}}</code></pre>
-        </div>
-        <div class="code">
-          <pre><code>{{codes[2]}}</code></pre>
-        </div>
-      </li>
-    </ul>
+          </div>
+        </li>
+        <li>
+          При помощи метода Promise.resolve(value), который возвращает Promise
+          выполненный с переданным значением.
+          <div class="code">
+            <pre><code>{{codes[0]}}</code></pre>
+          </div>
+        </li>
+        <li>
+          При помощи метода Promise.reject(reason), который возвращает объект
+          Promise, который был отклонён по указанной причине
+          <br/>
+            Promise.reject возвращает Promise который был отклонён. В целях
+            отладки и выборочного отлова ошибок, удобно использовать в качестве
+            причины объекты Error.
+            <div class="code">
+              <pre><code>{{codes[1]}}</code></pre>
+            </div>
+            <div class="code">
+              <pre><code>{{codes[2]}}</code></pre>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="promise__description__part">
+        <h4>Методы Promise</h4>
+        <ul style="list-style: decimal;">
+          <li
+            *ngFor="let method of methods; let i = index">
+            <h5>{{method.name}}</h5>
+            <a
+            (click)="showMethodInfoOnClick(i)">MORE...</a>
+          </li>
+        </ul>
+      </section>
+    </section>
   </section>
-</section>

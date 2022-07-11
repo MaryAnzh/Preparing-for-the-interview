@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ILinksData } from 'src/app/share/madel/links-list.modet';
-
+import { IMethods } from 'src/app/share/madel/description.model';
+import { methods } from './data';
 
 @Component({
   selector: 'app-promise',
@@ -19,6 +20,8 @@ export class PromiseComponent {
       url: 'https://learn.javascript.ru/promise-basics',
     },
   ];
+
+  @Input() currentMethod: IMethods | null = null;
 
   public codes: string[] = [
     `const promiseResolve = Promise.resolve('secsess');
@@ -39,8 +42,17 @@ export class PromiseComponent {
     );
     //OPS!`
 
-    ];
+  ];
+
+  @Input() public methods: IMethods[] = methods;
 
   constructor() { }
 
+  showMethodInfoOnClick(index: number) {
+    this.currentMethod = this.methods[index];
+  }
+
+  closeMethodInfoOnClick() {
+    this.currentMethod = null;
+  }
 }
