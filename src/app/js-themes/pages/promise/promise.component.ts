@@ -24,15 +24,15 @@ export class PromiseComponent {
   @Input() currentMethod: IMethods | null = null;
 
   public codes: string[] = [
-    `const promiseResolve = Promise.resolve('secsess');
+    `const promiseResolve = Promise.resolve('success');
     promiseResolve.then(
-        (secsess) => console.log(secsess),
+        (success) => console.log(success),
         (error) => console.log(error)
     );
-    //secsess`,
+    //success`,
     `const promiseError = Promise.reject(new Error('OPS!'));
     promiseError.then(
-        (secsess) => console.log(secsess),
+        (success) => console.log(success),
         (error) => console.log(error)
     );
     //OPS!`,
