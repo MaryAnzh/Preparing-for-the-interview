@@ -7,6 +7,7 @@ import { JsThemesComponent } from './js-themes.component';
 import { EventLoopComponent } from './pages/event-loop/event-loop.component';
 import { JsTimersComponent } from './pages/js-timers/js-timers.component';
 import { PromiseComponent } from './pages/promise/promise.component';
+import { RecursionComponent } from './pages/recursion/recursion.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { PromiseComponent } from './pages/promise/promise.component';
     JsThemesComponent,
     EventLoopComponent,
     JsTimersComponent,
-    PromiseComponent
+    PromiseComponent,
+    RecursionComponent
   ],
   imports: [
     CommonModule,

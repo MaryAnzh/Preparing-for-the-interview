@@ -1,0 +1,13 @@
+.recursion {
+  &__sample {
+    &__code {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      &__result {
+        margin-left: 40px;
+      }
+    }
+  }
+}

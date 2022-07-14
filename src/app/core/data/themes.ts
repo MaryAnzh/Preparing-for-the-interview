@@ -264,12 +264,19 @@ export const themeLists: Itheme[] = [
             date: null,
             url: '',
           },
-          //closure, recursion
+          //closure
           {
             name: 'closure, recursion',
             progress: false,
             date: null,
             url: '',
+          },
+          //recursion
+          {
+            name: 'recursion',
+            progress: true,
+            date: new Date('07/14/2022'),
+            url: 'js/recursion',
           },
           //nested scopes
           {
