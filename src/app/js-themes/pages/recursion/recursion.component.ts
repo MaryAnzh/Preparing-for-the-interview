@@ -24,6 +24,17 @@ export class RecursionComponent implements OnInit {
   }
 };
 getMaxCallStackSize2(0);`,
+    `const factorial = (n) => {
+  if (n === 0) {
+      return 1;
+  } else {
+      return n * factorial(n - 1);
+  }
+}
+
+console.log(factorial(3));`,
+'3 -> (2 -> (1 -> (1)))',
+`1 * 1 * 2 * 3`,
 
   ];
 
