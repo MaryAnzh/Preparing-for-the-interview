@@ -35,7 +35,23 @@ getMaxCallStackSize2(0);`,
 console.log(factorial(3));`,
 '3 -> (2 -> (1 -> (1)))',
 `1 * 1 * 2 * 3`,
+`//1
+const arrayDepth = (arr, curretLevel = 1, maxDepth = 0) => {
+//2
+  maxDepth = Math.max(maxDepth, curretLevel);
+//3
+  for (let i = 0; i < arr.length; i++) {
+        const element = arr[i];
+        if (Array.isArray(element)) {
+          maxDepth = arrayDepth(element, curretLevel + 1, maxDepth);
+        }
+    }
+//4
+    return maxDepth;
+}
 
+const test = [1, 2, [[1, 2, []]],[[[1, 2, [[]]]]], 5];
+console.log(arrayDepth(test));`
   ];
 
   constructor() { }

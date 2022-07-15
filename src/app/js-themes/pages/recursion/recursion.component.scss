@@ -2,9 +2,19 @@
   &__sample {
     &__code {
       width: 100%;
+      flex-wrap: wrap;
       display: flex;
       align-items: center;
       margin-bottom: 50px;
+
+      .depth {
+        width: fit-content;
+      }
+
+      .depth-sample {
+        width: 500px;
+        padding: 10px;
+      }
 
       &__result {
         margin-left: 40px;
