@@ -1,4 +1,4 @@
-import { IMethods } from "src/app/share/madel/description.model";
+import { IMethods } from "src/app/share/model/description.model";
 
 const promiseCodeExample: string[] = [
   //00

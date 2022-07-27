@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Itheme } from '../../modal/themes.modal';
+import { IRecentTopics } from 'src/app/share/model/pipes.model';
+import { TransformArr } from 'src/app/share/util/transformArray.utile';
 
 @Component({
   selector: 'app-recent-topics',
@@ -12,9 +14,18 @@ export class RecentTopicsComponent implements OnInit {
 
   @Input() public linkToList: Function | null = null;
 
-  constructor() { }
+  public recentTopicsLength: number = 5;
+
+  public recentArray: IRecentTopics[] = [];
+
+  constructor(
+    ) { }
 
   ngOnInit(): void {
+    if (this.themeLists) {
+      this.recentArray = TransformArr.sortThemesByDate(this.themeLists);
+      console.log(this.recentArray);
+    }
   }
 
 }

@@ -15,7 +15,7 @@ import {
   animate,
   transition,
 } from '@angular/animations';
-import { ILinksData } from 'src/app/share/madel/links-list.modet';
+import { ILinksData } from 'src/app/share/model/links-list.modet';
 
 
 @Component({

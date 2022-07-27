@@ -1,22 +1,32 @@
 <section class="recent-topics"
   *ngIf="themeLists && linkToList">
-  <ul class="recent-topics__list"
-    *ngFor="let recent of themeLists | recentTopics">
-    <li>
+  <ul class="recent-topics__list">
+    <p>(5 last from {{recentArray.length}})</p>
+    <li
+      *ngFor="let recent of themeLists | recentTopics |
+      slice:0:recentTopicsLength">
       <p class="recent-topics__list__title">{{recent.name}}</p>
       <p class="recent-topics__list__theme">
         {{recent.theme}}, {{recent.subTheme}}
       </p>
-      <p class="recent-topics__list__date">{{recent.date | date: 'EEEE, MMMM d, y'}}</p>
+      <p class="recent-topics__list__date">{{recent.date | date: 'EEEE, MMMM d,
+        y'}}</p>
       <p
-      *ngIf="recent.sourse !== ''">
-      <a href="{{recent.sourse}}" target="_blank">link to article --></a>
+        *ngIf="recent.sourse !== ''">
+        <a href="{{recent.sourse}}" target="_blank">link to article --/></a>
       </p>
       <p
-      *ngIf="recent.url !== ''">
+        *ngIf="recent.url !== ''">
         <a (click)="linkToList(recent.url)">MORE...</a>
       </p>
     </li>
   </ul>
-
+  <hr
+    *ngIf="recentTopicsLength === 5" />
+  <a
+    *ngIf="recentTopicsLength === 5"
+    (click)="recentTopicsLength= recentArray.length">See all...</a>
+  <a
+    *ngIf="recentTopicsLength !== 5"
+    (click)="recentTopicsLength= 5">See 5 last...</a>
 </section>

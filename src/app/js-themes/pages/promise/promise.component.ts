@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { ILinksData } from 'src/app/share/madel/links-list.modet';
-import { IMethods } from 'src/app/share/madel/description.model';
+import { ILinksData } from 'src/app/share/model/links-list.modet';
+import { IMethods } from 'src/app/share/model/description.model';
 import { methods } from './data';
 
 @Component({

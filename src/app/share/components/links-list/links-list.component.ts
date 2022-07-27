@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ILinksData } from '../../madel/links-list.modet';
+import { ILinksData } from '../../model/links-list.modet';
 
 @Component({
   selector: 'app-links-list',

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ILinksData } from 'src/app/share/madel/links-list.modet';
+import { ILinksData } from 'src/app/share/model/links-list.modet';
 
 @Component({
   selector: 'app-recursion',

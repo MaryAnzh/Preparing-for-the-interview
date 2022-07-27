@@ -5,6 +5,7 @@ import { EventLoopComponent } from './pages/event-loop/event-loop.component';
 import { JsTimersComponent } from './pages/js-timers/js-timers.component';
 import { PromiseComponent } from './pages/promise/promise.component';
 import { RecursionComponent } from './pages/recursion/recursion.component';
+import { ObjComponent } from './pages/obj/obj.component';
 
 const routes: Routes = [
   {
@@ -26,7 +27,11 @@ const routes: Routes = [
   {
     path: 'recursion',
     component: RecursionComponent,
-  }
+  },
+  {
+    path: 'obj',
+    component: ObjComponent,
+  },
 ];
 
 @NgModule({

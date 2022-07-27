@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IMethods } from '../../madel/description.model';
+import { IMethods } from '../../model/description.model';
 
 @Component({
   selector: 'app-pop-up-description',
