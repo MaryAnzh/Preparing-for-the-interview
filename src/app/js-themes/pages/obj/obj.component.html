@@ -1,1 +1,103 @@
-<p>obj works!</p>
+<section class="objects">
+  <h2>Objects</h2>
+  <section class="objects__nav">
+    <ul class="objects__nav__list">
+      <li
+        [ngClass]="{'active': true, 'objects__nav__list__item': true}">
+        Create
+      </li>
+      <li
+        [ngClass]="{'active': false, 'objects__nav__list__item': true}">
+        Modify
+      </li>
+      <li
+        [ngClass]="{'active': false, 'objects__nav__list__item': true}">
+        methods
+      </li>
+      <li
+        [ngClass]="{'active': false, 'objects__nav__list__item': true}">
+        keys/values
+      </li>
+      <li
+      [ngClass]="{'active': false, 'objects__nav__list__item': true}">
+      flags
+    </li>
+    <li
+    [ngClass]="{'active': false, 'objects__nav__list__item': true}">
+    get & set
+  </li>
+
+    </ul>
+  </section>
+  <h3>Create objects</h3>
+
+  <app-links-list
+    [linksData]="linksData">
+  </app-links-list>
+
+  <section class="objects__description">
+    <p>Объекты используются для хранения коллекций различных значений и более
+      сложных сущностей в виде пар "ключ - значение".
+    </p>
+    <p>Объект передается по ссылкe. Переменной можно присвоить ссылку на Объект,
+      но не сам Объект.</p>
+  </section>
+  <section class="objects__create">
+    <ul
+      style="list-style: decimal;">
+      <li>
+        <h4>Литерал объекта</h4>
+        <p>{{"При помощи {...}, с необязательным списком свойств. Свойство – это
+          пара «ключ: значение», где ключ – это строка, а значение может быть
+          чем угодно"}}</p>
+        <div class="objects__create__sample">
+          <div class="code">
+            <pre><code>{{code[0]}}</code></pre>
+          </div>
+          <button
+            (click)="sayHi()">Try</button>
+        </div>
+      </li>
+      <li>
+        <h4>Конструктор объекта</h4>
+        <div class="objects__create__sample">
+          <div class="code">
+            <pre><code>{{code[1]}}</code></pre>
+          </div>
+          <pre><code>{{code[2]}}</code></pre>
+        </div>
+      </li>
+      <li>
+        <h4>Функция-конструктор</h4>
+        <div class="objects__create__sample">
+          <div class="code">
+            <pre><code>{{code[3]}}</code></pre>
+          </div>
+          <pre><code>{{code[4]}}</code></pre>
+        </div>
+      </li>
+      <li>
+        <h4>Через метод Object.create()</h4>
+        <a
+          href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create"
+          target="_blank">Object.create() MDN</a>
+      </li>
+      <li>
+        <h4>Через копирование другого объекта</h4>
+        <div class="code">
+          <pre><code>{{code[5]}}</code></pre>
+        </div>
+      </li>
+      <li>
+        <h4>Как экземпляр класса</h4>
+        <div class="code">
+          <pre><code>{{code[6]}}</code></pre>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+  <section style="margin-top: 50px;">
+    <h3>Objects modification</h3>
+  </section>
+</section>

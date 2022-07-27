@@ -1,0 +1,48 @@
+@import '../../../../vareable';
+
+.objects {
+  &__nav {
+    margin-bottom: 30px;
+
+    &__list {
+      display: flex;
+
+      &__item {
+        width: 100px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $mainColor;
+        color: #ffffff;
+        border-radius: 5px;
+        margin-left: 5px;
+        text-transform: lowercase;
+      }
+
+      .active {
+        background: $mainColorLight2;
+        color: $mainColorDark;
+        border: 1px dotted $mainColorDark;
+      }
+    }
+  }
+
+  &__create {
+    ul {
+      li {
+        margin-top: 30px;
+      }
+    }
+
+    &__sample {
+      display: flex;
+      align-items: center;
+
+      button {
+        margin-left: 50px;
+        font-size: 24px;
+      }
+    }
+  }
+}
