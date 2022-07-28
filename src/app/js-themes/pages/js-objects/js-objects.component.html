@@ -1,0 +1,34 @@
+<section class="objects">
+  <h2>Objects</h2>
+  <section class="objects__nav">
+    <ul class="objects__nav__list">
+      <li
+        routerLink="create"
+        [ngClass]="{'active': nav['create'], 'objects__nav__list__item': true}">
+        Create
+      </li>
+      <li
+        routerLink="modify"
+        [ngClass]="{'active': nav['modify'], 'objects__nav__list__item': true}">
+        Modify
+      </li>
+      <li
+        [ngClass]="{'active': false, 'objects__nav__list__item': true}">
+        methods
+      </li>
+      <li
+        [ngClass]="{'active': false, 'objects__nav__list__item': true}">
+        keys/values
+      </li>
+      <li
+        [ngClass]="{'active': false, 'objects__nav__list__item': true}">
+        flags
+      </li>
+      <li
+        [ngClass]="{'active': false, 'objects__nav__list__item': true}">
+        get & set
+      </li>
+    </ul>
+  </section>
+</section>
+<router-outlet></router-outlet>

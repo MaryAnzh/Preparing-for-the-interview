@@ -82,12 +82,19 @@ export const themeLists: Itheme[] = [
       {
         name: 'Objects',
         description: [
-          //create, modify
+          //create
           {
-            name: 'Objects',
+            name: 'Create',
             progress: true,
             date: new Date('07/27/2022'),
-            url: 'js/obj',
+            url: 'js/objects/create',
+          },
+          //modify
+          {
+            name: 'Modify',
+            progress: true,
+            date: new Date('07/28/2022'),
+            url: 'js/objects/modify',
           },
           //built-in methods
           {
