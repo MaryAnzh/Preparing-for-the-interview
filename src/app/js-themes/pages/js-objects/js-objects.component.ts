@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, NavigationStart } from '@angular/router';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -15,7 +15,8 @@ export class JsObjectsComponent {
   }
 
 
-  //public _pageName$$ = new Subject();
+  public _pageName$$ = new Subject();
+  public pageName$ = this._pageName$$.asObservable();
   public pageName: string = '';
 
 
@@ -23,18 +24,23 @@ export class JsObjectsComponent {
     private _router: Router,
     private _activatedRoute: ActivatedRoute
   ) {
-    this._activatedRoute.children[0].url.subscribe({
-      next: (m) => this.pageName = m[0].path
+    this._router.events.subscribe({
+      next: (event) => {
+        if (event instanceof NavigationStart) {
+          const url = event.url.split('/').pop();
+          this.pageName = url ?? '';
+          for (let key in this.nav) {
+            this.nav[key] = (key === this.pageName)
+          }
+        }
+      },
     });
+  }
 
-    //this.pageName = this._activatedRoute.snapshot.children[0].url[0].path;
-    console.log(this.pageName);
+  ngOnInit(): void {
+    this.pageName = this._activatedRoute.snapshot.children[0].url[0].path;
     for (let key in this.nav) {
       this.nav[key] = (key === this.pageName)
     }
-  }
-
-  ngOninit() {
-
   }
 }

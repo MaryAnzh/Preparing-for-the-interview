@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
+import { ShareModule } from 'src/app/share/share.module';
 import { JsObjectsRoutingModule } from './js-objects-routing.module';
 
 import { JsObjectsComponent } from './js-objects.component';
@@ -15,7 +15,9 @@ import { ObjectsModifyComponent } from './objects-modify/objects-modify.componen
   ],
   imports: [
     CommonModule,
-    JsObjectsRoutingModule  ],
+    ShareModule,
+    JsObjectsRoutingModule,
+   ],
 })
 
 export class JsObjectsModule { }
