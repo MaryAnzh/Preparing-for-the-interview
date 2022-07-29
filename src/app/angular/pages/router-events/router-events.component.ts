@@ -28,7 +28,7 @@ import { filter } from 'rxjs';`,
   private _router: Router,
 ) {
   this._router.events.pipe(
-    filter((ev: Event): ev is RouterEvent => ev instanceof RouterEvent)
+    filter((ev: Event): eev is NavigationEnd => ev instanceof NavigationEnd)
   ).subscribe({
     next: (event: NavigationEnd) => {
       const url = event.url;
