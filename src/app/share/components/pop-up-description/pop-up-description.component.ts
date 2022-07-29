@@ -7,14 +7,11 @@ import { IMethods } from '../../model/description.model';
   styleUrls: ['./pop-up-description.component.scss']
 })
 
-export class PopUpDescriptionComponent implements OnInit {
+export class PopUpDescriptionComponent {
 
   @Input() public description: IMethods | null = null;
 
   @Input() public close: Function = new Function();
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 }

@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './js-themes.component.html',
   styleUrls: ['./js-themes.component.scss']
 })
-export class JsThemesComponent implements OnInit {
+export class JsThemesComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

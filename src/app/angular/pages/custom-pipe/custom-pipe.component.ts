@@ -56,7 +56,4 @@ export class CustomPipeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
 }

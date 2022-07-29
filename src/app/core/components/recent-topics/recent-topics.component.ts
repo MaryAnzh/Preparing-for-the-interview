@@ -24,7 +24,6 @@ export class RecentTopicsComponent implements OnInit {
   ngOnInit(): void {
     if (this.themeLists) {
       this.recentArray = TransformArr.sortThemesByDate(this.themeLists);
-      console.log(this.recentArray);
     }
   }
 

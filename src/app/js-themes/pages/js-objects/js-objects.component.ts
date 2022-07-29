@@ -8,14 +8,13 @@ import { filter } from 'rxjs';
   styleUrls: ['./js-objects.component.scss']
 })
 
-export class JsObjectsComponent {
+export class JsObjectsComponent implements OnInit {
   public nav: { [key: string]: boolean } = {
     create: false,
     modify: false,
   }
 
   public pageName: string = '';
-
 
   constructor(
     private _router: Router,

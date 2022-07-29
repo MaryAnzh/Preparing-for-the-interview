@@ -39,7 +39,7 @@ import { ILinksData } from 'src/app/share/model/links-list.modet';
   ],
 })
 
-export class EventLoopComponent implements OnInit {
+export class EventLoopComponent {
   @Input() public linksData: ILinksData[] = [
     {
       title: 'JavaScript EventLoop MDN',
@@ -82,9 +82,6 @@ export class EventLoopComponent implements OnInit {
 
   constructor(
     private _viewportScroller: ViewportScroller) { }
-
-  ngOnInit(): void {
-  }
 
   task01(): void {
     setTimeout(() => console.log('01. Макро-задача-2, setTimeout-1'), 0);
@@ -135,7 +132,7 @@ export class EventLoopComponent implements OnInit {
     // d.catch((reject) => console.log(reject));
   }
 
-  selectedCodeStrinOnClick() {
+  selectedCodeStrinOnClick(): void {
     this.selectStringNumber++;
     this.ShowInteractive(this.selectStringNumber);
 
@@ -162,7 +159,7 @@ export class EventLoopComponent implements OnInit {
     }
   }
 
-  ShowInteractive(codeStringNumber: number) {
+  ShowInteractive(codeStringNumber: number): void {
 
     switch (codeStringNumber) {
       case 0:
@@ -263,11 +260,10 @@ export class EventLoopComponent implements OnInit {
     }
   }
 
-  resetTask(array: ITaskDate[]) {
+  resetTask(array: ITaskDate[]): void {
     for (let i = 0; i < array.length; i++) {
       array[i].select = false;
       array[i].visible = false;
-
     }
   }
 

@@ -6,13 +6,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./browser-frame.component.scss']
 })
 
-export class BrowserFrameComponent implements OnInit {
+export class BrowserFrameComponent {
 
   @Input() siteName: string = '';
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

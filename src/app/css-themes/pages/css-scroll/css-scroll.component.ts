@@ -10,7 +10,4 @@ export class CssScrollComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
 }

@@ -7,7 +7,7 @@ import { ILinksData } from 'src/app/share/model/links-list.modet';
   styleUrls: ['./recursion.component.scss']
 })
 
-export class RecursionComponent implements OnInit {
+export class RecursionComponent {
   @Input() public linksData: ILinksData[] = [
     {
       title: 'Recursion',
@@ -55,8 +55,4 @@ console.log(arrayDepth(test));`
   ];
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

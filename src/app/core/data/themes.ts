@@ -65,19 +65,6 @@ export const themeLists: Itheme[] = [
         ],
         progress: false,
       },
-      //Set. Map
-      {
-        name: 'Set. Map',
-        description: [
-          {
-            name: 'Set, Map',
-            progress: false,
-            date: null,
-            url: '',
-          }
-        ],
-        progress: false,
-      },
       //Objects
       {
         name: 'Objects',
@@ -93,7 +80,7 @@ export const themeLists: Itheme[] = [
           {
             name: 'Modify',
             progress: true,
-            date: new Date('07/28/2022'),
+            date: new Date('07/29/2022 22:00'),
             url: 'js/objects/modify',
           },
           //built-in methods
@@ -152,6 +139,19 @@ export const themeLists: Itheme[] = [
             date: null,
             url: '',
           },
+        ],
+        progress: false,
+      },
+      //Set. Map
+      {
+        name: 'Set. Map',
+        description: [
+          {
+            name: 'Set, Map',
+            progress: false,
+            date: null,
+            url: '',
+          }
         ],
         progress: false,
       },

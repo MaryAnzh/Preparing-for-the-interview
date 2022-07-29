@@ -6,16 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./anchor.component.scss']
 })
 
-export class AnchorComponent implements OnInit {
+export class AnchorComponent {
 
   public codes: string[] = [
     `<p id="anchor">Anchor</p>
   <...>
   <a (click)="scrollFn('anchor')">To anchor</a>`,
     ];
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+  constructor() { }
 
 }

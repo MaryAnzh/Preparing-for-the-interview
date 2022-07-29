@@ -9,7 +9,4 @@ export class CssThemesComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
 }

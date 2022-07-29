@@ -7,12 +7,9 @@ import { ILinksData } from '../../model/links-list.modet';
   styleUrls: ['./links-list.component.scss']
 })
 
-export class LinksListComponent implements OnInit {
+export class LinksListComponent {
 @Input() public linksData: ILinksData[] | null = null;
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
