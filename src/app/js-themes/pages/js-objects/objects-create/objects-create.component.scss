@@ -11,8 +11,12 @@
     gap: 20ox;
     align-items: center;
 
-    button {
+    &__description {
       margin-left: 50px;
+
+    }
+
+    button {
       font-size: 24px;
     }
   }

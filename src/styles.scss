@@ -101,3 +101,8 @@ pre {
   font-size: 18px;
   color: $mainColorDark;
 }
+
+.blocked {
+  opacity: 0.5;
+  pointer-events: none;
+}

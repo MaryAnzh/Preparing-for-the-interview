@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ILinksData } from 'src/app/share/model/links-list.modet';
+import { objectCreateSample } from './data';
 
 @Component({
   selector: 'app-objects-create',
@@ -60,9 +61,13 @@ console.log((obj == obj4)); // false`,
 }
 
 const max = new User('Max', 35);
-max.sayHi();`
-
-  ];
+max.sayHi();`,
+objectCreateSample[0],
+objectCreateSample[1],
+objectCreateSample[2],
+objectCreateSample[3],
+objectCreateSample[4],
+];
 
   constructor() { }
 
