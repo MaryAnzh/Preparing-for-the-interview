@@ -48,11 +48,11 @@ export class PromiseComponent {
 
   constructor() { }
 
-  showMethodInfoOnClick(index: number) {
+  showMethodInfoOnClick(index: number): void {
     this.currentMethod = this.methods[index];
   }
 
-  closeMethodInfoOnClick() {
+  closeMethodInfoOnClick(): void {
     this.currentMethod = null;
   }
 }

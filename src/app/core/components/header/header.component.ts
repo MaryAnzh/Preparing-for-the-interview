@@ -24,7 +24,7 @@ export class HeaderComponent {
     });
   }
 
-  toMain() {
+  toMain(): void {
     this.coreService.updateIsMain(true);
     this._router.navigateByUrl('/');
   }

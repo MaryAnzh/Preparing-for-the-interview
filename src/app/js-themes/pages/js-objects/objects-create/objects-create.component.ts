@@ -74,7 +74,7 @@ objectCreateSample[4],
   sayHi(): void {
     const obj = {
       name: 'Mari',
-      sayHi: function () { alert(`Hi, ${this.name}`) },
+      sayHi: function (): void { alert(`Hi, ${this.name}`) },
     };
     obj.sayHi();
   }

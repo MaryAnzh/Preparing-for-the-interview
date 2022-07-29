@@ -99,10 +99,10 @@ export class EventLoopComponent {
 
     setTimeout(() => console.log('06.  Макро-задача-4, setTimeout-3'), 0);
 
-    function fun01() {
+    function fun01(): void {
       console.log('07. Макро-задача-1, log вложенная фукция fun01');
 
-      function fun02() {
+      function fun02(): void {
         setTimeout(() => console.log('08.  Макро-задача-5, setTimeout-4, вложенная функция fun02'), 0);
         console.log('09. Макро-задача-1, log, вложенная функция fun02');
         a.then((resolve) => console.log(`10. Микро-задача-02, оработала, после выполнения Макро-задачи-3, setTimeout-2`));
