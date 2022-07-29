@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { CoreService } from '../../service/core-service/core.service';
-import { Location } from '@angular/common';
-import { Router } from '@angular/router';
+import { Event, Router, NavigationEnd } from '@angular/router'
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -10,40 +9,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 
-export class HeaderComponent implements OnInit {
-  public isMainPage$: Observable<boolean>;
-
+export class HeaderComponent {
   public isMain: boolean = true;
 
   constructor(
     private coreService: CoreService,
-    private location: Location,
-    private router: Router
+    private _router: Router
   ) {
-    this.isMainPage$ = this.coreService.isMainPage$;
-    this.isMainPage$.subscribe({
-      next: value => {
 
-        this.isMain = value;
-      },
-
+    this._router.events.pipe(
+      filter((ev: Event): ev is NavigationEnd => ev instanceof NavigationEnd)
+    ).subscribe({
+      next: (event: NavigationEnd) => (this.isMain = event.url === '/' || event.url === '/main')
     });
-
-    const uwl = this.location.path();
-    if (uwl === '/main') {
-      this.coreService.updateIsMain(true);
-
-    } else {
-      this.coreService.updateIsMain(false);
-
-    }
   }
 
   toMain() {
     this.coreService.updateIsMain(true);
-    this.router.navigateByUrl('/');
+    this._router.navigateByUrl('/');
   }
 
-  ngOnInit(): void {
-  }
 }

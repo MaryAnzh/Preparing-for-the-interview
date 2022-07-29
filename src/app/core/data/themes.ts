@@ -916,18 +916,26 @@ export const themeLists: Itheme[] = [
         ],
         progress: true,
       },
-      //anchor
+      //Utile
       {
-        name: 'anchor',
+        name: 'Utile',
         description: [
+          //anchor
           {
             name: 'anchor',
             progress: true,
             date: new Date('Jun 19 2022 15:15:00'),
             url: 'angular/anchor',
-          }
+          },
+          //listen to router Events
+          {
+            name: 'listen to router Events',
+            progress: true,
+            date: new Date('07/29/2022'),
+            url: 'angular/router-events',
+          },
         ],
-        progress: true,
+        progress: false,
       }
     ]
   },

@@ -1,0 +1,26 @@
+@import '../../../../vareable';
+
+.router-events {
+  &__sample {
+
+    &__nav {
+      display: flex;
+
+      li {
+        padding: 0px 10px;
+        border: 1px dotted $mainColorDark;
+        border-radius: 5px;
+        background: $mainColorLight2;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+
+    }
+
+  }
+}
+
+
+.code {
+  margin-bottom: 30px;
+}

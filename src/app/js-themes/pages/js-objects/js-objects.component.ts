@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, NavigationStart } from '@angular/router';
-import { Subject } from 'rxjs';
+import { Router, ActivatedRoute, NavigationStart, RouterEvent, Event, Navigation } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-js-objects',
@@ -14,26 +14,23 @@ export class JsObjectsComponent {
     modify: false,
   }
 
-
-  public _pageName$$ = new Subject();
-  public pageName$ = this._pageName$$.asObservable();
   public pageName: string = '';
 
 
   constructor(
     private _router: Router,
-    private _activatedRoute: ActivatedRoute
+    private _activatedRoute: ActivatedRoute,
   ) {
-    this._router.events.subscribe({
-      next: (event) => {
-        if (event instanceof NavigationStart) {
-          const url = event.url.split('/').pop();
-          this.pageName = url ?? '';
-          for (let key in this.nav) {
-            this.nav[key] = (key === this.pageName)
-          }
+    this._router.events.pipe(
+      filter((ev: Event): ev is RouterEvent => ev instanceof NavigationStart)
+    ).subscribe({
+      next: (event: NavigationStart) => {
+        const url = event.url.split('/').pop();
+        this.pageName = url ?? '';
+        for (let key in this.nav) {
+          this.nav[key] = (key === this.pageName)
         }
-      },
+      }
     });
   }
 

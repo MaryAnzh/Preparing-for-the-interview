@@ -4,6 +4,7 @@ import { AngularComponent } from './angular.component';
 import { AnchorComponent } from './pages/anchor/anchor.component';
 import { CustomPipeComponent } from './pages/custom-pipe/custom-pipe.component';
 import { PipesComponent } from './pages/pipes/pipes.component';
+import { RouterEventsComponent } from './pages/router-events/router-events.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,11 @@ const routes: Routes = [
   {
     path: 'pipes',
     component: PipesComponent
-  }
+  },
+  {
+    path: 'router-events',
+    component: RouterEventsComponent,
+  },
 
 ];
 

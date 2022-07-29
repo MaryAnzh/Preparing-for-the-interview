@@ -1,0 +1,28 @@
+<section class="router-events">
+  <h3>listen to router Events</h3>
+  <app-links-list
+    [linksData]="linksData">
+  </app-links-list>
+
+  <section>
+    <ul style="list-style: disc;">
+      <li>
+        Импортируем в коммпонент:
+        <div class="code">
+          <pre><code>{{code[0]}}</code></pre>
+        </div>
+      </li>
+      <li>
+        <p>Добавляем код в конструктор</p>
+        <div class="code">
+          <pre><code>{{code[1]}}</code></pre>
+        </div>
+      </li>
+    </ul>
+    <p>Следует учитывать, что если написать</p>
+    <div class="code">
+      <pre><code>{{"ev instanceof RouterEvent"}}</code></pre>
+    </div>
+    <p>то прилетит несколько событий</p>
+  </section>
+</section>
