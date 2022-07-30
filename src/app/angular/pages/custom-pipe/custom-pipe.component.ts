@@ -8,7 +8,7 @@ import { Itheme } from 'src/app/core/modal/themes.modal';
   styleUrls: ['./custom-pipe.component.scss']
 })
 
-export class CustomPipeComponent implements OnInit {
+export class CustomPipeComponent {
 
   public sampleThemeLists: Itheme[] = [
     {

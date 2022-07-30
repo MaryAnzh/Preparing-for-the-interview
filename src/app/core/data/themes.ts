@@ -842,40 +842,44 @@ export const themeLists: Itheme[] = [
     ]
   },
 
-  //Design patterns
+  //Design principles
   {
-    name: 'Design patterns',
+    name: 'Design (principles, pattern)',
     isSubThemeShow: false,
     subTheme: [
-      //design patterns
+      //Design patterns principles
       {
-        name: 'design patterns',
+        name: 'Design principles',
         description: [
-          //design patterns
-          {
-            name: 'design patterns',
-            progress: false,
-            date: null,
-            url: '',
-          },
-          //KISS, DRY, YAGNI
           {
             name: 'KISS, DRY, YAGNI',
             progress: false,
             date: null,
-            url: '',
+            url: ''
           },
-          //behind SOLID principles
           {
             name: 'behind SOLID principles',
             progress: false,
             date: null,
-            url: '',
-          },
+            url: ''
+          }
         ],
         progress: false,
       },
-    ]
+      //Design Pattern
+      {
+        name: 'Design Pattern',
+        description: [
+          {
+            name: 'Fluent API',
+            progress: false,
+            date: null,
+            url: ''
+          }
+        ],
+        progress: false,
+      },
+    ],
   },
 
   //Angular

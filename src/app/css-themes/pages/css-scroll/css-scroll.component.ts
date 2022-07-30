@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./css-scroll.component.scss']
 })
 
-export class CssScrollComponent implements OnInit {
+export class CssScrollComponent {
 
   constructor() { }
 
