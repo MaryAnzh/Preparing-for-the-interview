@@ -76,9 +76,9 @@ export const themeLists: Itheme[] = [
             date: new Date('07/27/2022'),
             url: 'js/objects/create',
           },
-          //props
+          //props, key/value
           {
-            name: 'Objects props',
+            name: 'Objects props, key/value',
             progress: true,
             date: new Date('08/03/2022 12:00'),
             url: 'js/objects/props',
@@ -89,38 +89,16 @@ export const themeLists: Itheme[] = [
             progress: true,
             date: new Date('07/29/2022 22:00'),
             url: 'js/objects/modify',
-          },
-          //built-in methods
+          },          //modify
           {
-            name: 'built-in methods',
-            progress: false,
-            date: null,
-            url: '',
+            name: 'Modify',
+            progress: true,
+            date: new Date('07/29/2022 22:00'),
+            url: 'js/objects/modify',
           },
-          //Members
+          //Property flags & descriptors
           {
-            name: 'Members',
-            progress: false,
-            date: null,
-            url: '',
-          },
-          //members: public, private
-          {
-            name: 'Members: public, private',
-            progress: false,
-            date: null,
-            url: '',
-          },
-          //Members: static
-          {
-            name: 'Members: static',
-            progress: false,
-            date: null,
-            url: '',
-          },
-          //Object keys/values
-          {
-            name: 'Object keys/values',
+            name: 'Property flags & descriptors',
             progress: false,
             date: null,
             url: '',
@@ -132,9 +110,23 @@ export const themeLists: Itheme[] = [
             date: null,
             url: '',
           },
-          //Property flags & descriptors
+          //methods
           {
-            name: 'Property flags & descriptors',
+            name: 'methods',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //methods: public, private
+          {
+            name: 'methods: public, private',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //built-in methods
+          {
+            name: 'built-in methods',
             progress: false,
             date: null,
             url: '',
@@ -153,9 +145,129 @@ export const themeLists: Itheme[] = [
             date: null,
             url: '',
           },
-          //class in Object
+          //util, class in Object
           {
             name: 'class in Object',
+            progress: false,
+            date: null,
+            url: '',
+          },
+        ],
+        progress: false,
+      },
+      //Classes
+      {
+        name: 'Classes',
+        description: [
+          //constructors
+          {
+            name: 'constructors',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //difference between class and constructor function
+          {
+            name: 'difference between class and constructor function',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //Getter/setter
+          {
+            name: 'Getter/setter',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //super(), where we have to use it
+          {
+            name: 'super(), where we have to use it',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //static members
+          {
+            name: 'static members',
+            progress: false,
+            date: null,
+            url: '',
+          },
+
+        ],
+        progress: false,
+      },
+      //This, Prototype
+      {
+        name: 'This, Prototype',
+        description: [
+          //execution context
+          {
+            name: 'execution context',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //call/apply/bind methods
+          {
+            name: 'call/apply/bind methods',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //constructor functions
+          {
+            name: 'constructor functions',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //understanding of prototypes
+          {
+            name: 'understanding of prototypes',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //__proto__ property
+          {
+            name: '__proto__ property',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //[Object.create] and define __proto__ explicitly
+          {
+            name: `[Object.create] and define __proto__ explicitly`,
+            progress: false,
+            date: null,
+            url: '',
+          },
+          // set / get object prototype
+          {
+            name: `set / get object prototype`,
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //prototype property
+          {
+            name: `prototype property`,
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //dependency between function constructor prototype and instance __proto__
+          {
+            name: `dependency between function constructor prototype and instance __proto__`,
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //create 'class' methods using function prototype property
+          {
+            name: `create 'class' methods using function prototype property`,
             progress: false,
             date: null,
             url: '',
@@ -313,126 +425,6 @@ export const themeLists: Itheme[] = [
             date: null,
             url: '',
           },
-        ],
-        progress: false,
-      },
-      //This, Prototype
-      {
-        name: 'This, Prototype',
-        description: [
-          //execution context
-          {
-            name: 'execution context',
-            progress: false,
-            date: null,
-            url: '',
-          },
-          //call/apply/bind methods
-          {
-            name: 'call/apply/bind methods',
-            progress: false,
-            date: null,
-            url: '',
-          },
-          //constructor functions
-          {
-            name: 'constructor functions',
-            progress: false,
-            date: null,
-            url: '',
-          },
-          //understanding of prototypes
-          {
-            name: 'understanding of prototypes',
-            progress: false,
-            date: null,
-            url: '',
-          },
-          //__proto__ property
-          {
-            name: '__proto__ property',
-            progress: false,
-            date: null,
-            url: '',
-          },
-          //[Object.create] and define __proto__ explicitly
-          {
-            name: `[Object.create] and define __proto__ explicitly`,
-            progress: false,
-            date: null,
-            url: '',
-          },
-          // set / get object prototype
-          {
-            name: `set / get object prototype`,
-            progress: false,
-            date: null,
-            url: '',
-          },
-          //prototype property
-          {
-            name: `prototype property`,
-            progress: false,
-            date: null,
-            url: '',
-          },
-          //dependency between function constructor prototype and instance __proto__
-          {
-            name: `dependency between function constructor prototype and instance __proto__`,
-            progress: false,
-            date: null,
-            url: '',
-          },
-          //create 'class' methods using function prototype property
-          {
-            name: `create 'class' methods using function prototype property`,
-            progress: false,
-            date: null,
-            url: '',
-          },
-        ],
-        progress: false,
-      },
-      //Classes
-      {
-        name: 'Classes',
-        description: [
-          //constructors
-          {
-            name: 'constructors',
-            progress: false,
-            date: null,
-            url: '',
-          },
-          //difference between class and constructor function
-          {
-            name: 'difference between class and constructor function',
-            progress: false,
-            date: null,
-            url: '',
-          },
-          //Getter/setter
-          {
-            name: 'Getter/setter',
-            progress: false,
-            date: null,
-            url: '',
-          },
-          //super(), where we have to use it
-          {
-            name: 'super(), where we have to use it',
-            progress: false,
-            date: null,
-            url: '',
-          },
-          //static members
-          {
-            name: 'static members',
-            progress: false,
-            date: null,
-            url: '',
-          },
-
         ],
         progress: false,
       },
