@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { JsObjectsComponent } from './js-objects.component';
 import { ObjectsCreateComponent } from './objects-create/objects-create.component';
 import { ObjectsModifyComponent } from './objects-modify/objects-modify.component';
+import { ObjPropsComponent } from './obj-props/obj-props.component';
 
 const childRoutes: Routes = [
   {
@@ -12,6 +13,10 @@ const childRoutes: Routes = [
   {
     path: 'modify',
     component: ObjectsModifyComponent,
+  },
+  {
+    path: 'props',
+    component: ObjPropsComponent,
   },
 ];
 

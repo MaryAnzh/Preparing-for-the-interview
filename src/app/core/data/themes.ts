@@ -76,6 +76,13 @@ export const themeLists: Itheme[] = [
             date: new Date('07/27/2022'),
             url: 'js/objects/create',
           },
+          //props
+          {
+            name: 'Objects props',
+            progress: true,
+            date: new Date('08/03/2022 12:00'),
+            url: 'js/objects/props',
+          },
           //modify
           {
             name: 'Modify',
@@ -90,9 +97,23 @@ export const themeLists: Itheme[] = [
             date: null,
             url: '',
           },
-          //Object public, private, static members
+          //Members
           {
-            name: 'Object public, private, static members',
+            name: 'Members',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //members: public, private
+          {
+            name: 'Members: public, private',
+            progress: false,
+            date: null,
+            url: '',
+          },
+          //Members: static
+          {
+            name: 'Members: static',
             progress: false,
             date: null,
             url: '',
@@ -132,9 +153,9 @@ export const themeLists: Itheme[] = [
             date: null,
             url: '',
           },
-          //Object as Hash
+          //class in Object
           {
-            name: 'Object as Hash (to loop through Object keys)',
+            name: 'class in Object',
             progress: false,
             date: null,
             url: '',
