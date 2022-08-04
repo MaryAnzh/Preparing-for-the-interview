@@ -20,33 +20,49 @@ export class ObjPropsComponent {
   ];
 
   public code: string[] = [
-//0
+    //0
     `const cat = {
   name: 'Pixel',
   age: 2,
 }`,
-//1
-`console.log(cat.name);
+    //1
+    `console.log(cat.name);
 console.log(cat.age);`,
-//2
-`cat.color = 'black-and-white';
+    //2
+    `cat.color = 'black-and-white';
 cat["is cute"] = true;
 console.log(cat);`,
-//3
-`{
+    //3
+    `{
 name: 'Pixel',
 age: 2,
 color: 'black-and-white',
 is cute: true,
 }`,
-//4
-`{
+    //4
+    `{
 name: 'Pixel',
 age: 2,
 }`,
-//5
-`delete cat.color;
+    //5
+    `delete cat.color;
 delete cat['is cute'];`,
+    //6
+    `cat.name === undefined
+//falase, такое свойство есть
+cat.weight === undefined
+//true, свойства нет`,
+    //7
+    `cat = {
+  "is cute": true,
+}
+console.log(cat["is cute"]);`,
+//8
+`for(const props in cat) {
+  console.log(\`\${props}: \${cat[props]}\`);
+}`,
+`name: Pixel
+age: 2`,
   ];
 
   constructor() { }

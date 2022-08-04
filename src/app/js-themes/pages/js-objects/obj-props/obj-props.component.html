@@ -5,21 +5,21 @@
     состоит из имени и значения,
     ассоциированного с этим именем</p>
   <p><span class="bold">Key(ключ)</span> -- это строка (также называемая
-    «именем свойства»), или Symbel</p>
+    «именем свойства»), или Symbol</p>
   <p><span class="bold">Value(значение)</span>, может быть любого типа</p>
   <section class="props__key-info">
     <h5>Key, -- особенности наименования</h5>
     <ul style="list-style: disc;">
       <li>
-        являются чувствительными к регистру:
+        являются чувствительными к регистру;
       </li>
       <li>
         могут быть строками JavaScript, или тем, что может быть сконвертировано
-        в строку, включая пустую строку:
+        в строку, включая пустую строку;
       </li>
       <li>
         если ключ состоит из нескольких слов, тогда он должен быть заключен в
-        кавычки
+        кавычки;
       </li>
     </ul>
   </section>
@@ -32,6 +32,7 @@
       <pre><code></code>{{code[0]}}</pre>
     </div>
   </section>
+
   <section>
     <p>Для обращения к свойствам используется запись «через точку»:</p>
     <div class="example">
@@ -43,7 +44,19 @@
         <p>2</p>
       </div>
     </div>
+
+    <p>Для обращения к свойствам разделенным пробелом или '-' используется
+      запись «через [""]:</p>
+    <div class="example">
+      <div class="example__code code">
+        <pre><code></code>{{code[7]}}</pre>
+      </div>
+      <div class="example__result">
+        <p>true</p>
+      </div>
+    </div>
   </section>
+
   <section>
     <h5>Добавление свойства</h5>
     <p>Cвойство можно добавить следующим образом:</p>
@@ -59,6 +72,7 @@
       </div>
     </div>
   </section>
+
   <section>
     <p>Для удаления свойства мы можем использовать оператор delete:</p>
     <div class="example">
@@ -69,5 +83,43 @@
         <pre><code>{{code[4]}}</code></pre>
       </div>
     </div>
+  </section>
+
+  <section>
+    <h5>Проверка существования свойства</h5>
+    <ul style="list-style: disc;">
+      <li>Сравнение с undefined
+        <div class="code">
+          <pre><code>{{code[6]}}</code></pre>
+        </div>
+        Минус этого способа в том, что если значение свойства будет равно
+        undefined, то при наличии свойства сравнение даст true. Поэтому в таком
+        случае, рекомендуется использовать null
+        <pre><code>cat.weight = null;
+console.log(cat.weight !== undefined);
+//truw, такое свойство есть</code></pre>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h5>Получение всех свойств/значений объекта</h5>
+    <ul style="list-style: disc;">
+      <li>
+        При помощи for ... in;
+        <div class="example">
+          <div class="example__code code">
+            <pre><code></code>{{code[8]}}</pre>
+          </div>
+          <div class="example__result">
+            <pre><code>{{code[9]}}</code></pre>
+          </div>
+        </div>
+      </li>
+      <li>
+        При помощи встроенных методов Object;
+
+      </li>
+    </ul>
   </section>
 </section>
