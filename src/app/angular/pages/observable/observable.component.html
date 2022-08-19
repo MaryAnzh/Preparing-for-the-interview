@@ -100,10 +100,75 @@
           </path>
         </svg>
       </div>
-      <p class="observable__info__section__text">
-        Создание Observable из массива, array-like object, Promise, итерируемого
-        object, или Observable-like object.
-      </p>
+      <ng-container
+        *ngIf="showFromInfo">
+        <p class="observable__info__section__text">
+          Создание Observable из массива, array-like object, Promise,
+          итерируемого
+          object, или Observable-like object.
+        </p>
+
+        <div class="code">
+          <pre><code>{{code[3]}}</code></pre>
+        </div>
+
+        <div class="code-examole">
+          <div class="code">
+            <pre><code>{{code[4]}}</code></pre>
+          </div>
+          <div class="result">
+            <pre>
+              10
+              20
+              30
+            </pre>
+          </div>
+        </div>
+      </ng-container>
+    </section>
+
+    <!-- fromEvent -->
+    <section class="observable__info__section">
+      <div class="observable__info__section__title">
+        <h3>
+          <a
+            href="https://rxjs.dev/api/index/function/fromEvent"
+            target="_blank">
+            fromEvent
+          </a>
+        </h3>
+        <svg
+          [@openClose]="showFormEventInfo ? 'closed' : 'open'"
+          (click)="showFormEventInfo= !showFormEventInfo"
+          viewBox="0 0 20 10">
+          <path
+            d="M20,0c-3.33,3.33-6.67,6.67-10,10C6.67,6.67,3.33,3.33,0,0C6.67,0,13.33,0,20,0z">
+          </path>
+        </svg>
+      </div>
+      <ng-container>
+        <!-- *ngIf="showFormEventInfo" -->
+        <p class="observable__info__section__text">
+          Создает Observable, принимающий объект, который генерирует
+          событие и название события
+        </p>
+
+        <div class="code">
+          <pre><code>{{code[5]}}</code></pre>
+        </div>
+
+        <div class="code-examole observable__info__section__code-examole">
+          <div class="code">
+            <pre><code>{{code[6]}}</code></pre>
+          </div>
+          <div class="result observable__info__section__code-examole__result">
+            <p>Клик номер:</p>
+            <p class="count">{{clickCount}}</p>
+            <button class=""
+              (click)="clickCount= -1">Сброс</button>
+          </div>
+        </div>
+      </ng-container>
     </section>
   </article>
 </section>

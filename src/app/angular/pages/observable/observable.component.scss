@@ -2,7 +2,9 @@
 
 :host {
 
+
   .observable {
+    padding: 0 20px;
 
     &__info {
 
@@ -20,8 +22,10 @@
         &__title {
           display: flex;
           align-items: center;
+
           h3 {
-            width: 70px;
+            width: fit-content;
+            padding-right: 10px;
           }
 
           svg {
@@ -41,7 +45,13 @@
           }
         }
 
-
+        &__code-examole {
+          &__result {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
       }
 
       &__section:nth-child(2n) {
@@ -49,4 +59,10 @@
       }
     }
   }
+}
+
+.count {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
 }

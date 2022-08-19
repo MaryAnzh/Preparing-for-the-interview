@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ILinksData } from 'src/app/share/model/links-list.modet';
-import { asyncScheduler, scheduled, of } from 'rxjs';
+import { asyncScheduler, scheduled, of, from, fromEvent } from 'rxjs';
 import {
   trigger,
   state,
@@ -63,16 +63,35 @@ of(1, 2, 3)
 of([1, 2, 3], asyncScheduler).subscribe((x) => console.log(x));
 // suggested approach
 scheduled([1, 2, 3], asyncScheduler).subscribe((x) => console.log(x));`,
+    `from<T>(input: ObservableInput<T>, scheduler?: SchedulerLike): Observable<T>`,
+    `import { from } from 'rxjs';
+
+const array = [10, 20, 30];
+const result = from(array);
+
+result.subscribe(x => console.log(x));`,
+    `fromEvent<T>(
+  target: any,
+  eventName: string,
+  options?: EventListenerOptions
+  | ((...args: any[]) => T), resultSelector?: (...args: any[])
+  => T): Observable<T>`,
+`import { fromEvent } from 'rxjs';
+
+const clicks = fromEvent(document, 'click');
+clicks.subscribe(() => this.clickCount++ );`
   ];
 
   public showOfInfo: boolean = false;
   public showFromInfo: boolean = false;
+  public showFormEventInfo: boolean = false;
 
+  public clickCount: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.ofExample();
+    this.fromEventExample();
   }
 
   ofExample(): void {
@@ -86,6 +105,18 @@ scheduled([1, 2, 3], asyncScheduler).subscribe((x) => console.log(x));`,
 
   scheduledExample(): void {
 
+  }
+
+  fromExample(): void {
+    const array = [10, 20, 30];
+    const result = from(array);
+
+    result.subscribe(x => console.log(x));
+  }
+
+  fromEventExample(): void {
+    const clicks = fromEvent(document, 'click');
+    clicks.subscribe(() => this.clickCount++ );
   }
 
 }
