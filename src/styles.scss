@@ -81,12 +81,22 @@ button {
   }
 }
 
+.code {
+  min-width: 45%;
+  width: fit-content;
+  overflow: auto;
+  box-shadow: 5px 5px 15px rgb(180, 180, 180);
+  margin: 10px;
+  border-radius: 4px;
+}
+
 .code-examole {
   width: 100%;
   display: flex;
   align-items: center;
 
   .code {
+    min-width: 45%;
     width: fit-content;
     overflow: auto;
     box-shadow: 5px 5px 15px rgb(180, 180, 180);
@@ -98,14 +108,6 @@ button {
   .result {
     margin-left: 50px;
   }
-}
-
-.code {
-  width: fit-content;
-  overflow: auto;
-  box-shadow: 5px 5px 15px rgb(180, 180, 180);
-  margin: 10px;
-  border-radius: 4px;
 }
 
 pre {

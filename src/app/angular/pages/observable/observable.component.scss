@@ -4,12 +4,15 @@
 
     &__info {
 
-      &__text {
-        padding-bottom: 20px;
+      &__section {
 
-        &::first-letter {
-          text-transform: uppercase;
-          padding-left: 20px;
+        &__text {
+          padding-bottom: 20px;
+
+          &::first-letter {
+            text-transform: uppercase;
+            padding-left: 20px;
+          }
         }
       }
     }

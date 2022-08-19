@@ -21,7 +21,11 @@ export class ObservableComponent implements OnInit {
   ];
 
   public code: string[] = [
-    `import { of } from 'rxjs';
+`of(value: null): Observable<null>
+of(value: undefined): Observable<undefined>
+of(): Observable<never>
+of(value: T): Observable<T>`,
+`import { of } from 'rxjs';
 ...
 of(1, 2, 3)
 .subscribe({
