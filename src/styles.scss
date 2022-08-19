@@ -81,13 +81,31 @@ button {
   }
 }
 
+.code-examole {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .code {
+    width: fit-content;
+    overflow: auto;
+    box-shadow: 5px 5px 15px rgb(180, 180, 180);
+    margin: 10px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+  }
+
+  .result {
+    margin-left: 50px;
+  }
+}
+
 .code {
   width: fit-content;
   overflow: auto;
   box-shadow: 5px 5px 15px rgb(180, 180, 180);
   margin: 10px;
   border-radius: 4px;
-  //user-select: none;
 }
 
 pre {

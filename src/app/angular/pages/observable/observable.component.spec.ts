@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ObjectsModifyComponent } from './objects-modify.component';
+import { ObservableComponent } from './observable.component';
 
-describe('ObjectsModifyComponent', () => {
-  let component: ObjectsModifyComponent;
-  let fixture: ComponentFixture<ObjectsModifyComponent>;
+describe('ObservableComponent', () => {
+  let component: ObservableComponent;
+  let fixture: ComponentFixture<ObservableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ObjectsModifyComponent ]
+      declarations: [ ObservableComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ObjectsModifyComponent);
+    fixture = TestBed.createComponent(ObservableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -15,6 +15,8 @@
     <ul
       style="list-style: decimal;">
       <h3>Способы создания</h3>
+
+      <!-- Литерал объекта -->
       <li>
         <h4>Литерал объекта</h4>
         <p>При помощи {{"{...}"}}, с необязательным списком свойств. Свойство –
@@ -25,10 +27,12 @@
           <div class="code">
             <pre><code>{{code[0]}}</code></pre>
           </div>
-          <button class="create__sample__description"
+          <button class="create__sample__result"
             (click)="sayHi()">Try</button>
         </div>
       </li>
+
+      <!-- Конструктор объекта -->
       <li>
         <h4>Конструктор объекта</h4>
         <div class="create__sample">
@@ -38,6 +42,8 @@
           <pre><code>{{code[2]}}</code></pre>
         </div>
       </li>
+
+      <!-- Функция-конструктор -->
       <li>
         <h4>Функция-конструктор</h4>
         <div class="create__sample">
@@ -46,62 +52,63 @@
           </div>
           <pre><code>{{code[4]}}</code></pre>
         </div>
+        <div class="create__sample">
+          <div class="code">
+            <pre><code>{{code[12]}}</code></pre>
+          </div>
+          <pre><code>{{code[4]}}</code></pre>
+        </div>
       </li>
+
+      <!-- Object.create() -->
       <li>
         <h4>Через метод Object.create()</h4>
         <p>Нюанс в передаче второго параметра. Свойство объекта передается
           дескриптором свойства</p>
-        <ul>
-          <li>
-            <a
-              href="https://www.tech-wiki.online/ru/javascript-object-create.html"
-              target="_blank">
-              Метод Object create (). tech-wiki
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/create"
-              target="_blank">Object.create() MDN</a>
-          </li>
-        </ul>
 
         <div class="create__sample">
           <div class="code">
             <pre><code>{{code[7]}}</code></pre>
           </div>
-          <div class="create__sample__description">
+          <div class="create__sample__result">
             <p>Пустой объект</p>
             <p>{{"{}"}}</p>
           </div>
         </div>
+
         <div class="create__sample">
           <div class="code">
             <pre><code>{{code[8]}}</code></pre>
           </div>
-          <div class="create__sample__description">
+          <div class="create__sample__result">
             <p>Объект с прототипом proto</p>
             <pre><code>{{code[10]}}</code></pre>
           </div>
         </div>
+
         <div class="create__sample">
           <div class="code">
             <pre><code>{{code[9]}}</code></pre>
           </div>
-          <div class="create__sample__description">
-            <p>Объект с прототипом proto
+          <div class="create__sample__result">
+            <!-- <p>Объект с прототипом proto
               и свойством переданным дескриптором
-            </p>
+            </p> -->
             <pre><code>{{code[11]}}</code></pre>
           </div>
+
         </div>
       </li>
+
+      <!-- копирование -->
       <li>
         <h4>Через копирование другого объекта</h4>
         <div class="code">
           <pre><code>{{code[5]}}</code></pre>
         </div>
       </li>
+
+      <!-- Как экземпляр класса -->
       <li>
         <h4>Как экземпляр класса</h4>
         <div class="code">

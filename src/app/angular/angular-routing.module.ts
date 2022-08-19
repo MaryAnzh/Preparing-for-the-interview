@@ -5,6 +5,7 @@ import { AnchorComponent } from './pages/anchor/anchor.component';
 import { CustomPipeComponent } from './pages/custom-pipe/custom-pipe.component';
 import { PipesComponent } from './pages/pipes/pipes.component';
 import { RouterEventsComponent } from './pages/router-events/router-events.component';
+import { ObservableComponent } from './pages/observable/observable.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'router-events',
     component: RouterEventsComponent,
+  },
+  {
+    path: 'observable',
+    component: ObservableComponent
   },
 
 ];

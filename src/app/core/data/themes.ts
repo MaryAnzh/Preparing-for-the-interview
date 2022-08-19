@@ -83,19 +83,6 @@ export const themeLists: Itheme[] = [
             date: new Date('08/03/2022 12:00'),
             url: 'js/objects/props',
           },
-          //modify
-          {
-            name: 'Modify',
-            progress: true,
-            date: new Date('07/29/2022 22:00'),
-            url: 'js/objects/modify',
-          },          //modify
-          {
-            name: 'Modify',
-            progress: true,
-            date: new Date('07/29/2022 22:00'),
-            url: 'js/objects/modify',
-          },
           //Property flags & descriptors
           {
             name: 'Property flags & descriptors',
@@ -932,6 +919,20 @@ export const themeLists: Itheme[] = [
           }
         ],
         progress: true,
+      },
+      //RXJS
+      {
+        name: 'RxJS',
+        description: [
+          //Observable
+          {
+            name: "Observable",
+            date: new Date('08/19/2022'),
+            progress: true,
+            url: 'angular/observable'
+          },
+        ],
+        progress: false,
       },
       //Utile
       {

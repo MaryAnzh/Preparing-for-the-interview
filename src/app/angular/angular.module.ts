@@ -8,6 +8,7 @@ import { AnchorComponent } from './pages/anchor/anchor.component';
 import { CustomPipeComponent } from './pages/custom-pipe/custom-pipe.component';
 import { PipesComponent } from './pages/pipes/pipes.component';
 import { RouterEventsComponent } from './pages/router-events/router-events.component';
+import { ObservableComponent } from './pages/observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { RouterEventsComponent } from './pages/router-events/router-events.compo
     CustomPipeComponent,
     PipesComponent,
     RouterEventsComponent,
+    ObservableComponent,
   ],
   imports: [
     CommonModule,

@@ -12,7 +12,6 @@ export class JsObjectsComponent implements OnInit {
   public nav: { [key: string]: boolean } = {
     create: false,
     props: false,
-    modify: false,
   }
 
   public pageName: string = '';

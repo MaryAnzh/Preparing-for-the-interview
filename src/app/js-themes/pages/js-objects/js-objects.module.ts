@@ -5,14 +5,12 @@ import { JsObjectsRoutingModule } from './js-objects-routing.module';
 
 import { JsObjectsComponent } from './js-objects.component';
 import { ObjectsCreateComponent } from './objects-create/objects-create.component';
-import { ObjectsModifyComponent } from './objects-modify/objects-modify.component';
 import { ObjPropsComponent } from './obj-props/obj-props.component';
 
 @NgModule({
   declarations: [
     JsObjectsComponent,
     ObjectsCreateComponent,
-    ObjectsModifyComponent,
     ObjPropsComponent
   ],
   imports: [
