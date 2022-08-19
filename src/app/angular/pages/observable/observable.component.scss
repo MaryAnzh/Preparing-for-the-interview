@@ -1,10 +1,36 @@
+@import '../../../../vareable';
+
 :host {
 
   .observable {
 
     &__info {
 
+      &__text {
+        padding-bottom: 20px;
+
+        &::first-letter {
+          text-transform: uppercase;
+          padding-left: 20px;
+        }
+      }
+
       &__section {
+
+        &__title {
+          display: flex;
+          align-items: center;
+          h3 {
+            width: 70px;
+          }
+
+          svg {
+            width: 15px;
+            height: 15px;
+            fill: $mainColor;
+            cursor: pointer;
+          }
+        }
 
         &__text {
           padding-bottom: 20px;
@@ -14,6 +40,12 @@
             padding-left: 20px;
           }
         }
+
+
+      }
+
+      &__section:nth-child(2n) {
+        background: $mainColorLight2;
       }
     }
   }

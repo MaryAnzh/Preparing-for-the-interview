@@ -5,6 +5,7 @@
   </app-links-list>
 
   <article class="observable__info">
+
     <p class="observable__info__text"><span class="bold">Observable</span> - это
       название механизма, который
       используется в Angular для программирования асинхронных потоков данных в
@@ -25,55 +26,84 @@
 
     <!-- of -->
     <section class="observable__info__section">
-      <h5>
-        <a
-          href="https://rxjs.dev/api/index/function/of"
-          target="_blank">
-          of
-        </a>
-      </h5>
-
-      <div class="code">
-        <pre><code>{{code[0]}}</code></pre>
+      <div class="observable__info__section__title">
+        <h3>
+          <a
+            href="https://rxjs.dev/api/index/function/of"
+            target="_blank">
+            of
+          </a>
+        </h3>
+        <svg
+          [@openClose]="showOfInfo ? 'closed' : 'open'"
+          (click)="showOfInfo= !showOfInfo"
+          viewBox="0 0 20 10">
+          <path
+            d="M20,0c-3.33,3.33-6.67,6.67-10,10C6.67,6.67,3.33,3.33,0,0C6.67,0,13.33,0,20,0z">
+          </path>
+        </svg>
       </div>
 
-      <div class="code-examole">
+      <ng-container
+        *ngIf="showOfInfo">
         <div class="code">
-          <pre><code>{{code[1]}}</code></pre>
+          <pre><code>{{code[0]}}</code></pre>
         </div>
-        <div class="result">
-          <pre><code>
+
+        <div class="code-examole">
+          <div class="code">
+            <pre><code>{{code[1]}}</code></pre>
+          </div>
+          <div class="result">
+            <pre><code>
         next: 1
         next: 2
         next: 3
         the end
       </code></pre>
+          </div>
         </div>
-      </div>
+        <h6>Deprecation Notes</h6>
+        <p class="observable__info__section__text">
+          The scheduler parameter will be removed in v8. Use scheduled
+          <br>
+          <a href="https://rxjs.dev/deprecations/scheduler-argument"
+            target="_blank">
+            Details
+          </a>
+        </p>
+        <div class="code">
+          <pre><code>{{code[2]}}</code></pre>
+        </div>
+      </ng-container>
 
-      <h6>Deprecation Notes</h6>
-      <p class="observable__info__section__text">
-        The scheduler parameter will be removed in v8. Use scheduled
-        <br>
-        <a href="https://rxjs.dev/deprecations/scheduler-argument"
-          target="_blank">
-          Details
-        </a>
-      </p>
-      <div class="code">
-        <pre><code>{{code[2]}}</code></pre>
-      </div>
+
+
     </section>
 
     <!-- from -->
     <section class="observable__info__section">
-      <h5>
-        <a href="https://rxjs.dev/api/index/function/from" target="_blank">
-          from
-        </a>
-      </h5>
+      <div class="observable__info__section__title">
+        <h3>
+          <a
+            href="https://rxjs.dev/api/index/function/of"
+            target="_blank">
+            from
+          </a>
+        </h3>
+        <svg
+          [@openClose]="showFromInfo ? 'closed' : 'open'"
+          (click)="showFromInfo= !showFromInfo"
+          viewBox="0 0 20 10">
+          <path
+            d="M20,0c-3.33,3.33-6.67,6.67-10,10C6.67,6.67,3.33,3.33,0,0C6.67,0,13.33,0,20,0z">
+          </path>
+        </svg>
+      </div>
+      <p class="observable__info__section__text">
+        Создание Observable из массива, array-like object, Promise, итерируемого
+        object, или Observable-like object.
+      </p>
     </section>
-
-
   </article>
 </section>
