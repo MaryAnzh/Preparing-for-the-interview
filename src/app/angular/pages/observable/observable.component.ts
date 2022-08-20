@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ILinksData } from 'src/app/share/model/links-list.modet';
-import { asyncScheduler, scheduled, of, from, fromEvent } from 'rxjs';
+import { asyncScheduler, scheduled, of, from, fromEvent, Observable, map } from 'rxjs';
 import {
   trigger,
   state,
@@ -76,7 +76,7 @@ result.subscribe(x => console.log(x));`,
   options?: EventListenerOptions
   | ((...args: any[]) => T), resultSelector?: (...args: any[])
   => T): Observable<T>`,
-`import { fromEvent } from 'rxjs';
+    `import { fromEvent } from 'rxjs';
 
 const clicks = fromEvent(document, 'click');
 clicks.subscribe(() => this.clickCount++ );`
@@ -87,11 +87,19 @@ clicks.subscribe(() => this.clickCount++ );`
   public showFormEventInfo: boolean = false;
 
   public clickCount: number = 0;
+  public click: Observable<string> = new Observable();
 
   constructor() { }
 
   ngOnInit(): void {
     this.fromEventExample();
+  this.click = fromEvent(document, 'click').pipe(
+    map((event) => {
+      const elem = <HTMLElement>event.target;
+      console.log(elem.tagName);
+      return `<${elem.tagName}>`
+    })
+  );
   }
 
   ofExample(): void {
@@ -116,7 +124,7 @@ clicks.subscribe(() => this.clickCount++ );`
 
   fromEventExample(): void {
     const clicks = fromEvent(document, 'click');
-    clicks.subscribe(() => this.clickCount++ );
+    clicks.subscribe(() => this.clickCount++);
   }
 
 }
