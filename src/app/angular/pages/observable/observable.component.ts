@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ILinksData } from 'src/app/share/model/links-list.modet';
-import { of, from, fromEvent, Observable, map, count, interval, takeUntil, bufferCount, mergeScan, reduce } from 'rxjs';
+import { Router, ActivatedRoute, NavigationStart, RouterEvent, Event, Navigation } from '@angular/router';
+import { of, from, fromEvent, Observable, map, filter, mergeScan, Subscription } from 'rxjs';
 import {
   trigger,
   state,
@@ -32,16 +32,16 @@ import {
 })
 
 export class ObservableComponent implements OnInit {
-  public linksData: ILinksData[] = [
-    {
-      title: 'observable, angdev.ru',
-      url: 'https://angdev.ru/rxjs/observable/'
-    },
-    {
-      title: 'observable, bxnotes.ru',
-      url: 'https://bxnotes.ru/conspect/lib/angular/angular-5-the-complete-guide/observable'
-    },
-  ];
+  public nav: { [key: string]: boolean } = {
+    about: false,
+    of: false,
+    from: false,
+    ['from-event']: false,
+    new: false,
+  }
+
+  public pageName: string = '';
+
 
   public code: string[] = [
     //00
@@ -70,18 +70,18 @@ of([1, 2, 3], asyncScheduler).subscribe((x) => console.log(x));
 scheduled([1, 2, 3], asyncScheduler).subscribe((x) => console.log(x));`,
 
     //03 from
-`from<T>(input: ObservableInput<T>, scheduler?: SchedulerLike): Observable<T>`,
+    `from<T>(input: ObservableInput<T>, scheduler?: SchedulerLike): Observable<T>`,
 
     //04 from
-`import { from } from 'rxjs';
+    `import { from } from 'rxjs';
 
 const array = [10, 20, 30];
 const result = from(array);
 
 result.subscribe(x => console.log(x));`,
 
-//05 fromEvent
-`fromEvent<T>(
+    //05 fromEvent
+    `fromEvent<T>(
   target: any,
   eventName: string,
   options?: EventListenerOptions
@@ -89,7 +89,7 @@ result.subscribe(x => console.log(x));`,
   => T): Observable<T>`,
 
     //06 fromEvent click count
-`import { fromEvent, map, mergeScan } from 'rxjs';
+    `import { fromEvent, map, mergeScan } from 'rxjs';
 ...
   public clickCount$: Observable<number> = of(0);
 ...
@@ -108,12 +108,12 @@ result.subscribe(x => console.log(x));`,
       mergeScan((acc, one) => of(acc + one), seed)
     );
   }`,
-//07 html
-`<p>Количество кликов:</p>
+    //07 html
+    `<p>Количество кликов:</p>
 <p class="count">{{clickCount$ | async}}</p>`,
 
     //08 fromEvent teg name
-`public click$: Observable<string> = of('');
+    `public click$: Observable<string> = of('');
 ...
 ngOnInit(): void {
   this.click$ = fromEvent(document, 'click').pipe(
@@ -132,9 +132,30 @@ ngOnInit(): void {
   public clickCount$: Observable<number> = of(0);
   public click$: Observable<string> = of('');
 
-  constructor() { }
+  public routerEvents: Subscription;
+
+  constructor(
+    private _router: Router,
+    private _activatedRoute: ActivatedRoute
+  ) {
+    this.routerEvents = this._router.events.pipe(
+      filter((ev: Event): ev is RouterEvent => ev instanceof NavigationStart)
+    ).subscribe({
+      next: (event: NavigationStart) => {
+        const url = event.url.split('/').pop();
+        this.pageName = url ?? '';
+        for (let key in this.nav) {
+          this.nav[key] = (key === this.pageName)
+        }
+      }
+    });
+  }
 
   ngOnInit(): void {
+    this.pageName = this._activatedRoute.snapshot.children[0].url[0].path;
+    for (let key in this.nav) {
+      this.nav[key] = (key === this.pageName)
+    }
     this.click$ = fromEvent(document, 'click').pipe(
       map((event) => {
         const elem = <HTMLElement>event.target;
@@ -195,8 +216,10 @@ ngOnInit(): void {
     ;
   }
 
-  ngonDestroy(): void {
-
+  ngOnDestroy(): void {
+    if (this.routerEvents) {
+      this.routerEvents.unsubscribe();
+    }
   }
 
 }

@@ -1,85 +1,43 @@
 <section class="observable">
   <h3>Observable</h3>
-  <app-links-list
-    [linksData]="linksData">
-  </app-links-list>
+
+  <nav class="nav">
+    <ul class="nav__list">
+      <li
+        routerLink="about"
+        [ngClass]="{'nav__list__item': true, 'active': nav['about']}">
+        about
+      </li>
+      <li
+      routerLink="of"
+        [ngClass]="{'nav__list__item': true, 'active': nav['of']}">
+        of
+      </li>
+      <li
+      routerLink="from"
+        [ngClass]="{'nav__list__item': true, 'active': nav['from']}">
+        from
+      </li>
+      <li
+      routerLink="from-event"
+        [ngClass]="{'nav__list__item': true, 'active': nav['from-event']}">
+        fromEvent
+      </li>
+      <li
+      routerLink="new"
+        [ngClass]="{'nav__list__item': true, 'active': nav['new']}">
+        new Observable()
+      </li>
+    </ul>
+  </nav>
+
+  <router-outlet></router-outlet>
 
   <article class="observable__info">
 
-    <p class="observable__info__text"><span class="bold">Observable</span> - это
-      название механизма, который
-      используется в Angular для программирования асинхронных потоков данных в
-      декларативном стиле. Observable является синонимом термина stream. К
-      асинхронным потокам данных обычно относятся такие концепции, как события,
-      http запросы и триггеры в коде.</p>
-    <p class="observable__info__text">Данный механизм позволяет создавать
-      объекты, инициирующие асинхронные
-      потоки (stream или observable) и объекты, которые за ними наблюдают
-      (observer).</p>
-  </article>
-
-  <article class="observable__info">
-    <h4>Создание</h4>
-    <p class="observable__info__text">Объекты RxJS Observable создаются либо с
-      использованием операторов
-      создания (of, from, fromEvent), либо через new Observable.</p>
 
     <!-- of -->
-    <section class="observable__info__section">
-      <div class="observable__info__section__title">
-        <h3>
-          <a
-            href="https://rxjs.dev/api/index/function/of"
-            target="_blank">
-            of
-          </a>
-        </h3>
-        <svg
-          [@openClose]="showOfInfo ? 'closed' : 'open'"
-          (click)="showOfInfo= !showOfInfo"
-          viewBox="0 0 20 10">
-          <path
-            d="M20,0c-3.33,3.33-6.67,6.67-10,10C6.67,6.67,3.33,3.33,0,0C6.67,0,13.33,0,20,0z">
-          </path>
-        </svg>
-      </div>
 
-      <ng-container
-        *ngIf="showOfInfo">
-        <div class="code">
-          <pre><code>{{code[0]}}</code></pre>
-        </div>
-
-        <div class="code-examole">
-          <div class="code">
-            <pre><code>{{code[1]}}</code></pre>
-          </div>
-          <div class="result">
-            <pre><code>
-        next: 1
-        next: 2
-        next: 3
-        the end
-      </code></pre>
-          </div>
-        </div>
-        <h6>Deprecation Notes</h6>
-        <p class="observable__info__section__text">
-          The scheduler parameter will be removed in v8. Use scheduled
-          <br>
-          <a href="https://rxjs.dev/deprecations/scheduler-argument"
-            target="_blank">
-            Details
-          </a>
-        </p>
-        <div class="code">
-          <pre><code>{{code[2]}}</code></pre>
-        </div>
-      </ng-container>
-
-
-
-    </section>
 
     <!-- from -->
     <section class="observable__info__section">

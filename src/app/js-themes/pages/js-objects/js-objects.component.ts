@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationStart, RouterEvent, Event, Navigation } from '@angular/router';
-import { filter } from 'rxjs';
+import { filter, Subscribable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-js-objects',
@@ -16,11 +16,13 @@ export class JsObjectsComponent implements OnInit {
 
   public pageName: string = '';
 
+  public routerEvents: Subscription;
+
   constructor(
     private _router: Router,
     private _activatedRoute: ActivatedRoute,
   ) {
-    this._router.events.pipe(
+    this.routerEvents = this._router.events.pipe(
       filter((ev: Event): ev is RouterEvent => ev instanceof NavigationStart)
     ).subscribe({
       next: (event: NavigationStart) => {
@@ -37,6 +39,12 @@ export class JsObjectsComponent implements OnInit {
     this.pageName = this._activatedRoute.snapshot.children[0].url[0].path;
     for (let key in this.nav) {
       this.nav[key] = (key === this.pageName)
+    }
+  }
+
+  ngOnDestroy(): void {
+    if (this.routerEvents) {
+      this.routerEvents.unsubscribe();
     }
   }
 }

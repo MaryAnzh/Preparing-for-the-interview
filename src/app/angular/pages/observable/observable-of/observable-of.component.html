@@ -1,0 +1,37 @@
+<section class="section">
+  <h3>Создание Observable через оператор of</h3>
+
+  <app-links-list
+    [linksData]="linksData">
+  </app-links-list>
+
+  <div class="code">
+    <pre><code>{{code[0]}}</code></pre>
+  </div>
+
+  <div class="code-examole">
+    <div class="code">
+      <pre><code>{{code[1]}}</code></pre>
+    </div>
+    <div class="result">
+      <pre><code>
+    next: 1
+    next: 2
+    next: 3
+    the end
+  </code></pre>
+    </div>
+  </div>
+  <h6>Deprecation Notes</h6>
+  <p class="observable__info__section__text">
+    The scheduler parameter will be removed in v8. Use scheduled
+    <br>
+    <a href="https://rxjs.dev/deprecations/scheduler-argument"
+      target="_blank">
+      Details
+    </a>
+  </p>
+  <div class="code">
+    <pre><code>{{code[2]}}</code></pre>
+  </div>
+</section>

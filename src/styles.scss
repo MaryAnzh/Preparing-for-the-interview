@@ -75,6 +75,40 @@ button {
   }
 }
 
+.nav {
+  margin-bottom: 30px;
+
+  &__list {
+    display: flex;
+
+    &__item {
+      min-width: 100px;
+      width: fit-content;
+      height: 30px;
+      padding: 0 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $mainColorLight2;
+      color: $mainColorDark;
+      border: 1px dotted $mainColorDark;
+      border-radius: 5px;
+      margin-left: 5px;
+      text-transform: lowercase;
+      transition: .3s;
+      cursor: pointer;
+
+      &:hover {
+        background: $mainColorLight;
+      }
+    }
+
+    .active {
+      background: $mainColor;
+      color: #ffffff;
+    }
+  }
+}
 .description {
   p {
     padding: 10px 0;

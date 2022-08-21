@@ -920,16 +920,40 @@ export const themeLists: Itheme[] = [
         ],
         progress: true,
       },
-      //RXJS
+      //Observable
       {
-        name: 'RxJS',
+        name: 'Observable',
         description: [
           //Observable
           {
             name: "Observable",
             date: new Date('08/19/2022'),
             progress: true,
-            url: 'angular/observable'
+            url: 'angular/observable/about'
+          },
+          {
+            name: "Observable create: of",
+            date: new Date('08/19/2022'),
+            progress: true,
+            url: 'angular/observable/of'
+          },
+          {
+            name: "Observable create: from",
+            date: new Date('08/19/2022'),
+            progress: true,
+            url: 'angular/observable/from'
+          },
+          {
+            name: "Observable create: fromEvent",
+            date: new Date('08/19/2022'),
+            progress: true,
+            url: 'angular/observable/from-event'
+          },
+          {
+            name: "Observable create: new Observable()",
+            date: new Date('08/19/2022'),
+            progress: true,
+            url: 'angular/observable/new'
           },
         ],
         progress: false,
