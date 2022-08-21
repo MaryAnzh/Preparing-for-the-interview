@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ILinksData } from 'src/app/share/model/links-list.modet';
-import { asyncScheduler, scheduled, of, from, fromEvent, Observable, map, Subscribable, Subscription } from 'rxjs';
+import { of, from, fromEvent, Observable, map, count, interval, takeUntil, bufferCount, mergeScan, reduce } from 'rxjs';
 import {
   trigger,
   state,
@@ -44,15 +44,15 @@ export class ObservableComponent implements OnInit {
   ];
 
   public code: string[] = [
-//00
-`of(value: null): Observable<null>
+    //00
+    `of(value: null): Observable<null>
 of(value: undefined): Observable<undefined>
 of(): Observable<never>
 of(value: T): Observable<T>
 of(value: T): Observable<T>`,
 
-//01 of
-`import { of } from 'rxjs';
+    //01 of
+    `import { of } from 'rxjs';
 ...
 of(1, 2, 3)
 .subscribe({
@@ -61,18 +61,18 @@ of(1, 2, 3)
   complete: () => console.log('the end'),
 });`,
 
-//02 scheduled
-`import { of, asyncScheduler, scheduled } from 'rxjs';
+    //02 scheduled
+    `import { of, asyncScheduler, scheduled } from 'rxjs';
 
 // Deprecated approach
 of([1, 2, 3], asyncScheduler).subscribe((x) => console.log(x));
 // suggested approach
 scheduled([1, 2, 3], asyncScheduler).subscribe((x) => console.log(x));`,
 
-//03 from
+    //03 from
 `from<T>(input: ObservableInput<T>, scheduler?: SchedulerLike): Observable<T>`,
 
-//04 from
+    //04 from
 `import { from } from 'rxjs';
 
 const array = [10, 20, 30];
@@ -88,28 +88,35 @@ result.subscribe(x => console.log(x));`,
   | ((...args: any[]) => T), resultSelector?: (...args: any[])
   => T): Observable<T>`,
 
-//06 fromEvent click count
-`import { fromEvent } from 'rxjs';
+    //06 fromEvent click count
+`import { fromEvent, map, mergeScan } from 'rxjs';
 ...
   public clickCount$: Observable<number> = of(0);
 ...
   ngOnInit(): void {
-    this.click$ = fromEvent(document, 'click').pipe(
-      map((event) => {
-        const elem = <HTMLElement>event.target;
-        return \`<\${elem.tagName}>\`
-      })
+//variant 1
+    let clickCount = 0;
+    this.clickCount$ = fromEvent(document, 'click').pipe(
+      map(() => clickCount++)
+    )
+
+//variant 2
+    const click$ = fromEvent(document, 'click');
+    const one$ = click$.pipe(map(() => 1));
+    const seed = 0;
+    this.clickCount$ = one$.pipe(
+      mergeScan((acc, one) => of(acc + one), seed)
     );
   }`,
 //07 html
-`<p>Клик номер:</p>
+`<p>Количество кликов:</p>
 <p class="count">{{clickCount$ | async}}</p>`,
 
-//08 fromEvent teg name
+    //08 fromEvent teg name
 `public click$: Observable<string> = of('');
 ...
 ngOnInit(): void {
-  this.click = fromEvent(document, 'click').pipe(
+  this.click$ = fromEvent(document, 'click').pipe(
     map((event) => {
       const elem = <HTMLElement>event.target;
       return \`<\${elem.tagName}>]\`
@@ -135,12 +142,17 @@ ngOnInit(): void {
       })
     );
 
-    let count = 0;
+    // const click$ = fromEvent(document, 'click');
+    // const one$ = click$.pipe(map(() => 1));
+    // const seed = 0;
+    // this.clickCount$ = one$.pipe(
+    //   mergeScan((acc, one) => of(acc + one), seed)
+    // );
+
+    let clickCount = 0;
     this.clickCount$ = fromEvent(document, 'click').pipe(
-      map(() => {
-        return count++
-      })
-    );
+      map(() => clickCount++)
+    )
 
     // const obs = new Observable((sub) => {
     //   sub.next(1);
