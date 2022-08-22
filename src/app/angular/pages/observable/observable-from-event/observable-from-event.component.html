@@ -1,1 +1,46 @@
-<p>observable-from-event works!</p>
+<section class="section">
+  <h3>Создание Observable через оператор fromEvent</h3>
+  <app-links-list
+    [linksData]="linksData">
+  </app-links-list>
+
+
+  <p class="section__text">
+    Создает Observable, принимающий объект, который генерирует
+    событие и название события
+  </p>
+
+  <div class="code">
+    <pre><code>{{code[0]}}</code></pre>
+  </div>
+
+  <h3>Примеры</h3>
+  <h4>Подсчет количества кликов</h4>
+  <div class="code-examole section__code-examole">
+    <div class="code">
+      <pre><code>{{code[1]}}</code></pre>
+      <pre><code>HTML
+{{code[2]}}</code></pre>
+
+    </div>
+    <div class="result section__code-examole__result">
+      <p>Количество кликов:</p>
+      <p class="count"
+        *ngIf="isClick">0</p>
+      <p class="count">{{clickCount$ | async}}</p>
+    </div>
+  </div>
+
+  <h4>Отображение тега, на который кликнули</h4>
+  <div class="code-examole section__code-examole">
+    <div class="code">
+      <pre><code>{{code[3]}}</code></pre>
+    </div>
+    <div class="result section__code-examole__result">
+      <p>Вы кликнули на тег:</p>
+      <div class="section__code-examole__result__tegs">
+        <p>{{click$ | async | lowercase }}</p>
+      </div>
+    </div>
+  </div>
+</section>

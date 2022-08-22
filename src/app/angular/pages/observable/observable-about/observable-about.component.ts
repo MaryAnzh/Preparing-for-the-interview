@@ -21,6 +21,7 @@ export class ObservableAboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.clear();
   }
 
 }
