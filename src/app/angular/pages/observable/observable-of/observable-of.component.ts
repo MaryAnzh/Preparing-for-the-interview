@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ILinksData } from 'src/app/share/model/links-list.modet';
-import { of, Subscription } from 'rxjs';
+import { Observable, Observer, of, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-observable-of',

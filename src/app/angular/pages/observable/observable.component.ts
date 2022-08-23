@@ -36,9 +36,14 @@ export class ObservableComponent implements OnInit {
     about: false,
     of: false,
     from: false,
-    ['from-event']: false,
+    fromEvent: false,
     new: false,
+    methods: false,
   }
+
+  public navPages: string[] = [
+    'about', 'of', 'from', 'fromEvent', 'new', 'methods'
+  ];
 
   public pageName: string = '';
 

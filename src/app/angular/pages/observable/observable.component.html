@@ -1,32 +1,13 @@
-<section class="observable">
+**<section class="observable">
   <h3>Observable</h3>
 
   <nav class="nav">
     <ul class="nav__list">
       <li
-        routerLink="about"
-        [ngClass]="{'nav__list__item': true, 'active': nav['about']}">
-        about
-      </li>
-      <li
-      routerLink="of"
-        [ngClass]="{'nav__list__item': true, 'active': nav['of']}">
-        of
-      </li>
-      <li
-      routerLink="from"
-        [ngClass]="{'nav__list__item': true, 'active': nav['from']}">
-        from
-      </li>
-      <li
-      routerLink="from-event"
-        [ngClass]="{'nav__list__item': true, 'active': nav['from-event']}">
-        fromEvent
-      </li>
-      <li
-      routerLink="new"
-        [ngClass]="{'nav__list__item': true, 'active': nav['new']}">
-        new Observable()
+      *ngFor="let list of navPages"
+        routerLink="{{list}}"
+        [ngClass]="{'nav__list__item': true, 'active': nav[list]}">
+        {{list}}
       </li>
     </ul>
   </nav>

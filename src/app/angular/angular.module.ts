@@ -14,6 +14,7 @@ import { ObservableFromComponent } from './pages/observable/observable-from/obse
 import { ObservableFromEventComponent } from './pages/observable/observable-from-event/observable-from-event.component';
 import { ObservableAboutComponent } from './pages/observable/observable-about/observable-about.component';
 import { ObservableNewComponent } from './pages/observable/observable-new/observable-new.component';
+import { ObservableMethodsComponent } from './pages/observable/observable-methods/observable-methods.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ObservableNewComponent } from './pages/observable/observable-new/observ
     ObservableFromEventComponent,
     ObservableAboutComponent,
     ObservableNewComponent,
+    ObservableMethodsComponent,
   ],
   imports: [
     CommonModule,
