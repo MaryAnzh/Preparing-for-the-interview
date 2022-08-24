@@ -12,6 +12,7 @@ import { ObservableFromEventComponent } from './pages/observable/observable-from
 import { ObservableAboutComponent } from './pages/observable/observable-about/observable-about.component';
 import { ObservableNewComponent } from './pages/observable/observable-new/observable-new.component';
 import { ObservableMethodsComponent } from './pages/observable/observable-methods/observable-methods.component';
+import { AngularProjectComponent } from './pages/angular-project/angular-project.component';
 
 const observableChildRoutes: Routes = [
   {
@@ -65,6 +66,10 @@ const routes: Routes = [
     path: 'observable',
     component: ObservableComponent,
     children: observableChildRoutes
+  },
+  {
+    path: 'angular-project',
+    component: AngularProjectComponent
   },
 ];
 

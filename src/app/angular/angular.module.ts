@@ -15,6 +15,7 @@ import { ObservableFromEventComponent } from './pages/observable/observable-from
 import { ObservableAboutComponent } from './pages/observable/observable-about/observable-about.component';
 import { ObservableNewComponent } from './pages/observable/observable-new/observable-new.component';
 import { ObservableMethodsComponent } from './pages/observable/observable-methods/observable-methods.component';
+import { AngularProjectComponent } from './pages/angular-project/angular-project.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ObservableMethodsComponent } from './pages/observable/observable-method
     ObservableAboutComponent,
     ObservableNewComponent,
     ObservableMethodsComponent,
+    AngularProjectComponent,
   ],
   imports: [
     CommonModule,

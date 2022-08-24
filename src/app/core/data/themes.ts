@@ -887,6 +887,19 @@ export const themeLists: Itheme[] = [
     name: 'Angular',
     isSubThemeShow: false,
     subTheme: [
+      //angular cli
+      {
+        name: 'Create Angular project',
+        description: [
+          {
+            name: 'Create Angular project',
+            date: new Date('08/23/2022'),
+            url: 'angular/angular-project',
+            progress: true,
+          },
+        ],
+        progress: false,
+      },
       //module
       {
         name: 'Module',

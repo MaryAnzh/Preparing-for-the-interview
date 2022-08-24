@@ -1,0 +1,58 @@
+<section class="angular-project">
+  <h3>Create Angular project</h3>
+  <nav class="nav">
+    <ul class="nav__list">
+      <li
+        *ngFor="let project of nav"
+        [ngClass]="{'nav__list__item': true, 'active': project.isActive}"
+        (click)="showProjectOnClick(project.title)">
+        {{project.title}}
+      </li>
+    </ul>
+  </nav>
+
+  <ng-container
+    *ngIf="nav[0].isActive">
+    <section class="angular-project__cv">
+      <ul style="list-style: decimal;">
+        <li>Создание проекта
+          <pre><code>ng new cv
+Would you like to add Angular routing? Yes
+Which stylesheet format would you like to use?
+  CSS
+> SCSS   [ https://sass-lang.com/documentation/syntax#scss                ]
+  Sass   [ https://sass-lang.com/documentation/syntax#the-indented-syntax ]
+  Less   [ http://lesscss.org
+          </code></pre>
+        </li>
+        <li>
+          Изменения в package.json
+          <div class="code">
+            <pre><code>{{code[0]}}</code></pre>
+          </div>
+        </li>
+        <li>
+          Добавляем EsLInt
+          <pre><code>ng lint</code></pre>
+          Если пакета нет, то вам предложат его установить
+        </li>
+        <li>
+          для возможности развертываня проекта на github.com добавляем angular-cli-ghpages
+          <pre><code>npm i angular-cli-ghpages --save-dev</code></pre>
+        </li>
+        <li>
+          Вносим изменения в angular.json
+          <div class="code">
+            <pre><code>{{code[1]}}</code></pre>
+            <p>и</p>
+            <pre><code>{{code[2]}}</code></pre>
+          </div>
+        </li>
+        <li>
+          Разворачиваем проект на github.com
+          <pre><code>{{code[3]}}</code></pre>
+        </li>
+      </ul>
+    </section>
+  </ng-container>
+</section>
