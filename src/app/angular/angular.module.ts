@@ -16,6 +16,7 @@ import { ObservableAboutComponent } from './pages/observable/observable-about/ob
 import { ObservableNewComponent } from './pages/observable/observable-new/observable-new.component';
 import { ObservableMethodsComponent } from './pages/observable/observable-methods/observable-methods.component';
 import { AngularProjectComponent } from './pages/angular-project/angular-project.component';
+import { AngularTranslateComponent } from './pages/angular-translate/angular-translate.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { AngularProjectComponent } from './pages/angular-project/angular-project
     ObservableNewComponent,
     ObservableMethodsComponent,
     AngularProjectComponent,
+    AngularTranslateComponent,
   ],
   imports: [
     CommonModule,

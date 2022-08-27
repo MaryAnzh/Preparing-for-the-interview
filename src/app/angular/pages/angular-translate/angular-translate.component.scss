@@ -1,0 +1,20 @@
+:host {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+
+  .angular-translate {
+
+    &__info {
+
+      &__main-list {
+        list-style: decimal;
+
+        &__additional-list {
+          list-style: disc;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}

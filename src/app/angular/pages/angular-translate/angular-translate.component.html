@@ -1,0 +1,84 @@
+<section class="angular-translate">
+  <h3>Angular ngx-translate</h3>
+  <app-links-list
+    [linksData]="linksData">
+  </app-links-list>
+
+  <section class="angular-translate__info">
+    <p>Библиотека не работает без подключения interceptor к
+      проекту, Так же для развертывания проекта на Githab необходимо указать
+      путь к папке со словарем в HttpLoaderFactory. Если проект имеет бекэнд, то interceptor
+      необходимо писать с учетом того, что его использует библиотека
+      переводчика,</p>
+
+    <ul class="angular-translate__info__main-list">
+      <li>
+        <h5>Подключение interceptor</h5>
+        <p>Если в проекте не используется interceptor, то его необходимо
+          подключить</p>
+        <ul class="angular-translate__info__main-list__additional-list">
+          <li>Создаем папку interceptor в core</li>
+          <li>Создаем в этой папке interceptor
+            <pre><code>ng generate interceptor HTTPClient</code></pre>
+            Если бекэнда нет, то interceptor оставляем без изменений
+          </li>
+        </ul>
+
+      </li>
+      <li>
+        <h5>Подключаем бибилитеку</h5>
+        <pre><code>npm install @ngx-translate/core @ngx-translate/http-loader --save</code></pre>
+      </li>
+      <li>
+        <h5>Импортируем в app.module.ts</h5>
+        <div class="code">
+          <pre><code>{{code[0]}}</code></pre>
+        </div>
+      </li>
+      <li>
+        <h5>Создаем HttpLoaderFactory в app.module.ts</h5>
+        Если тут не прописать путь к словарю, то при развертывании приложения
+        на Githab мы получим пустые строки, а не перевод
+        <div class="code">
+          <pre><code>{{code[1]}}</code></pre>
+        </div>
+      </li>
+      <li>
+        <h5>Прописываем в imports и в providers</h5>
+        <div class="code">
+          <pre><code>{{code[2]}}</code></pre>
+        </div>
+      </li>
+      <li>
+        <h5>Подключение к второстепенному модулю</h5>
+        <p>Если в приложении имеются дополнительные модули, то в
+          эти модуль необходимо подключить TranslateModule, если есть
+          необходимость в переводе
+        </p>
+        <div class="code">
+          <pre><code>{{code[3]}}</code></pre>
+        </div>
+      </li>
+      <li>
+        <h5>Переключение языка</h5>
+        <p>В моем случае переключение языка осуществляется в компоненте header,
+          который находится в модуле core. Для возможности переключения языка
+          необходими подключить TranslateService в heaser.component.ts</p>
+        <div class="code">
+          <pre><code>{{code[4]}}</code></pre>
+        </div>
+      </li>
+      <li>
+        Словарь размещается в assets/i18n/ в виде json файлов. В моем
+        случае en.json и ru.json
+      </li>
+      <li>
+        <h5>Подключение в HTML</h5>
+        <p>Подключение в HTML осуществляется через pipe translate</p>
+        <pre><code>{{code[5]}}</code></pre>
+        Если translate не определяется, то нужно проверить подключение
+        TranslateModule к родительскому модулю
+      </li>
+    </ul>
+  </section>
+</section>

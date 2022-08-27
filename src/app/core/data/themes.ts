@@ -897,6 +897,12 @@ export const themeLists: Itheme[] = [
             url: 'angular/angular-project',
             progress: true,
           },
+          {
+            name: 'Add i18n, Translate',
+            date: new Date('08/27/2022'),
+            url: 'angular/angular-translate',
+            progress: true,
+          },
         ],
         progress: false,
       },
