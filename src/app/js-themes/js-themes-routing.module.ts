@@ -8,8 +8,13 @@ import { RecursionComponent } from './pages/recursion/recursion.component';
 import { FunctionComponent } from './pages/function/function.component';
 import { FunctionCreateComponent } from './pages/function/function-create/function-create.component';
 import { FunctionInvokeComponent } from './pages/function/function-invoke/function-invoke.component';
+import { FunctionAboutComponent } from './pages/function/function-about/function-about.component';
 
 const functionChidlren: Routes = [
+  {
+    path: 'about',
+    component: FunctionAboutComponent
+  },
   {
     path: 'create',
     component: FunctionCreateComponent,

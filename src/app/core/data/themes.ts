@@ -335,6 +335,13 @@ export const themeLists: Itheme[] = [
       {
         name: 'Functions',
         description: [
+          //about
+          {
+            name: 'about',
+            progress: true,
+            date: new Date('09/12/2022'),
+            url: 'js/function/about',
+          },
           //create
           {
             name: 'create',

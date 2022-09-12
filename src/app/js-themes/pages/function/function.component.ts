@@ -16,6 +16,11 @@ export class FunctionComponent {
 
   @Input() public navList: INavList[] = [
     {
+      title: 'about',
+      url: 'about',
+      isActive: false,
+    },
+    {
       title: 'create',
       url: 'create',
       isActive: false,
