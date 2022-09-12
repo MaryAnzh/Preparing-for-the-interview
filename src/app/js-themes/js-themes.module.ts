@@ -8,6 +8,8 @@ import { EventLoopComponent } from './pages/event-loop/event-loop.component';
 import { JsTimersComponent } from './pages/js-timers/js-timers.component';
 import { PromiseComponent } from './pages/promise/promise.component';
 import { RecursionComponent } from './pages/recursion/recursion.component';
+import { FunctionComponent } from './pages/function/function.component';
+import { FunctionCreateComponent } from './pages/function/function-create/function-create.component';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { RecursionComponent } from './pages/recursion/recursion.component';
     JsTimersComponent,
     PromiseComponent,
     RecursionComponent,
+    FunctionComponent,
+    FunctionCreateComponent,
   ],
   imports: [
     CommonModule,

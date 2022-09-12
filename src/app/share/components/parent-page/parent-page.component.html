@@ -1,0 +1,16 @@
+<section class="parant">
+  <h3
+    *ngIf="parentPageName">{{parentPageName}}</h3>
+
+  <nav class="nav"
+  *ngIf="navList">
+    <ul class="nav__list">
+      <li
+        *ngFor="let list of navList"
+        routerLink="{{list.url}}"
+        [ngClass]="{'nav__list__item': true, 'active': list.isActive}">
+        {{list.title}}
+      </li>
+    </ul>
+  </nav>
+</section>

@@ -5,7 +5,16 @@ import { EventLoopComponent } from './pages/event-loop/event-loop.component';
 import { JsTimersComponent } from './pages/js-timers/js-timers.component';
 import { PromiseComponent } from './pages/promise/promise.component';
 import { RecursionComponent } from './pages/recursion/recursion.component';
+import { FunctionComponent } from './pages/function/function.component';
+import { FunctionCreateComponent } from './pages/function/function-create/function-create.component';
 
+
+const functionChidlren: Routes = [
+  {
+    path: 'create',
+    component: FunctionCreateComponent,
+  }
+];
 
 const routes: Routes = [
   {
@@ -30,7 +39,13 @@ const routes: Routes = [
   },
   {
     path: 'objects',
-    loadChildren: () => import('./pages/js-objects/js-objects.module').then(m => m.JsObjectsModule) },
+    loadChildren: () => import('./pages/js-objects/js-objects.module').then(m => m.JsObjectsModule)
+  },
+  {
+    path: 'function',
+    component: FunctionComponent,
+    children: functionChidlren
+  }
 ];
 
 @NgModule({
