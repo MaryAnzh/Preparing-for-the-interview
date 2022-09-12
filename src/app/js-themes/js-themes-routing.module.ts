@@ -7,12 +7,16 @@ import { PromiseComponent } from './pages/promise/promise.component';
 import { RecursionComponent } from './pages/recursion/recursion.component';
 import { FunctionComponent } from './pages/function/function.component';
 import { FunctionCreateComponent } from './pages/function/function-create/function-create.component';
-
+import { FunctionInvokeComponent } from './pages/function/function-invoke/function-invoke.component';
 
 const functionChidlren: Routes = [
   {
     path: 'create',
     component: FunctionCreateComponent,
+  },
+  {
+    path: 'invoke',
+    component: FunctionInvokeComponent
   }
 ];
 

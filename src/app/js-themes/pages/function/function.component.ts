@@ -11,7 +11,7 @@ import { INavList } from 'src/app/share/model/nav-list.model';
   styleUrls: ['./function.component.scss']
 })
 
-export class FunctionComponent implements OnInit {
+export class FunctionComponent {
   @Input() public parentPageName: string = 'Function';
 
   @Input() public navList: INavList[] = [
@@ -20,15 +20,13 @@ export class FunctionComponent implements OnInit {
       url: 'create',
       isActive: false,
     },
+    {
+      title: 'invoke',
+      url: "invoke",
+      isActive: false
+    }
   ];
 
-  constructor(
-
-  ) {
-
-   }
-
-  ngOnInit(): void {
-  }
+  constructor() { }
 
 }
