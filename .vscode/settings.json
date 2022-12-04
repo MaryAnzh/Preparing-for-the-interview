@@ -4,6 +4,7 @@
         "angdev",
         "bxnotes",
         "devkit",
-        "httpclient"
+        "httpclient",
+        "tagname"
     ]
 }

@@ -73,7 +73,7 @@ export const consoleData: IConsoleData[] = [
     isTitle: false,
   },
   {
-    text: '07. log вложенная фукция fun01',
+    text: '07. log вложенная функция fun01',
     visible: false,
     isTitle: false,
   },
@@ -93,7 +93,7 @@ export const consoleData: IConsoleData[] = [
     isTitle: false,
   },
   {
-    text: '12. b.then, результат выполнения промиса уже есть в Макро-задаче-1',
+    text: '12. b.then, результат выполнения Promise уже есть в Макро-задаче-1',
     visible: false,
     isTitle: false,
   },
@@ -129,7 +129,7 @@ export const consoleData: IConsoleData[] = [
   }
 ];
 
-export const macrotaskDate: ITaskDate[] = [
+export const macroTaskDate: ITaskDate[] = [
   {
     title: 'Макро-задача-01',
     visible: false,
@@ -157,7 +157,7 @@ export const macrotaskDate: ITaskDate[] = [
   },
 ]
 
-export const microtaskDate: ITaskDate[] = [
+export const microTaskDate: ITaskDate[] = [
   {
     title: 'Микро-задача-01',
     visible: false,
@@ -175,7 +175,7 @@ export const microtaskDate: ITaskDate[] = [
   },
 ]
 
-export const microtaskinAwait: ITaskDate[] = [
+export const microTaskInAwait: ITaskDate[] = [
   {
     title: 'a.then()',
     visible: false,

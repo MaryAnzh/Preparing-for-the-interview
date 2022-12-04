@@ -3,10 +3,10 @@ import { ViewportScroller } from '@angular/common';
 import { ITaskDate, IConsoleData } from './event-loop.model';
 import {
   consoleData,
-  macrotaskDate,
+  macroTaskDate,
   codeDescription,
-  microtaskDate,
-  microtaskinAwait
+  microTaskDate,
+  microTaskInAwait
 } from './event-loop-date';
 import {
   trigger,
@@ -46,7 +46,7 @@ export class EventLoopComponent {
       url: 'https://developer.mozilla.org/ru/docs/Web/JavaScript/EventLoop',
     },
     {
-      title: 'Событийный цикл: микрозадачи и макрозадачи . Современный учебник JS',
+      title: 'Событийный цикл: микро-задачи и макро-задачи . Современный учебник JS',
       url: 'https://learn.javascript.ru/event-loop',
     },
     {
@@ -63,11 +63,11 @@ export class EventLoopComponent {
 
   public consoleData: IConsoleData[] = consoleData;
 
-  public macrotaskDate: ITaskDate[] = macrotaskDate;
+  public macroTaskDate: ITaskDate[] = macroTaskDate;
 
-  public microtaskDate: ITaskDate[] = microtaskDate;
+  public microTaskDate: ITaskDate[] = microTaskDate;
 
-  public microtaskinAwait: ITaskDate[] = microtaskinAwait;
+  public microTaskInAwait: ITaskDate[] = microTaskInAwait;
 
   public allCommentsStringCount: number = 20;
 
@@ -154,7 +154,7 @@ export class EventLoopComponent {
       this.stringSelectIterationArr[this.selectStringNumber - 1] = false;
       this.showFirstMacroTask = true;
       this.showMacroTasksQueue = false;
-      this.resetTask(this.macrotaskDate);
+      this.resetTask(this.macroTaskDate);
       this.selectStringNumber = -1;
     }
   }
@@ -164,96 +164,96 @@ export class EventLoopComponent {
     switch (codeStringNumber) {
       case 0:
         this.consoleData[0].visible = true;
-        this.macrotaskDate[0].visible = true;
-        this.macrotaskDate[0].select = true;
+        this.macroTaskDate[0].visible = true;
+        this.macroTaskDate[0].select = true;
         break;
       case 2:
-        this.macrotaskDate[1].visible = true;
+        this.macroTaskDate[1].visible = true;
         break;
       case 3:
         this.consoleData[1].visible = true;
         break;
       case 5:
-        this.macrotaskDate[2].visible = true;
+        this.macroTaskDate[2].visible = true;
         break;
       case 6:
         this.consoleData[2].visible = true;
         break;
       case 7:
-        this.microtaskinAwait[0].visible = true;
+        this.microTaskInAwait[0].visible = true;
         break;
       case 8:
-        this.macrotaskDate[3].visible = true;
+        this.macroTaskDate[3].visible = true;
         break;
       case 11:
         this.consoleData[3].visible = true;
         break;
       case 14:
-        this.macrotaskDate[4].visible = true;
+        this.macroTaskDate[4].visible = true;
         break;
       case 15:
         this.consoleData[4].visible = true;
         break;
       case 16:
-        this.microtaskinAwait[1].visible = true;
+        this.microTaskInAwait[1].visible = true;
         break;
       case 18:
         this.consoleData[5].visible = true;
         break;
       case 19:
-        this.microtaskDate[2].visible = true;
+        this.microTaskDate[2].visible = true;
         break;
       case 21:
-        this.macrotaskDate[0].select = false;
-        this.macrotaskDate[0].visible = false;
+        this.macroTaskDate[0].select = false;
+        this.macroTaskDate[0].visible = false;
         break;
       case 22:
-        this.microtaskDate[2].select = true;
+        this.microTaskDate[2].select = true;
         this.consoleData[6].visible = true;
         break;
       case 23:
-        this.microtaskDate[2].select = false;
-        this.microtaskDate[2].visible = false;
-        this.macrotaskDate[1].select = true;
+        this.microTaskDate[2].select = false;
+        this.microTaskDate[2].visible = false;
+        this.macroTaskDate[1].select = true;
         this.consoleData[7].visible = true;
         break;
       case 24:
-        this.macrotaskDate[1].select = false;
-        this.macrotaskDate[1].visible = false;
-        this.macrotaskDate[2].select = true;
-        this.macrotaskDate[2].visible = true;
+        this.macroTaskDate[1].select = false;
+        this.macroTaskDate[1].visible = false;
+        this.macroTaskDate[2].select = true;
+        this.macroTaskDate[2].visible = true;
         this.consoleData[8].visible = true;
-        this.resetTask(this.microtaskinAwait);
-        this.microtaskDate[0].visible = true;
-        this.microtaskDate[1].visible = true;
+        this.resetTask(this.microTaskInAwait);
+        this.microTaskDate[0].visible = true;
+        this.microTaskDate[1].visible = true;
         break;
       case 25:
-        this.macrotaskDate[2].select = false;
-        this.macrotaskDate[2].visible = false;
-        this.microtaskDate[0].select = true;
+        this.macroTaskDate[2].select = false;
+        this.macroTaskDate[2].visible = false;
+        this.microTaskDate[0].select = true;
         this.consoleData[9].visible = true;
         break;
       case 26:
-        this.microtaskDate[0].select = false;
-        this.microtaskDate[0].visible = false;
-        this.microtaskDate[1].select = true;
+        this.microTaskDate[0].select = false;
+        this.microTaskDate[0].visible = false;
+        this.microTaskDate[1].select = true;
         this.consoleData[10].visible = true;
         break;
       case 27:
-        this.microtaskDate[1].select = false;
-        this.microtaskDate[1].visible = false;
-        this.macrotaskDate[3].select = true;
+        this.microTaskDate[1].select = false;
+        this.microTaskDate[1].visible = false;
+        this.macroTaskDate[3].select = true;
         this.consoleData[11].visible = true;
         break;
       case 28:
-        this.macrotaskDate[3].select = false;
-        this.macrotaskDate[3].visible = false;
-        this.macrotaskDate[4].select = true;
+        this.macroTaskDate[3].select = false;
+        this.macroTaskDate[3].visible = false;
+        this.macroTaskDate[4].select = true;
         this.consoleData[12].visible = true;
         break;
       case 29:
-        this.macrotaskDate[4].select = false;
-        this.macrotaskDate[4].visible = false;
+        this.macroTaskDate[4].select = false;
+        this.macroTaskDate[4].visible = false;
         break;
       default:
         break;

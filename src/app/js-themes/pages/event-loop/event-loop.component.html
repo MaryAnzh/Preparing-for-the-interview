@@ -140,7 +140,7 @@
             <div class="event-loop__example__text__queue__macro">
               <ul>
                 <ng-container
-                  *ngFor="let macroTask of macrotaskDate">
+                  *ngFor="let macroTask of macroTaskDate">
                   <li
                     @showTask
                     *ngIf="macroTask.visible"
@@ -158,7 +158,7 @@
             <div class="event-loop__example__text__queue__micro">
               <ul>
                 <ng-container
-                  *ngFor="let item of microtaskDate">
+                  *ngFor="let item of microTaskDate">
                   <li
                     @showTask
                     *ngIf="item.visible"
@@ -175,7 +175,7 @@
 
               <ul>
                 <ng-container
-                  *ngFor="let await of microtaskinAwait">
+                  *ngFor="let await of microTaskInAwait">
                   <li
                     @showTask
                     *ngIf="await.visible"
