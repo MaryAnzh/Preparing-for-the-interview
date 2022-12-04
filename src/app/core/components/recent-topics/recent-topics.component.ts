@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Itheme } from '../../modal/themes.modal';
+import { ITheme } from '../../modal/themes.modal';
 import { IRecentTopics } from 'src/app/share/model/pipes.model';
 import { TransformArr } from 'src/app/share/util/transformArray.utile';
 
@@ -10,7 +10,7 @@ import { TransformArr } from 'src/app/share/util/transformArray.utile';
 })
 
 export class RecentTopicsComponent implements OnInit {
-  @Input() public themeLists: Itheme[] | null = null;
+  @Input() public themeLists: ITheme[] | null = null;
 
   @Input() public linkToList: Function | null = null;
 

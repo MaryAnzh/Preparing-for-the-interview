@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { showPipeFile, showPipeFileHTML } from 'src/app/core/data/showPipeFile';
-import { Itheme } from 'src/app/core/modal/themes.modal';
+import { ITheme } from 'src/app/core/modal/themes.modal';
 
 @Component({
   selector: 'app-custom-pipe',
@@ -10,7 +10,7 @@ import { Itheme } from 'src/app/core/modal/themes.modal';
 
 export class CustomPipeComponent {
 
-  public sampleThemeLists: Itheme[] = [
+  public sampleThemeLists: ITheme[] = [
     {
       name: 'Angular',
       isSubThemeShow: false,

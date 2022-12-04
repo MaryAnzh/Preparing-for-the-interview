@@ -1,4 +1,4 @@
-export interface Itheme {
+export interface ITheme {
   name: string,
   isSubThemeShow: boolean,
   subTheme: IsubTheme[],

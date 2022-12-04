@@ -1,7 +1,7 @@
 import { NEVER } from "rxjs";
-import { Itheme } from "../modal/themes.modal";
+import { ITheme } from "../modal/themes.modal";
 
-export const themeLists: Itheme[] = [
+export const themeLists: ITheme[] = [
   // JS
   {
     name: "JS",

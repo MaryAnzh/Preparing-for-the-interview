@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Itheme } from '../../../core/modal/themes.modal';
+import { ITheme } from '../../../core/modal/themes.modal';
 import { IRecentTopics } from '../../model/pipes.model';
 import { TransformArr } from '../../util/transformArray.utile';
 
@@ -8,7 +8,7 @@ import { TransformArr } from '../../util/transformArray.utile';
 })
 
 export class RecentTopicsPipe implements PipeTransform {
-  transform(themes: Itheme[]): IRecentTopics[] {
+  transform(themes: ITheme[]): IRecentTopics[] {
     return TransformArr.sortThemesByDate(themes).sort((a, b) => +b.date - +a.date);
   }
 }

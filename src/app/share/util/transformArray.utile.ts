@@ -1,9 +1,9 @@
-import { Itheme } from "src/app/core/modal/themes.modal";
+import { ITheme } from "src/app/core/modal/themes.modal";
 import { IRecentTopics } from "../model/pipes.model";
 
 export class TransformArr {
 
-  static sortThemesByDate(themes: Itheme[]): IRecentTopics[] {
+  static sortThemesByDate(themes: ITheme[]): IRecentTopics[] {
     const recentTopics: IRecentTopics[] = [];
 
     themes.forEach((theme) => {

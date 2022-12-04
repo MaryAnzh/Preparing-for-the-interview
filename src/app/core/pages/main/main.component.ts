@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { themeLists } from '../../data/themes';
-import { Itheme } from '../../modal/themes.modal';
+import { ITheme } from '../../modal/themes.modal';
 import { Router } from '@angular/router';
 import { CoreService } from '../../service/core-service/core.service';
 
@@ -11,7 +11,7 @@ import { CoreService } from '../../service/core-service/core.service';
 })
 
 export class MainComponent {
-  @Input() public themeLists: Itheme[] = themeLists;
+  @Input() public themeLists: ITheme[] = themeLists;
 
   constructor(
     private router: Router,

@@ -6,7 +6,7 @@
 
   <section class="angular-translate__info">
     <p>Библиотека не работает без подключения interceptor к
-      проекту, Так же для развертывания проекта на Githab необходимо указать
+      проекту, Так же для развертывания проекта на github необходимо указать
       путь к папке со словарем в HttpLoaderFactory. Если проект имеет бекэнд, то interceptor
       необходимо писать с учетом того, что его использует библиотека
       переводчика,</p>
@@ -26,7 +26,7 @@
 
       </li>
       <li>
-        <h5>Подключаем бибилитеку</h5>
+        <h5>Подключаем библиотеку</h5>
         <pre><code>npm install @ngx-translate/core @ngx-translate/http-loader --save</code></pre>
       </li>
       <li>
@@ -38,7 +38,7 @@
       <li>
         <h5>Создаем HttpLoaderFactory в app.module.ts</h5>
         Если тут не прописать путь к словарю, то при развертывании приложения
-        на Githab мы получим пустые строки, а не перевод
+        на Github мы получим пустые строки, а не перевод
         <div class="code">
           <pre><code>{{code[1]}}</code></pre>
         </div>
@@ -63,7 +63,7 @@
         <h5>Переключение языка</h5>
         <p>В моем случае переключение языка осуществляется в компоненте header,
           который находится в модуле core. Для возможности переключения языка
-          необходими подключить TranslateService в heaser.component.ts</p>
+          необходимо подключить TranslateService в header.component.ts</p>
         <div class="code">
           <pre><code>{{code[4]}}</code></pre>
         </div>

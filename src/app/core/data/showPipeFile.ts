@@ -2,7 +2,7 @@ export const showPipeFile = `
 recent-topics.pipe.ts
 
 import { Pipe, PipeTransform } from '@angular/core';
-import { Itheme } from '../../modal/themes.modal';
+import { ITheme } from '../../modal/themes.modal';
 
 type RecentTopics = {
   name: string,
@@ -18,7 +18,7 @@ type RecentTopics = {
 
 export class RecentTopicsPipe implements PipeTransform {
 
-  transform(themes: Itheme[]): RecentTopics[] {
+  transform(themes: ITheme[]): RecentTopics[] {
     const recentTopics: RecentTopics[] = [];
 
     themes.forEach((theme) => {
