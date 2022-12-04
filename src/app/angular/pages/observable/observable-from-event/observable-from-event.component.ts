@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of, fromEvent, Subscription, map, mergeScan } from 'rxjs';
-import { ILinksData } from 'src/app/share/model/links-list.modet';
+import { ILinksData } from 'src/app/share/model/links-list.model';
 
 @Component({
   selector: 'app-observable-from-event',

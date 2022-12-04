@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ILinksData } from 'src/app/share/model/links-list.modet';
+import { ILinksData } from 'src/app/share/model/links-list.model';
 import { Observable, Observer, of, Subscription } from 'rxjs';
 
 @Component({

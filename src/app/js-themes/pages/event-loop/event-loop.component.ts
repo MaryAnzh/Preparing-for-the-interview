@@ -15,7 +15,7 @@ import {
   animate,
   transition,
 } from '@angular/animations';
-import { ILinksData } from 'src/app/share/model/links-list.modet';
+import { ILinksData } from 'src/app/share/model/links-list.model';
 
 
 @Component({
@@ -95,17 +95,17 @@ export class EventLoopComponent {
       }, 0);
     });
     console.log('04. Макро-задача-1, log');
-    a.then((resolve) => console.log(`05. Микро-задача-01, оработала, после выполнения Макро-задачи-3, setTimeout-2`));
+    a.then((resolve) => console.log(`05. Микро-задача-01, отработала, после выполнения Макро-задачи-3, setTimeout-2`));
 
     setTimeout(() => console.log('06.  Макро-задача-4, setTimeout-3'), 0);
 
     function fun01(): void {
-      console.log('07. Макро-задача-1, log вложенная фукция fun01');
+      console.log('07. Макро-задача-1, log вложенная функция fun01');
 
       function fun02(): void {
         setTimeout(() => console.log('08.  Макро-задача-5, setTimeout-4, вложенная функция fun02'), 0);
         console.log('09. Макро-задача-1, log, вложенная функция fun02');
-        a.then((resolve) => console.log(`10. Микро-задача-02, оработала, после выполнения Макро-задачи-3, setTimeout-2`));
+        a.then((resolve) => console.log(`10. Микро-задача-02, отработала, после выполнения Макро-задачи-3, setTimeout-2`));
       }
       fun02();
     }
@@ -116,7 +116,7 @@ export class EventLoopComponent {
       resolve('resolve b');
     });
 
-    b.then((resolve) => console.log(`12. Микро-задача-3 b.then, результат выполнения промиса уже есть в Макро-задаче-1`));
+    b.then((resolve) => console.log(`12. Микро-задача-3 b.then, результат выполнения Promise уже есть в Макро-задаче-1`));
     console.log('13. Макро-задача-1, последний log');
     // setTimeout(() => {
     //   const b = Promise.resolve([1, 2, 3]);
@@ -132,7 +132,7 @@ export class EventLoopComponent {
     // d.catch((reject) => console.log(reject));
   }
 
-  selectedCodeStrinOnClick(): void {
+  selectedCodeStringOnClick(): void {
     this.selectStringNumber++;
     this.ShowInteractive(this.selectStringNumber);
 

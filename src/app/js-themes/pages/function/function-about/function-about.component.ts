@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ILinksData } from 'src/app/share/model/links-list.modet';
+import { ILinksData } from 'src/app/share/model/links-list.model';
 
 @Component({
   selector: 'app-function-about',
@@ -23,5 +23,6 @@ export class FunctionAboutComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
 }

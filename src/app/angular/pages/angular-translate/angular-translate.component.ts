@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ILinksData } from 'src/app/share/model/links-list.modet';
+import { ILinksData } from 'src/app/share/model/links-list.model';
 
 @Component({
   selector: 'app-angular-translate',
@@ -55,7 +55,7 @@ import { TranslateModule } from '@ngx-translate/core';
     TranslateModule
   ],
 `,
-    `heqder.component.ts
+    `header.component.ts
 ___
 import { TranslateService } from '@ngx-translate/core';
 ...

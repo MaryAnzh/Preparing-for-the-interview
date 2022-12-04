@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ILinksData } from 'src/app/share/model/links-list.modet';
+import { ILinksData } from 'src/app/share/model/links-list.model';
 import { Event, Router, NavigationEnd } from '@angular/router'
 import { filter } from 'rxjs';
 
