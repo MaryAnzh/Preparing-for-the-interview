@@ -1,10 +1,10 @@
 export interface ITheme {
   name: string,
   isSubThemeShow: boolean,
-  subTheme: IsubTheme[],
+  subTheme: ISubTheme[],
 }
 
-export interface IsubTheme {
+export interface ISubTheme {
   name: string,
   description: IDescription[],
   progress: boolean,
@@ -15,5 +15,5 @@ export interface IDescription {
   progress: boolean,
   date: Date | null,
   url: string,
-  sourse?: string
+  source?: string
 }

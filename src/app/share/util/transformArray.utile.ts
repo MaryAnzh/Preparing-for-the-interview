@@ -10,14 +10,14 @@ export class TransformArr {
       theme.subTheme.forEach((subTheme) => {
         subTheme.description.forEach((elem) => {
           if (elem.date !== null) {
-            const sourse = elem.sourse ?? '';
+            const source = elem.source ?? '';
             const recentTopic: IRecentTopics = {
               name: elem.name,
               theme: theme.name,
               subTheme: subTheme.name,
               date: elem.date,
               url: elem.url,
-              sourse: sourse,
+              source: source,
             }
             recentTopics.push(recentTopic);
           }

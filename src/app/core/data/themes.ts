@@ -766,9 +766,9 @@ export const themeLists: ITheme[] = [
             date: null,
             url: '',
           },
-          //utitily types, typeguards, generic types
+          //utility types, type guards, generic types
           {
-            name: 'futitily types, typeguards, generic types',
+            name: 'utility types, type guards, generic types',
             progress: false,
             date: null,
             url: '',
@@ -838,7 +838,7 @@ export const themeLists: ITheme[] = [
         name: 'problems',
         description: [
           {
-            name: 'Прыгающий контент от скролл-бар',
+            name: 'Прыгающий контент от scroll-bar',
             progress: true,
             date: new Date('06/15/2022 14:00'),
             url: 'css/scroll',
@@ -922,7 +922,7 @@ export const themeLists: ITheme[] = [
             progress: true,
             date: new Date('07/05/2022'),
             url: '',
-            sourse: 'https://betterprogramming.pub/angular-4-shared-modules-18ac50f24852',
+            source: 'https://betterprogramming.pub/angular-4-shared-modules-18ac50f24852',
           },
         ],
         progress: false,

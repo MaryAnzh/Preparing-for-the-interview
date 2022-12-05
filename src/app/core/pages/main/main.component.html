@@ -9,7 +9,7 @@
         <li class="main__themes-wrap__themes-list__themes__item">
           <div class="main__themes-wrap__themes-list__themes__item__name">
             <div
-              class="main__themes-wrap__themes-list__themes__item__name__attow">
+              class="main__themes-wrap__themes-list__themes__item__name__arrow">
               <svg
                 [ngClass]="{'open': !themeList.isSubThemeShow, 'close':
                 themeList.isSubThemeShow}"
@@ -49,8 +49,8 @@
                           MORE...
                         </a>
                         <a
-                          *ngIf="description.sourse"
-                          href="{{description.sourse}}"
+                          *ngIf="description.source"
+                          href="{{description.source}}"
                           target="_blank">
                           Link to article...
                         </a>

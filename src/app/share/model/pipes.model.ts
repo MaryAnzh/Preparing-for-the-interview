@@ -4,5 +4,5 @@ export interface IRecentTopics {
   theme: string,
   url: string,
   date: Date,
-  sourse: string,
+  source: string,
 }
