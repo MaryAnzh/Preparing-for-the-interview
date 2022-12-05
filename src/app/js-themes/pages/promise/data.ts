@@ -160,7 +160,7 @@ export const methods: IMethods[] = [
         code: promiseCodeExample[3]
       },
       {
-        description: 'Отклонене всех промисов',
+        description: 'Отклонение всех промисов',
         code: promiseCodeExample[4]
       }
     ]

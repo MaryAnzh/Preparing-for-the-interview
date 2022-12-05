@@ -49,7 +49,7 @@ age: 2,
 delete cat['is cute'];`,
     //6
     `cat.name === undefined
-//falase, такое свойство есть
+//false, такое свойство есть
 cat.weight === undefined
 //true, свойства нет`,
     //7
