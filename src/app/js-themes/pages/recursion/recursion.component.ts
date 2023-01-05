@@ -36,14 +36,14 @@ console.log(factorial(3));`,
 '3 -> (2 -> (1 -> (1)))',
 `1 * 1 * 2 * 3`,
 `//1
-const arrayDepth = (arr, curretLevel = 1, maxDepth = 0) => {
+const arrayDepth = (arr, currentLevel = 1, maxDepth = 0) => {
 //2
-  maxDepth = Math.max(maxDepth, curretLevel);
+  maxDepth = Math.max(maxDepth, currentLevel);
 //3
   for (let i = 0; i < arr.length; i++) {
         const element = arr[i];
         if (Array.isArray(element)) {
-          maxDepth = arrayDepth(element, curretLevel + 1, maxDepth);
+          maxDepth = arrayDepth(element, currentLevel + 1, maxDepth);
         }
     }
 //4

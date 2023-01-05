@@ -10,7 +10,7 @@ import { FunctionCreateComponent } from './pages/function/function-create/functi
 import { FunctionInvokeComponent } from './pages/function/function-invoke/function-invoke.component';
 import { FunctionAboutComponent } from './pages/function/function-about/function-about.component';
 
-const functionChidlren: Routes = [
+const functionChildren: Routes = [
   {
     path: 'about',
     component: FunctionAboutComponent
@@ -53,7 +53,7 @@ const routes: Routes = [
   {
     path: 'function',
     component: FunctionComponent,
-    children: functionChidlren
+    children: functionChildren
   }
 ];
 
